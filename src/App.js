@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Layout from "./hoc/layout";
+import Home from "./pages/Home";
+import Regions from "./pages/Regions";
+import Icons from "./pages/Icons";
+import Maps from "./pages/Maps";
+import Content from "./pages/Content";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Coba from "./pages/Coba";
+import Dashboard from "./pages/Dashboard";
+import Submit from "./pages/Submit";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="keys" element={<Icons />} />
+          <Route path="regions" element={<Regions />} />
+          <Route path="maps" element={<Maps />} />
+          <Route path="content" element={<Content />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="submit" element={<Submit />} />
+          <Route path="coba" element={<Coba />} />
+        </Routes>
+      </Layout>
   );
 }
 

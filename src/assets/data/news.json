@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "category": "news",
+        "coordinates" : [ 
+            -7.2532799, 112.7425691
+        ],
+        "lat": "-7.2532799",
+        "lng": "112.7425691",
+        "title": "The Bucha-Irpin bridge has been blown up to stop the Russian advancement towards Kyiv in this direction",
+        "slug": "the-bucha-irpin-bridge-has-been-blown-up-to-stop-the-russian-advancement-towards-kyiv-in-this-direction",
+        "images": "imag",
+        "tags": ["ukraine", "war", "russia"],
+        "icon": "killedIcon",
+        "created_at": "2022-02-26T12:59-0500"
+    },
+    {
+        "id": 2,
+        "category": "news",
+        "coordinates" : [ 
+            -7.2692552, 112.6737247
+        ],
+        "lat": "-7.2692552",
+        "lng": "112.6737247",
+        "title": "Russian tanks destroyed near Priluky",
+        "slug": "russian-tanks-destroyed-near-priluky",
+        "images": "imag2",
+        "tags": ["ukraine", "war", "russia"],
+        "icon": "rifleIcon",
+        "created_at": "2022-02-25T12:59-0500"
+    },
+    {
+        "id": 3,
+        "category": "news",
+        "coordinates" : [ 
+            -7.3182376, 112.7536991
+        ],
+        "lat": "-7.3182376",
+        "lng": "112.7536991",
+        "title": "A group of Chechen saboteurs who were moving around Kyiv in the ambulance has just been shot by the Ukrainian military intelligence officers (GUR MOU) in Kyiv, partly shot, partly detained",
+        "slug": "a-group-of-chechen-saboteurs-who-were-moving-around-kyiv-in-the-ambulance-has-just-been-shot-by-the-ukrainian-military-intelligence-officers-gur-mou-in-kyiv-partly-shot-partly-detained",
+        "images": "imag3",
+        "tags": ["ukraine", "war", "russia"],
+        "icon": "carIcon",
+        "created_at": "2022-02-24T12:59-0500"
+    },
+    {
+        "id": 4,
+        "category": "news",
+        "coordinates" : [ 
+            -7.2172264, 112.7567751
+        ],
+        "lat": "-7.2172264",
+        "lng": "112.7567751",
+        "title": "General Staff of Ukraine: Russian troops regrouped and accumulated armored vehicles and missile and artillery weapons in certain areas, primarily to surround and capture Kyiv and major cities of Ukraine, including Kharkiv, Chernihiv, Odessa, Kherson and Mariupol. A significant part of military equipment comes from the territory of Belarus and through the occupied Crimea",
+        "slug": "general-staff-of-ukraine-russian-troops-regrouped-and-accumulated-armored-vehicles-and-missile-and-artillery-weapons-in-certain-areas-primarily-to-surround-and-capture-kyiv-and-major-cities-of-ukraine-including-kharkiv-chernihiv-odessa-kherson-and-mariupol-a-significant-part-of-military-equipment-comes-from-the-territory-of-belarus-and-through-the-occupied-crimea",
+        "images": "",
+        "tags": ["ukraine", "war", "russia", "belarus"],
+        "icon": "explodeIcon",
+        "created_at": "2022-02-27T12:59-0500"
+    },
+    {
+        "id": 5,
+        "category": "news",
+        "coordinates" : [],
+        "lat": "",
+        "lng": "",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "slug": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum",
+        "images": "",
+        "tags": ["ukraine", "war", "russia", "belarus"],
+        "icon": "explodeIcon",
+        "created_at": "2022-02-27T12:59-0500"
+    }
+]
