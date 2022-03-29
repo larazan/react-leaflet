@@ -121,7 +121,7 @@ const disneyLandLatLng = [33.8121, -117.9190];
   return (
     <>
     
-      <div className="w-full max-w-md h-screen overflow-auto flex-none px-0 hidden md:block">
+      {/* <div className="w-full max-w-md h-screen overflow-auto flex-none px-0 hidden md:block"> */}
         <div className="bg-white mt-4">
         <div className="flex justify-between space-x-2 pb-2 px-3 border-b">
             <div className="flex flex-wrap w-2/3 items-center hidden md:flex">
@@ -455,7 +455,7 @@ const disneyLandLatLng = [33.8121, -117.9190];
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
 
       <Modal showModal={showModal} closeModal={setShowModal} />
     </>

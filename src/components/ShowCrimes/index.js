@@ -78,6 +78,8 @@ const ShowCrimes = ({ data }) => {
   });
 
   console.log(clusters.length);
+  console.log(data);
+  
 
   return (
     <> 

@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
+import Region from "../Region";
+import Key from "../Key";
+import News from "../News";
+
 const Tabs = () => {
   const [openTab, setOpenTab] = useState(1);
   const [color, setColor] = useState("green");
   return (
     <>
-      <div className="flex flex-wrap mt-20">
-        <div className="w-full">
+      <div className="w-full max-w-md  h-screen overflow-auto flex-none px-0 hidden md:block custom-scrollbar">
+        <div className="w-full mt-10">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3  flex-row border-b"
             role="tablist"
@@ -162,29 +166,14 @@ const Tabs = () => {
               </a>
             </li>
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-            <div className="px-4 py-5 flex-auto">
+          <div className="relative2 flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  h-screen">
+            <div className="px-41 py-51 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p>
-                    Collaboratively administrate empowered markets via
-                    plug-and-play networks. Dynamically procrastinate B2C users
-                    after installed base benefits.
-                    <br />
-                    <br /> Dramatically visualize customer directed convergence
-                    without revolutionary ROI.
-                  </p>
+                  <News />
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <p>
-                    Completely synergize resource taxing relationships via
-                    premier niche markets. Professionally cultivate one-to-one
-                    customer service with robust ideas.
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for
-                    state of the art customer service.
-                  </p>
+                  <Region />
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
                   <p>
@@ -197,9 +186,7 @@ const Tabs = () => {
                   </p>
                 </div>
                 <div className={openTab === 4 ? "block" : "hidden"} id="link4">
-                  <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </p>
+                  <Key />
                 </div>
               </div>
             </div>

@@ -32,7 +32,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="w-2/5 px-4">
+        {/* <div className="w-2/5 px-4">
           <div className="flex justify-between pl-4">
             <Link to="/">
               <div className="flex flex-col items-center hidden md:flex">
@@ -148,7 +148,7 @@ const Header = () => {
               </div>
             </Link>
           </div>
-        </div>
+        </div> */}
       </header>
     </>
   );

@@ -214,7 +214,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                     />
                   </svg>
 
-                  <span class="block text-grey">Drop your files here</span>
+                  <span className="block text-grey">Drop your files here</span>
                 </div>
               </div>
 

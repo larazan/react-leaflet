@@ -3,7 +3,7 @@ import React from "react";
 const Key = () => {
   return (
     <>
-      <div className="w-full max-w-md h-screen overflow-auto flex-none px-0 hidden md:block">
+      {/* <div className="w-full max-w-md h-screen overflow-auto flex-none px-0 hidden md:block"> */}
         <div className="bg-white mt-4">
           <div className="flex justify-between space-x-2 pb-2 px-3 border-b">
             <div className="flex flex-wrap w-2/3 items-center hidden md:flex">
@@ -45,104 +45,104 @@ const Key = () => {
                 </div>
                 <div className="flex mt-3 pl-2">
                   <div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(140, 140, 140)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Grey</span>
+                      <span className="flex text-xs px-2 items-center">Grey</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(105, 113, 94)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Green</span>
+                      <span className="flex text-xs px-2 items-center">Green</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(245, 244, 240)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">White</span>
+                      <span className="flex text-xs px-2 items-center">White</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(73, 96, 124)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Blue</span>
+                      <span className="flex text-xs px-2 items-center">Blue</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(59, 59, 59)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Black</span>
+                      <span className="flex text-xs px-2 items-center">Black</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(177, 71, 84)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Red</span>
+                      <span className="flex text-xs px-2 items-center">Red</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(223, 171, 181)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Pink</span>
+                      <span className="flex text-xs px-2 items-center">Pink</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(189, 148, 116)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Brown</span>
+                      <span className="flex text-xs px-2 items-center">Brown</span>
                     </div>
-                    <div class="flex py-1">
-                      <button class="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
-                        <span class="h-full w-full flex flex-col transform">
+                    <div className="flex py-1">
+                      <button className="h-6 w-6 flex flex-col border border-gray-300 rounded-full overflow-hidden focus:ring-2 focus:ring-offset-1 focus:ring-gray-900 focus:outline-none">
+                        <span className="h-full w-full flex flex-col transform">
                           <span
-                            class="h-6 w-6"
+                            className="h-6 w-6"
                             style={{ backgroundColor: "rgb(234, 217, 154)" }}
                           ></span>
                         </span>
                       </button>
-                      <span class="flex text-xs px-2 items-center">Yellow</span>
+                      <span className="flex text-xs px-2 items-center">Yellow</span>
                     </div>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const Key = () => {
           </div>
         
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };

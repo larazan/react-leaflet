@@ -2,8 +2,6 @@ import React, { useState, useRef } from "react";
 import {
   MapContainer,
   TileLayer,
-  Marker,
-  Popup,
   ZoomControl,
   useMapEvents,
 } from "react-leaflet";
@@ -14,45 +12,11 @@ import RenderMarker from "../components/RenderMarker";
 
 import news from "../assets/data/news.json";
 
-import imgCar from "../assets/icons/download.svg";
-import imgExplode from "../assets/icons/exploison.svg";
-import imgRifle from "../assets/icons/rifle.svg";
-import imgKilled from "../assets/icons/killed.svg";
-
-const markerIcon = L.Icon.extend({
-  options: {
-    iconSize: [39, 39],
-    iconAnchor: [17, 46], //[left/right, top/bottom]
-    popupAnchor: [0, -46], //[left/right, top/bottom]
-  },
-});
-
-const getIcon = (iconName) => {
-  let mapIcon = "";
-  switch (iconName) {
-    case "carIcon":
-      mapIcon = new markerIcon({ iconUrl: imgCar });
-      break;
-    case "explodeIcon":
-      mapIcon = new markerIcon({ iconUrl: imgExplode });
-      break;
-    case "rifleIcon":
-      mapIcon = new markerIcon({ iconUrl: imgRifle });
-      break;
-    case "killedIcon":
-      mapIcon = new markerIcon({ iconUrl: imgKilled });
-      break;
-  }
-  return mapIcon;
-};
-
 const Content = () => {
   const [map, setMap] = useState(null);
-  const [lat, setLat] = useState(-7.2491);
-  const [lng, setLng] = useState(112.7508);
+  const [selected, setSelected] = useState(0);
   const [center, setCenter] = useState({ lat: -7.2491, lng: 112.7508 });
   const ZOOM_LEVEL = 12;
-  const [coor, setCoor] = useState({lat: -7.2491, lng: 112.7508});
 
   const handleOnFlyTo = (coorLat, coorLng) => {
     console.log("tofly");
@@ -61,6 +25,22 @@ const Content = () => {
       duration: 1,
     });
   }
+
+  const handleOnMarkerFlyTo = (coorLat, coorLng) => {
+    console.log("tofly");
+    const co = [parseFloat(coorLat), parseFloat(coorLng)]
+    map.flyTo(co, 12, {
+      duration: 0,
+    });
+    
+  }
+
+  const handleId = (id) => {
+    const el = document.getElementById(id)
+    el.scrollIntoView({ behavior: 'smooth' });
+    setSelected(id)
+  }
+
   
   return (
     <>
@@ -80,23 +60,12 @@ const Content = () => {
               />
 
               <ZoomControl position="bottomleft" />
-              {news.map((city, idx) => (
-                city.lat === '' ? null : 
-                <Marker
-                  position={[city.lat, city.lng]}
-                  icon={getIcon(city.icon)}
-                  // icon={<RenderMarker ma={city.icon} />}
-                  key={idx}
-                >
-                  <Popup>
-                    <b>{city.title}</b>
-                  </Popup>
-                </Marker>
-              ))}
+             
+              <RenderMarker news={news} handleOnMarkerFlyTo={handleOnMarkerFlyTo} handleId={handleId} />
             </MapContainer>
           </div>
           <div className="flex w-2/5">
-            <ContentNews news={news} handleOnFlyTo={handleOnFlyTo} />
+            <ContentNews news={news} handleOnFlyTo={handleOnFlyTo} selected={selected} setSelected={setSelected} />
           </div>
         </div>
       </main>

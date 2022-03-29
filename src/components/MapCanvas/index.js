@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Map, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
-// import cities from "../../assets/data/cities.json";
 import news from "../../assets/data/news.json";
 import imgCar from "../../assets/icons/download.svg";
 import imgExplode from "../../assets/icons/exploison.svg";
@@ -47,31 +46,19 @@ const MapCanvas = () => {
   const [lng, setLng] = useState(112.7508);
   const [center, setCenter] = useState({ lat: -7.2491, lng: 112.7508 });
   const ZOOM_LEVEL = 12;
-  const mapRef = useRef();
-
-  // console.log(getIcon('carIcon'));
 
   return (
-    <MapContainer center={center} zoom={ZOOM_LEVEL} ref={mapRef}>
+    <MapContainer center={center} zoom={ZOOM_LEVEL} >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* <Marker position={[lat, lng]}>
+      <Marker position={[lat, lng]}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
-        </Marker> */}
-
-      {news.map((city, idx) => (
-        <Marker position={[city.lat, city.lng]} icon={getIcon(city.icon)} key={idx}>
-          <Popup>
-            <b>
-              {city.title}
-            </b>
-          </Popup>
         </Marker>
-      ))}
+
     </MapContainer>
   );
 };

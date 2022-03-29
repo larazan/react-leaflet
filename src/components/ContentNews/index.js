@@ -27,7 +27,7 @@ const getImage = (imgName) => {
   return imgNews;
 };
 
-const ContentNews = ({ news, handleOnFlyTo }) => {
+const ContentNews = ({ news, handleOnFlyTo, selected, setSelected }) => {
   const [newsId, setNewsId] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
@@ -41,7 +41,7 @@ const ContentNews = ({ news, handleOnFlyTo }) => {
     const id = e.currentTarget.dataset.id;
     const lat = e.currentTarget.dataset.lat;
     const lng = e.currentTarget.dataset.lng;
-    if (newsId === parseInt(id)) {
+    if (selected === parseInt(id)) {
       console.log("sama");
       openModal();
     } else {
@@ -53,7 +53,7 @@ const ContentNews = ({ news, handleOnFlyTo }) => {
       }
       
     }
-    setNewsId(parseInt(id));
+    setSelected(parseInt(id));
     console.log(id);
   };
 
@@ -85,6 +85,8 @@ const ContentNews = ({ news, handleOnFlyTo }) => {
 
     map.setView(disneyWorldLatLng, 14);
   }
+
+  console.log(selected);
 
   return (
     <>
@@ -124,10 +126,10 @@ const ContentNews = ({ news, handleOnFlyTo }) => {
             </div>
           </div>
           {news.map((article, idx) => (
-            <div className="border-b cursor-pointer" key={idx}>
+            <div className="border-b cursor-pointer" key={idx} id={article.id}>
               <div
-                className={`py-3 border-l-4 ${
-                  newsId === article.id ? "border-red-500" : "border-white"
+                className={`py-3 border-l-4  ${
+                  parseInt(selected) === article.id ? "border-red-500 selected" : "border-white"
                 } px-3`}
                 data-id={article.id}
                 data-lat={article.lat ? article.lat : ""}
