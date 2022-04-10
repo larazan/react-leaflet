@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Marker,
   Popup,
@@ -10,12 +10,14 @@ import imgCar from "../../assets/icons/download.svg";
 import imgExplode from "../../assets/icons/exploison.svg";
 import imgRifle from "../../assets/icons/rifle.svg";
 import imgKilled from "../../assets/icons/killed.svg";
+import imgShelling from "../../assets/icons/shelling.svg";
 
 const markerIcon = L.Icon.extend({
   options: {
     iconSize: [39, 39],
     iconAnchor: [17, 46], //[left/right, top/bottom]
     popupAnchor: [0, -46], //[left/right, top/bottom]
+    className: 'drop-shadow-md rounded-full border-4 border-amber-400'
   },
 });
 
@@ -33,6 +35,9 @@ const getIcon = (iconName) => {
       break;
     case "killedIcon":
       mapIcon = new markerIcon({ iconUrl: imgKilled });
+      break;
+    case "shellingIcon":
+      mapIcon = new markerIcon({ iconUrl: imgShelling });
       break;
   }
   return mapIcon;
@@ -53,6 +58,11 @@ const RenderMarker = ({ news, handleOnMarkerFlyTo, handleId }) => {
     handleId(id)
   }
 
+  const changeMarker = (ic) => {
+    console.log(ic + '2');
+    // setIcon(getIcon("shellingIcon"))
+  }
+
   return (
     <>
       {news.map((city, idx) =>
@@ -68,6 +78,8 @@ const RenderMarker = ({ news, handleOnMarkerFlyTo, handleId }) => {
                 console.log(e.latlng);
                 clickMarkerHandler(e.latlng)
                 idHandler(city.id)
+                changeMarker(city.icon)
+                
               },
             }}
           >
