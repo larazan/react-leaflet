@@ -12,6 +12,7 @@ import L from "leaflet";
 import ContentSubmit from "../components/ContentSubmit";
 import Sidebar from "../components/Sidebar";
 import useGeoLocation from "../hooks/useGeolocation";
+import MiniMap from "../components/MiniMap";
 
 import mark from "../assets/icons/marker.png";
 
@@ -31,7 +32,7 @@ const Submit = () => {
   const [position, setPosition] = useState(null);
   const [center, setCenter] = useState({ lat: -7.2491, lng: 112.7508 });
   const ZOOM_LEVEL = 12;
-
+  
   const location = useGeoLocation();
 
   const HandleClickMap = () => {
@@ -54,6 +55,7 @@ const Submit = () => {
         14,
         { animate: true }
       );
+      setPosition({ lat: location.coordinates.lat, lng: location.coordinates.lng })
     } else {
       alert(location.error.message);
     }
@@ -97,6 +99,7 @@ const Submit = () => {
                   <b>hello</b>
                 </Popup>
               </Marker> */}
+              <MiniMap position="bottomleft"  />
             </MapContainer>
           </div>
           <div className="flex w-2/6">

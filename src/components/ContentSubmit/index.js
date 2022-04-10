@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -6,10 +6,17 @@ import {
   ChartBarIcon,
   EmojiHappyIcon,
   PhotographIcon,
+  LinkIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import { Picker } from "emoji-mart";
+import "emoji-mart/css/emoji-mart.css";
+
+import TagsInput from "../TagsInput";
 
 const ContentSubmit = ({ position, showMyLocation }) => {
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
   const [showEmojis, setShowEmojis] = useState(false);
@@ -38,9 +45,21 @@ const ContentSubmit = ({ position, showMyLocation }) => {
     },
   });
 
+  const addEmoji = (e) => {
+    let sym = e.unified.split("-");
+    let codesArray = [];
+    sym.forEach((el) => codesArray.push("0x" + el));
+    let emoji = String.fromCodePoint(...codesArray);
+    setInput(input + emoji);
+  };
+
   console.log(position);
   console.log(lat);
   console.log(lng);
+
+  const selectedTags = (tags) => {
+    console.log(tags);
+  };
 
   return (
     <>
@@ -67,17 +86,39 @@ const ContentSubmit = ({ position, showMyLocation }) => {
           </div>
           <div className="px-6 mt-2 w-full mb-16">
             <form className="flex flex-col" onSubmit={formik.handleSubmit}>
-              <div className="my-2">
-                <label
-                  htmlFor="category"
-                  className="text-gray-400 font-semibold"
-                >
-                  Category
-                </label>
+              
+
+              <div className="my-1">
+                <div className="flex justify-between">
+                  <input
+                    id="latitude"
+                    className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
+                    name="latitude"
+                    type="text"
+                    placeholder="Latitude"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={lat}
+                  />
+                  <input
+                    id="longitude"
+                    className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
+                    type="text"
+                    name="longitude"
+                    placeholder="Password"
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
+                    value={lng}
+                  />
+                </div>
+              </div>
+
+              <div className="mt-1 mb-2">
                 <select
                   name="category"
-                  className="bg-white mt-2 px-4 py-3 rounded w-full border border-gray-300"
+                  className="text-sm bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
                 >
+                  <option>-- choose category --</option>
                   <option>Berita</option>
                   <option>Diskon</option>
                   <option>Promosi</option>
@@ -85,54 +126,10 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                 </select>
               </div>
 
-              <div className="my-2">
-                <label
-                  htmlFor="latitude"
-                  className="text-gray-400 font-semibold"
-                >
-                  Latitude
-                </label>
-                <input
-                  id="latitude"
-                  className="bg-white mt-2 px-4 py-3 rounded w-full border border-gray-300"
-                  name="latitude"
-                  type="text"
-                  placeholder="Latitude"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={lat}
-                />
-              </div>
-              <div className="my-2">
-                <div className="flex justify-between">
-                  <label
-                    htmlFor="longitude"
-                    className="text-gray-400 font-semibold"
-                  >
-                    Longitude
-                  </label>
-                </div>
-                <input
-                  id="longitude"
-                  className="bg-white mt-2 px-4 py-3 rounded w-full border border-gray-300"
-                  type="text"
-                  name="longitude"
-                  placeholder="Password"
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={lng}
-                />
-              </div>
-
-              <div className="my-2">
-                <div className="flex justify-between">
-                  <label htmlFor="body" className="text-gray-400 font-semibold">
-                    Body
-                  </label>
-                </div>
+              <div className="mt-1 mb-2">
                 <textarea
                   id="body"
-                  className="bg-white mt-2 px-4 py-3 rounded w-full border border-gray-300"
+                  className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
                   type="text"
                   name="body"
                   rows="4"
@@ -164,21 +161,21 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   </div>
 
                   <div className="icon rotate-90">
-                    <ChartBarIcon className="text-[#1d9bf0] h-[22px]" />
+                    <LinkIcon className="text-[#1d9bf0] h-[22px]" />
                   </div>
 
                   <div
                     className="icon"
-                    //   onClick={() => setShowEmojis(!showEmojis)}
+                      onClick={() => setShowEmojis(!showEmojis)}
                   >
-                    <EmojiHappyIcon className="text-[#1d9bf0] h-[22px]" />
+                    <EmojiHappyIcon className="text-[#1d9bf0] h-[22px] cursor-pointer" />
                   </div>
 
                   <div className="icon">
                     <CalendarIcon className="text-[#1d9bf0] h-[22px]" />
                   </div>
 
-                  {/* {showEmojis && (
+                  {showEmojis && (
                 <Picker
                   onSelect={addEmoji}
                   style={{
@@ -190,15 +187,12 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   }}
                   theme="dark"
                 />
-              )} */}
+              )}
                 </div>
               </div>
 
               <div className="my-2">
-                <label htmlFor="link" className="text-gray-400 font-semibold">
-                  Image
-                </label>
-                <div className="border-dashed border-2 w-64 h-32 mt-2 rounded flex justify-center items-center text-gray-400 font-semibold">
+                <div className="flex border-dashed border-2 w-full h-32 mt-2 rounded  justify-center items-center text-gray-400 font-semibold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -214,18 +208,17 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                     />
                   </svg>
 
-                  <span className="block text-grey">Drop your files here</span>
+                  <span className="text-sm block text-grey">
+                    Drop your files here
+                  </span>
                 </div>
               </div>
 
               <div className="my-2">
-                <label htmlFor="link" className="text-gray-400 font-semibold">
-                  Link
-                </label>
                 <input
                   id="link"
-                  className="bg-white mt-2 px-4 py-3 rounded w-full border border-gray-300"
-                  name="latitude"
+                  className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
+                  name="link"
                   type="text"
                   placeholder="Link"
                   onChange={formik.handleChange}
@@ -235,13 +228,10 @@ const ContentSubmit = ({ position, showMyLocation }) => {
               </div>
 
               <div className="my-2">
-                <label htmlFor="tags" className="text-gray-400 font-semibold">
-                  Tags
-                </label>
                 <input
-                  id="tags"
-                  className="bg-white mt-2 px-4 py-3 rounded w-full border border-gray-300"
-                  name="latitude"
+                  id="tags2"
+                  className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
+                  name="tags"
                   type="text"
                   placeholder="Tags"
                   onChange={formik.handleChange}
@@ -255,10 +245,35 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                 ) : null}
               </div>
 
+              {/* <div class="px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-purple-200 dark:bg-gray-400">
+                <span class="flex flex-wrap pl-4 pr-2 py-2 m-1 justify-between items-center text-sm font-medium rounded-xl cursor-pointer bg-purple-500 text-gray-200 hover:bg-purple-600 hover:text-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100">
+                  UI/UX
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 ml-3 hover:text-gray-300"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div> */}
+
+              <div className="my-2">
+                <TagsInput
+                  selectedTags={selectedTags}
+                  tagsI={["Nodejs"]}
+                />
+              </div>
+
               <div className="my-2 flex justify-end">
                 <button
                   type="submit"
-                  className="mt-4 w-full bg-gradient-to-tr from-blue-500 to-indigo-600 text-white px-10 py-3 rounded-md text-lg font-bold tracking-wide"
+                  className="mt-4 w-full bg-gradient-to-tr from-blue-500 to-indigo-600 text-white px-10 py-2 rounded-md text-lg font-bold tracking-wide"
                 >
                   Submit
                 </button>

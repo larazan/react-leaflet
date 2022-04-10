@@ -17,7 +17,7 @@ const markerIcon = L.Icon.extend({
     iconSize: [39, 39],
     iconAnchor: [17, 46], //[left/right, top/bottom]
     popupAnchor: [0, -46], //[left/right, top/bottom]
-    className: 'drop-shadow-md rounded-full border-4 border-amber-400'
+    className: 'drop-shadow-md'
   },
 });
 
