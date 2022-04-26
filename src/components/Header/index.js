@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Header = () => {
   return (
     <>
@@ -30,8 +31,11 @@ const Header = () => {
                 alt="liveuamap"
               />
             </div>
+            
           </div>
+          
         </div>
+        
         {/* <div className="w-2/5 px-4">
           <div className="flex justify-between pl-4">
             <Link to="/">

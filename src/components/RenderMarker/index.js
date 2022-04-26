@@ -21,29 +21,33 @@ const markerIcon = L.Icon.extend({
   },
 });
 
-const getIcon = (iconName) => {
-  let mapIcon = "";
-  switch (iconName) {
-    case "carIcon":
-      mapIcon = new markerIcon({ iconUrl: imgCar });
-      break;
-    case "explodeIcon":
-      mapIcon = new markerIcon({ iconUrl: imgExplode });
-      break;
-    case "rifleIcon":
-      mapIcon = new markerIcon({ iconUrl: imgRifle });
-      break;
-    case "killedIcon":
-      mapIcon = new markerIcon({ iconUrl: imgKilled });
-      break;
-    case "shellingIcon":
-      mapIcon = new markerIcon({ iconUrl: imgShelling });
-      break;
-  }
-  return mapIcon;
-};
+const RenderMarker = ({ news, handleOnMarkerFlyTo, handleId, selectedIndex, setSelectedIndex }) => {
+  
+  const getIcon = (iconName, index) => {
+    if(index === selectedIndex) return new markerIcon({ iconUrl: imgShelling });
 
-const RenderMarker = ({ news, handleOnMarkerFlyTo, handleId }) => {
+    console.log(index);
+
+    let mapIcon = "";
+    switch (iconName) {
+      case "carIcon":
+        mapIcon = new markerIcon({ iconUrl: imgCar });
+        break;
+      case "explodeIcon":
+        mapIcon = new markerIcon({ iconUrl: imgExplode });
+        break;
+      case "rifleIcon":
+        mapIcon = new markerIcon({ iconUrl: imgRifle });
+        break;
+      case "killedIcon":
+        mapIcon = new markerIcon({ iconUrl: imgKilled });
+        break;
+      case "shellingIcon":
+        mapIcon = new markerIcon({ iconUrl: imgShelling });
+        break;
+    }
+    return mapIcon;
+  };
 
   const clickMarkerHandler = (e) => {
     const lat = e.lat;
@@ -58,28 +62,25 @@ const RenderMarker = ({ news, handleOnMarkerFlyTo, handleId }) => {
     handleId(id)
   }
 
-  const changeMarker = (ic) => {
-    console.log(ic + '2');
-    // setIcon(getIcon("shellingIcon"))
-  }
+  console.log(selectedIndex);
 
   return (
     <>
-      {news.map((city, idx) =>
+      {news.map((city, index) =>
         city.lat === "" ? null : (
           <Marker
+            key={index}
+            index={index}
             position={[city.lat, city.lng]}
-            icon={getIcon(city.icon)}
-            key={idx}
+            icon={getIcon(city.icon, index)}
+            // onclick={handleClick}
             eventHandlers={{
               click: (e) => {
                 console.log('marker clicked', e)
-                // console.log(idx);
                 console.log(e.latlng);
                 clickMarkerHandler(e.latlng)
                 idHandler(city.id)
-                changeMarker(city.icon)
-                
+                setSelectedIndex(e.target.options.index)
               },
             }}
           >

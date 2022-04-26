@@ -81,7 +81,7 @@ const Submit = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
 
-              <ZoomControl position="bottomright" />
+              <ZoomControl position="bottomleft" />
 
               <HandleClickMap />
 
@@ -99,7 +99,7 @@ const Submit = () => {
                   <b>hello</b>
                 </Popup>
               </Marker> */}
-              <MiniMap position="bottomleft"  />
+              <MiniMap position="bottomright"  />
             </MapContainer>
           </div>
           <div className="flex w-2/6">

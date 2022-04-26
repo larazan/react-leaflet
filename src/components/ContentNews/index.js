@@ -27,7 +27,7 @@ const getImage = (imgName) => {
   return imgNews;
 };
 
-const ContentNews = ({ news, handleOnFlyTo, selected, setSelected }) => {
+const ContentNews = ({ news, handleOnFlyTo, selected, setSelected, setSelectedIndex }) => {
   const [newsId, setNewsId] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
@@ -54,6 +54,7 @@ const ContentNews = ({ news, handleOnFlyTo, selected, setSelected }) => {
       
     }
     setSelected(parseInt(id));
+    setSelectedIndex(parseInt(id)-1);
     console.log(id);
   };
 
@@ -86,7 +87,7 @@ const ContentNews = ({ news, handleOnFlyTo, selected, setSelected }) => {
     map.setView(disneyWorldLatLng, 14);
   }
 
-  console.log(selected);
+  // console.log(selected);
 
   return (
     <>

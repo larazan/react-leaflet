@@ -9,12 +9,14 @@ import L from "leaflet";
 
 import ContentNews from "../components/ContentNews";
 import RenderMarker from "../components/RenderMarker";
+import MiniMap from "../components/MiniMap";
 
 import news from "../assets/data/news.json";
 
 const Content = () => {
   const [map, setMap] = useState(null);
   const [selected, setSelected] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const [center, setCenter] = useState({ lat: -7.2491, lng: 112.7508 });
   const ZOOM_LEVEL = 12;
 
@@ -61,11 +63,13 @@ const Content = () => {
 
               <ZoomControl position="bottomleft" />
              
-              <RenderMarker news={news} handleOnMarkerFlyTo={handleOnMarkerFlyTo} handleId={handleId} />
+              <RenderMarker news={news} handleOnMarkerFlyTo={handleOnMarkerFlyTo} handleId={handleId} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
+            
+              <MiniMap position="bottomright"  />
             </MapContainer>
           </div>
           <div className="flex w-2/5">
-            <ContentNews news={news} handleOnFlyTo={handleOnFlyTo} selected={selected} setSelected={setSelected} />
+            <ContentNews news={news} handleOnFlyTo={handleOnFlyTo} selected={selected} setSelected={setSelected} setSelectedIndex={setSelectedIndex} />
           </div>
         </div>
       </main>

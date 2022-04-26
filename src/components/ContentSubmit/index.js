@@ -87,8 +87,8 @@ const ContentSubmit = ({ position, showMyLocation }) => {
           <div className="px-6 mt-2 w-full mb-16">
             <form className="flex flex-col" onSubmit={formik.handleSubmit}>
               
-
-              <div className="my-1">
+              { lat !== 0 && 
+              <div className="">
                 <div className="flex justify-between">
                   <input
                     id="latitude"
@@ -112,8 +112,9 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   />
                 </div>
               </div>
+              }
 
-              <div className="mt-1 mb-2">
+              <div className=" mb-2">
                 <select
                   name="category"
                   className="text-sm bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
@@ -126,7 +127,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                 </select>
               </div>
 
-              <div className="mt-1 mb-2">
+              <div className="mt-1 mb-0">
                 <textarea
                   id="body"
                   className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
@@ -145,7 +146,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                 ) : null}
               </div>
 
-              <div className="flex2 items-center">
+              <div className="flex2 items-center px-1">
                 <div className="flex items-center justify-between">
                   <div
                     className="icon"
