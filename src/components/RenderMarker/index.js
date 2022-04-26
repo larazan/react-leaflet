@@ -237,8 +237,9 @@ const RenderMarker = ({
       e = undersvg1,
       l = "#ffc600";
     6 == a[1] && (l = "#ffffff");
-    f && (e += lp.replace("#ED1F24", l));
-    l = svgl[a[0]];
+    // f && (e += lp.replace("#ED1F24", l));
+    if (f === -1) e += lp.replace("#ED1F24", l)
+    var m = svgl[a[0]];
     switch (a[1]) {
       case "1":
         e +=
@@ -304,14 +305,14 @@ const RenderMarker = ({
       //       .replace("#2E3192", "#e2e2d0")),
       //     (l = l.replace(/#FFFFFF/g, "#c65411"));
     }
-    a = window.btoa(e + l + "</svg>");
+    a = window.btoa(e + m + "</svg>");
       // void 0 != $.base64
       //   ? $.base64.encode(e + l + "</svg>")
       //   : window.btoa(e + l + "</svg>");
     return `<img src="data:image/svg+xml;base64, ${a}" />`;
   };
 
-  console.log(returnSvg('sports-2', -1));
+  console.log(returnSvg('explode-1', 1));
 
   return (
     <>
