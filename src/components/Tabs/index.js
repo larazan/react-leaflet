@@ -9,10 +9,11 @@ const Tabs = () => {
   const [color, setColor] = useState("green");
   return (
     <>
-      <div className="w-full max-w-md  h-screen overflow-auto flex-none px-0 hidden md:block custom-scrollbar">
-        <div className="w-full mt-10">
+      <div className="relative w-full max-w-md z-30 h-screen overflow-auto flex-none px-0 hidden md:block custom-scrollbar">
+        <div className="">
+          <div className="w-full ">
           <ul
-            className="flex mb-0 list-none flex-wrap pt-3  flex-row border-b"
+            className="fixed flex mb-0 list-none flex-wrap2 flex-row2 border-b bg-white"
             role="tablist"
           >
             <li className={
@@ -21,7 +22,7 @@ const Tabs = () => {
                     ? "border-b-4 border-indigo-400"
                     : "")}>
               <a
-                className="text-sm font-bold px-5 py-3 block leading-normal"
+                className="text-sm font-bold px-6 py-2 block leading-normal"
                 onClick={(e) => {
                   e.preventDefault();
                   setOpenTab(1);
@@ -59,7 +60,7 @@ const Tabs = () => {
                     ? "border-b-4 border-indigo-400"
                     : "")}>
               <a
-                className="text-sm font-bold px-5 py-3 block leading-normal"
+                className="text-sm font-bold px-6 py-2 block leading-normal"
                 onClick={(e) => {
                   e.preventDefault();
                   setOpenTab(2);
@@ -97,7 +98,7 @@ const Tabs = () => {
                     ? "border-b-4 border-indigo-400"
                     : "")}>
               <a
-                className="text-sm font-bold px-5 py-3 block leading-normal"
+                className="text-sm font-bold px-6 py-2 block leading-normal"
                 onClick={(e) => {
                   e.preventDefault();
                   setOpenTab(3);
@@ -135,7 +136,7 @@ const Tabs = () => {
                     ? "border-b-4 border-indigo-400"
                     : "")}>
               <a
-                className="text-sm font-bold px-5 py-3 block leading-normal"
+                className="text-sm font-bold px-6 py-2 block leading-normal"
                 onClick={(e) => {
                   e.preventDefault();
                   setOpenTab(4);
@@ -166,8 +167,9 @@ const Tabs = () => {
               </a>
             </li>
           </ul>
-          <div className="relative2 flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  h-screen">
-            <div className="px-41 py-51 flex-auto">
+          </div>
+          <div className="static flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  h-screen">
+            <div className="px-41 py-51 flex-auto mt-12">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                   <News />

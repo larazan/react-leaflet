@@ -24,6 +24,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Content />} />
+          <Route path="home" element={<Home />} />
           <Route path="keys" element={<Icons />} />
           <Route path="regions" element={<Regions />} />
           <Route path="maps" element={<Maps />} />
