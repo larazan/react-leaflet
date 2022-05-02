@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { shuffle } from 'lodash';
-import moment from 'moment';
+// import moment from 'moment';
+import moment from 'moment/min/moment-with-locales';
 import Moment from 'react-moment';
 import 'moment-timezone';
 
 import background, { gradient } from '../../hoc/background';
+
+moment.locale('id');
 
 const ModalWeather = ({ showWeather, closeWeather }) => {
   const [info, setInfo] = useState({});
@@ -212,7 +215,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                             />
                             <div>
                               <span className="text-md font-semibold text-gray-800">
-                                Senin
+                                Selasa
                               </span>
                             </div>
                             <div>
@@ -230,7 +233,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                             />
                             <div>
                               <span className="text-md font-semibold text-gray-800">
-                                Senin
+                                Rabu
                               </span>
                             </div>
                             <div>
@@ -248,7 +251,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                             />
                             <div>
                               <span className="text-md font-semibold text-gray-800">
-                                Senin
+                                Kamis
                               </span>
                             </div>
                             <div>
@@ -266,7 +269,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                             />
                             <div>
                               <span className="text-md font-semibold text-gray-800">
-                                Senin
+                                Jumat
                               </span>
                             </div>
                             <div>
@@ -284,7 +287,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                             />
                             <div>
                               <span className="text-md font-semibold text-gray-800">
-                                Senin
+                                Sabtu
                               </span>
                             </div>
                             <div>

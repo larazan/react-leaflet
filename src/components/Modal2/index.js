@@ -206,7 +206,7 @@ const Modal2 = ({ showModal, closeModal }) => {
               </div>
             </div>
 
-            <div className="px-7 py-3 pb-5 border-b bg-gradient-to-b from-gray-100 to-white max-h-fit overflow-y-auto">
+            <div className="px-7 py-3 pb-5 border-b bg-gradient-to-t from-gray-100 to-white max-h-fit overflow-y-auto">
               <div className="flex justify-between">
                 <div className="flex inline-flex justify-center items-center space-x-2 pb-3">
                   <div className="h-8 w-8">

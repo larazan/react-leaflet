@@ -53,10 +53,10 @@ const MiniMap = ({ position, zoom }) => {
   const minimap = useMemo(
     () => (
       <MapContainer
-        style={{ height: 80, width: 80 }}
+        style={{ height: 120, width: 120, border: '3px solid #fff' }}
         center={parentMap.getCenter()}
         zoom={mapZoom}
-        dragging={false}
+        dragging={true}
         doubleClickZoom={false}
         scrollWheelZoom={false}
         attributionControl={false}
