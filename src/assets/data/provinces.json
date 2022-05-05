@@ -1,0 +1,138 @@
+[
+    {
+        "kode": 11,
+        "name": "aceh"
+    },
+    {
+        "kode": 12,
+        "name": "sumatera utara"
+    },
+    {
+        "kode": 13,
+        "name": "sumatera barat"
+    },
+    {
+        "kode": 14,
+        "name": "riau"
+    },
+    {
+        "kode": 15,
+        "name": "jambi"
+    },
+    {
+        "kode": 16,
+        "name": "sumatera selatan"
+    },
+    {
+        "kode": 17,
+        "name": "bengkulu"
+    },
+    {
+        "kode": 18,
+        "name": "lampung"
+    },
+    {
+        "kode": 19,
+        "name": "kepulauan bangka belitung"
+    },
+    {
+        "kode": 21,
+        "name": "kepulauan riau"
+    },
+    {
+        "kode": 31,
+        "name": "DKI jakarta"
+    },
+    {
+        "kode": 32,
+        "name": "jawa barat"
+    },
+    {
+        "kode": 33,
+        "name": "jawa tengah"
+    },
+    {
+        "kode": 34,
+        "name": "DI yogyakarta"
+    },
+    {
+        "kode": 35,
+        "name": "jawa timur"
+    },
+    {
+        "kode": 36,
+        "name": "banten"
+    },
+    {
+        "kode": 51,
+        "name": "bali"
+    },
+    {
+        "kode": 52,
+        "name": "nusa tenggara barat"
+    },
+    {
+        "kode": 53,
+        "name": "nusa tenggara timur"
+    },
+    {
+        "kode": 61,
+        "name": "kalimantan barat"
+    },
+    {
+        "kode": 62,
+        "name": "kalimantan tengah"
+    },
+    {
+        "kode": 63,
+        "name": "kalimantan selatan"
+    },
+    {
+        "kode": 64,
+        "name": "kalimantan timur"
+    },
+    {
+        "kode": 65,
+        "name": "kalimantan utara"
+    },
+    {
+        "kode": 71,
+        "name": "sulawesi utara"
+    },
+    {
+        "kode": 72,
+        "name": "sulawesi tengah"
+    },
+    {
+        "kode": 73,
+        "name": "sulawesi selatan"
+    },
+    {
+        "kode": 74,
+        "name": "sulawesi tenggara"
+    },
+    {
+        "kode": 75,
+        "name": "gorontalo"
+    },
+    {
+        "kode": 76,
+        "name": "sulawesi barat"
+    },
+    {
+        "kode": 81,
+        "name": "maluku"
+    },
+    {
+        "kode": 82,
+        "name": "maluku utara"
+    },
+    {
+        "kode": 91,
+        "name": "papua barat"
+    },
+    {
+        "kode": 94,
+        "name": "papua"
+    }
+]

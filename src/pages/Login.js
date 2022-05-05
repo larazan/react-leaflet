@@ -23,6 +23,7 @@ const Login = () => {
 
   return (
     <>
+     <div className="flex flex-col h-screen max-h-screen">
       <main className="h-screen" style={{ backgroundColor: "#f0f5f8" }}>
         <div className="md:container md:mx-auto md:px-8">
           <div className="md:flex md:flex-no-wrap md:-mx-6">
@@ -148,6 +149,7 @@ const Login = () => {
         
       </main>
       <Footer />
+    </div>
     </>
   );
 };

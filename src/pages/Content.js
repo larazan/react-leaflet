@@ -40,6 +40,7 @@ const Content = () => {
   const handleId = (id) => {
     const el = document.getElementById(id)
     el.scrollIntoView({ behavior: 'smooth' });
+    // el.scroll(0, 550);
     setSelected(id)
   }
 
@@ -63,13 +64,26 @@ const Content = () => {
 
               <ZoomControl position="bottomleft" />
              
-              <RenderMarker news={news} handleOnMarkerFlyTo={handleOnMarkerFlyTo} handleId={handleId} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
+              <RenderMarker 
+                news={news} 
+                handleOnMarkerFlyTo={handleOnMarkerFlyTo} 
+                handleId={handleId} 
+                selectedIndex={selectedIndex} 
+                setSelectedIndex={setSelectedIndex} 
+              />
             
               <MiniMap position="bottomright"  />
             </MapContainer>
           </div>
           <div className="flex w-2/5">
-            <ContentNews news={news} handleOnFlyTo={handleOnFlyTo} selected={selected} setSelected={setSelected} setSelectedIndex={setSelectedIndex} />
+            <ContentNews 
+              news={news} 
+              handleOnFlyTo={handleOnFlyTo} 
+              selected={selected} 
+              setSelected={setSelected} 
+              setSelectedIndex={setSelectedIndex} 
+              handleId={handleId}
+            />
           </div>
         </div>
       </main>

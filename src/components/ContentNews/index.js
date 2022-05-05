@@ -27,7 +27,7 @@ const getImage = (imgName) => {
   return imgNews;
 };
 
-const ContentNews = ({ news, handleOnFlyTo, selected, setSelected, setSelectedIndex }) => {
+const ContentNews = ({ news, handleOnFlyTo, selected, setSelected, setSelectedIndex, handleId }) => {
   const [newsId, setNewsId] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
@@ -55,6 +55,7 @@ const ContentNews = ({ news, handleOnFlyTo, selected, setSelected, setSelectedIn
     }
     setSelected(parseInt(id));
     setSelectedIndex(parseInt(id)-1);
+    handleId(parseInt(id));
     console.log(id);
   };
 
