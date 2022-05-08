@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import Avatar from "react-avatar";
 
 import Modal from "../Modal";
 
@@ -57,6 +58,15 @@ const News = () => {
   const [shareId, setShareId] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [openShare, setOpenShare] = useState(false);
+  const [favorites, setFavorites] = useState([]);
+
+  const getArray = JSON.parse(localStorage.getItem("favorites") || "0");
+
+  useEffect(() => {
+    if (getArray !== 0) {
+      setFavorites([...getArray]);
+    }
+  }, []);
 
   const openModal = () => {
     console.log("modal open!");
@@ -66,11 +76,13 @@ const News = () => {
   const clickHandler = (e) => {
     console.log("click");
     const id = e.currentTarget.dataset.id;
+    let ev = e.currentTarget.dataset.event;
+    console.log(ev);
     if (newsId === parseInt(id)) {
-      console.log("sama");
+      // console.log("sama");
       openModal();
     } else {
-      console.log("beda");
+      // console.log("beda");
       // fly to locate in map
       // map.flyTo([lat, lng], 13)
     }
@@ -79,22 +91,27 @@ const News = () => {
   };
 
   const shareHandler = (e) => {
+    e.stopPropagation()
+    // console.log('share click');
     const id = e.currentTarget.dataset.id;
     setShareId(parseInt(id));
-    console.log("share");
+    // console.log("share");
     console.log(id);
     setOpenShare((prev) => !prev);
   };
 
-  const sourceHandler = () => {
-    console.log("source");
+  const sourceHandler = (e) => {
+    e.stopPropagation()
+    // console.log("source");
   };
 
-  const commentHandler = () => {
-    console.log("comment");
+  const commentHandler = (e) => {
+    e.stopPropagation()
+    // console.log('comment click');
+    // console.log("comment");
   };
 
-  console.log(newsId);
+  // console.log(newsId);
 
   const disneyWorldLatLng = [28.3852, -81.5639];
   const disneyLandLatLng = [33.8121, -117.919];
@@ -125,9 +142,33 @@ const News = () => {
     });
   }
 
-  const handleShare = () => {
-    setOpenShare((prev) => !prev);
-  }
+  const addFav = (props) => {
+    // e.stopPropagation()
+    // console.log("tambah favorit");
+    let array = favorites;
+    let addArray = true;
+    array.map((item, key) => {
+      if (item === props.idx) {
+        array.splice(key, 1);
+        addArray = false;
+      }
+    });
+    if (addArray) {
+      array.push(props.idx);
+    }
+    setFavorites([...array]);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    var storage = localStorage.getItem("favItem" + props.idx || "0");
+    if (storage == null) {
+      localStorage.setItem(
+        "favItem" + props.idx,
+        JSON.stringify(props.article)
+      );
+    } else {
+      localStorage.removeItem("favItem" + props.idx);
+    }
+  };
 
   return (
     <>
@@ -167,14 +208,35 @@ const News = () => {
           </div>
         </div>
         {news.map((article, idx) => (
-          <div className="border-b cursor-pointer" key={idx}>
+          <div className="border-b  cursor-pointer" key={idx}>
             <div
               className={`py-3 border-l-4 ${
                 newsId === article.id ? "border-red-500" : "border-white"
               } px-3`}
               data-id={article.id}
+              data-event=""
               onClick={clickHandler}
             >
+              <div className="flex justify-between mb-3 w-full pb-3 border-b ">
+                <div className="flex inline-flex justify-center items-center space-x-3">
+                  <div className="h-8 w-8">
+                    <Avatar name="Wim Mostmans" size="40" round={true} />
+                  </div>
+                  <div className=" font-semibold text-gray-700">
+                    wim mostmans
+                  </div>
+                </div>
+                <div>
+                  <div className="flex inline-flex justify-center items-center space-x-1">
+              
+                    <div className="flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+</svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="flex justify-between">
                 <div className="flex inline-flex justify-center items-center space-x-2">
                   <div className="h-8 w-8">
@@ -184,7 +246,7 @@ const News = () => {
                     15 minutes ago
                   </div>
                 </div>
-                <a href="#" onClick={sourceHandler}>
+                <div onClick={sourceHandler}>
                   <div className="flex inline-flex justify-center items-center space-x-1">
                     <div className="text-xs font-semibold text-gray-800">
                       Source
@@ -201,7 +263,7 @@ const News = () => {
                       </svg>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
               <div className="py-2">
                 <p className="font-light text-gray-700">{article.title}</p>
@@ -217,8 +279,8 @@ const News = () => {
                   <div className="py-3"></div>
                 )}
               </div>
-              <div className="flex justify-between">
-                <a href="#" onClick={commentHandler}>
+              <div className="flex justify-between w-full">
+                <div className="flex w-1/3 cursor-pointer" onClick={commentHandler}>
                   <div className="flex inline-flex justify-center items-center space-x-1">
                     <div className="h-5 w-5">
                       <svg
@@ -240,8 +302,70 @@ const News = () => {
                       Comments
                     </div>
                   </div>
-                </a>
-                <a href="#" onClick={shareHandler} data-id={idx}>
+                </div>
+                {favorites.includes(idx) ? (
+                  <div
+                    onClick={() => addFav({ article, idx })}
+                    data-event="fav"
+                    className="flex w-1/3 text-center justify-center cursor-pointer"
+                  >
+                    <div className="flex inline-flex justify-center items-center space-x-1">
+                      <div className="h-5 w-5 text-rose-500">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div className="text-xs font-semibold text-gray-600">
+                        {""}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    onClick={() => addFav({ article, idx })}
+                    data-event="fav"
+                    className="w-1/3 text-center cursor-pointer"
+                  >
+                    <div className="flex inline-flex justify-center items-center space-x-1">
+                      <div className="h-5 w-5 text-rose-500 ">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div className="text-xs font-semibold text-gray-600">
+                        {""}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div
+                  href="#"
+                  onClick={shareHandler}
+                  data-id={idx}
+                  data-event="share"
+                  className="w-1/3 text-right cursor-pointer"
+                >
                   <div className="flex inline-flex justify-center items-center space-x-1">
                     <div className="text-xs font-semibold text-gray-600">
                       Share
@@ -262,9 +386,8 @@ const News = () => {
                         />
                       </svg>
                     </div>
-                    {
-                      newsId === article.id ? (
-                        <div className="absolute flex z-[20] right-1 rounded-full border items-center justify-between shadow-md">
+                    {shareId === idx ? (
+                      <div className="absolute flex z-[20] right-1 rounded-full border items-center justify-between shadow-md">
                         <a
                           data-id="22436481"
                           className="facebook-icon fb w-12 h-10 p-2 px-3 bg-white items-center rounded-l-2xl"
@@ -284,11 +407,9 @@ const News = () => {
                           </button>
                         </a>
                       </div>
-                      ) : null
-                    }
-                   
+                    ) : null}
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
