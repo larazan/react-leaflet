@@ -1,26 +1,55 @@
+BISNIS
 promote
 discount
 food & beverage
 shop
+barbershop
+bakery
+coffeshop
+laundry
+
+JUAL BELI
+mobil
+motor
+goods / barang2
+
+EVENT
 event
+information
+lowongan
+
+PROPERTY
 house
 tanah / kavling
 rent kos
+apartement
+ruko
+parkir
+
+SPORTS
 sports
-crane
+
+CRIMES
 dead
+loot
 crime
 arrested
-fires
+
+DISASTER
+crane
+fires / kebakaran
 blackout / listrik padam
+air padam
 floods
 volcano
 earthquake
 tsunami
-blocking road
 polution
-road accident
 destroy
 drought
+
+ROAD
+road accident
+blocking road
+jammed / macet
 mobil mogok
-jammed

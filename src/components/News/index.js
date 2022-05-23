@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Avatar from "react-avatar";
+import { Link } from "react-router-dom";
 
 import Modal from "../Modal";
 
@@ -56,11 +57,21 @@ const News = () => {
   const [map, setMap] = useState(null);
   const [newsId, setNewsId] = useState(0);
   const [shareId, setShareId] = useState(0);
+  const [menuId, setMenuId] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [openShare, setOpenShare] = useState(false);
   const [favorites, setFavorites] = useState([]);
+  const [showDrop, setShowDrop] = useState(false);
 
   const getArray = JSON.parse(localStorage.getItem("favorites") || "0");
+
+  const openDrop = (e) => {
+    e.stopPropagation();
+    const id = e.currentTarget.dataset.id;
+    setMenuId(parseInt(id));
+    console.log("open drop");
+    setShowDrop((prev) => !prev);
+  };
 
   useEffect(() => {
     if (getArray !== 0) {
@@ -91,7 +102,7 @@ const News = () => {
   };
 
   const shareHandler = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     // console.log('share click');
     const id = e.currentTarget.dataset.id;
     setShareId(parseInt(id));
@@ -101,12 +112,12 @@ const News = () => {
   };
 
   const sourceHandler = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     // console.log("source");
   };
 
   const commentHandler = (e) => {
-    e.stopPropagation()
+    e.stopPropagation();
     // console.log('comment click');
     // console.log("comment");
   };
@@ -173,7 +184,7 @@ const News = () => {
   return (
     <>
       {/* <div className="w-full max-w-md h-screen overflow-auto flex-none px-0 hidden md:block"> */}
-      <div className="bg-white mt-4">
+      <div className="bg-white mt-4 z-20">
         <div className="flex justify-between space-x-2 pb-2 px-3 border-b">
           <div className="flex flex-wrap w-2/3 items-center hidden md:flex">
             <div className="flex w-full">
@@ -218,22 +229,116 @@ const News = () => {
               onClick={clickHandler}
             >
               <div className="flex justify-between mb-3 w-full pb-3 border-b ">
-                <div className="flex inline-flex justify-center items-center space-x-3">
+                <div className="flex inline-flex justify-center items-center space-x-2">
                   <div className="h-8 w-8">
-                    <Avatar name="Wim Mostmans" size="40" round={true} />
+                    <Avatar name="Wim Mostmans" size="35" round={true} />
                   </div>
                   <div className=" font-semibold text-gray-700">
                     wim mostmans
                   </div>
                 </div>
                 <div>
-                  <div className="flex inline-flex justify-center items-center space-x-1">
-              
+                  <div
+                    className="flex inline-flex justify-center items-center space-x-1"
+                    onClick={openDrop}
+                    data-id={idx}
+                  >
                     <div className="flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-  <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-</svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                      </svg>
                     </div>
+                    {menuId === idx ? (
+                    <div
+                      className={`sm:w-72 md:w-72 ${
+                        showDrop === false ? "hidden" : ""
+                      }  right-1 mt-32 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
+                    >
+                      <div className="py-2">
+                        <ul className="flex-col font-sans items-center justify-center text-sm">
+                          <Link to="">
+                            <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                              <div className="flex items-center space-x-2">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-8 w-8"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth={1}
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                  />
+                                </svg>
+                                <span>Tidak tertarik dengan tweet ini</span>
+                              </div>
+                            </li>
+                          </Link>
+                          <Link to="">
+                            <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                              <div className="flex items-center space-x-2">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-8 w-8"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth={1}
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                                  />
+                                </svg>
+                                <span>Laporkan tweet ini</span>
+                              </div>
+                            </li>
+                          </Link>
+                          <Link to="">
+                            <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                              <div className="flex items-center space-x-2">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-8 w-8"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth={1}
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                  />
+                                </svg>
+                                <span>Tambahkan/hapus dari daftar</span>
+                              </div>
+                            </li>
+                          </Link>
+                          {/* <Link to="">
+                      <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                        <span>Change Language</span>
+                      </li>
+                    </Link>
+                    <Link to="">
+                      <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                        <span>Logout</span>
+                      </li>
+                    </Link> */}
+                        </ul>
+                      </div>
+                    </div>
+                    )
+                    : null }
                   </div>
                 </div>
               </div>
@@ -280,7 +385,10 @@ const News = () => {
                 )}
               </div>
               <div className="flex justify-between w-full">
-                <div className="flex w-1/3 cursor-pointer" onClick={commentHandler}>
+                <div
+                  className="flex w-1/3 cursor-pointer"
+                  onClick={commentHandler}
+                >
                   <div className="flex inline-flex justify-center items-center space-x-1">
                     <div className="h-5 w-5">
                       <svg
@@ -336,7 +444,7 @@ const News = () => {
                     className="w-1/3 text-center cursor-pointer"
                   >
                     <div className="flex inline-flex justify-center items-center space-x-1">
-                      <div className="h-5 w-5 text-rose-500 ">
+                      <div className="h-5 w-5 ">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5"

@@ -16,6 +16,8 @@ import Coba from "./pages/Coba";
 import Dashboard from "./pages/Dashboard";
 import Submit from "./pages/Submit";
 import Cabinet from "./pages/Cabinet";
+import Filter from "./pages/Filter";
+import Pricing from "./pages/Pricing";
 
 import "./App.css";
 
@@ -36,6 +38,8 @@ function App() {
           <Route path="submit" element={<Submit />} />
           <Route path="coba" element={<Coba />} />
           <Route path="cabinet" element={<Cabinet />} />
+          <Route path="filter" element={<Filter />} />
+          <Route path="pricing" element={<Pricing />} />
         </Routes>
       </Layout>
      

@@ -1,0 +1,542 @@
+[
+    {
+        "city": "Jakarta", 
+        "city_id": 3171,
+        "province": "Jakarta",
+        "province_id": 31,
+        "location": {
+            "lat": "-6.200000",
+            "lng": "106.816666"
+        },
+        "population": "9607787"
+    },
+    {
+        "city": "Surabaya", 
+        "city_id": 3578,
+        "province": "Jawa Timur",
+        "province_id": 35,
+        "location": {
+            "lat": "-7.250445",
+            "lng": "112.768845"
+        },
+        "population": "2765487"
+    },
+    {
+        "city": "Bandung", 
+        "city_id": 3273,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-6.914864",
+            "lng": "107.608238"
+        },
+        "population": "2394873"
+    },
+    {
+        "city": "Bekasi", 
+        "city_id": 3275,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-6.241586",
+            "lng": "106.992416"
+        },
+        "population": "2334871"
+    },
+    {
+        "city": "Medan", 
+        "city_id": 1271,
+        "province": "Sumatera Utara",
+        "province_id": 12,
+        "location": {
+            "lat": "3.597031",
+            "lng": "98.678513"
+        },
+        "population": "2970032"
+    },
+    {
+        "city": "Semarang", 
+        "city_id": 3374,
+        "province": "Jawa Tengah",
+        "province_id": 33,
+        "location": {
+            "lat": "-6.966667",
+            "lng": "110.416664"
+        },
+        "population": "1890984"
+    },
+    {
+        "city": "Tangerang", 
+        "city_id": 3671,
+        "province": "Banten",
+        "province_id": 36,
+        "location": {
+            "lat": "-6.178306",
+            "lng": "106.631889"
+        },
+        "population": "1798601"
+    },
+    {
+        "city": "Depok", 
+        "city_id": 3276,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-6.385589",
+            "lng": "106.830711"
+        },
+        "population": "1738570"
+    },
+    {
+        "city": "Palembang", 
+        "city_id": 1671,
+        "province": "Sumatera Selatan",
+        "province_id": 16,
+        "location": {
+            "lat": "-2.990934",
+            "lng": "104.756554"
+        },
+        "population": "1489250"
+    },
+    {
+        "city": "Makassar", 
+        "city_id": 7371,
+        "province": "Sulawesi Selatan",
+        "province_id": 73,
+        "location": {
+            "lat": "-5.135399",
+            "lng": "119.423790"
+        },
+        "population": "1336663"
+    },
+    {
+        "city": "Pekanbaru", 
+        "city_id": 1471,
+        "province": "Riau",
+        "province_id": 14,
+        "location": {
+            "lat": "0.510440",
+            "lng": "101.438309"
+        },
+        "population": "1290890"
+    },
+    {
+        "city": "Tangerang Selatan", 
+        "city_id": 3674,
+        "province": "Banten",
+        "province_id": 36,
+        "location": {
+            "lat": "-6.283522",
+            "lng": "106.711293"
+        },
+        "population": "1290322"
+    },
+    {
+        "city": "Bogor", 
+        "city_id": 3271,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-6.595038",
+            "lng": "106.816635"
+        },
+        "population": "950334"
+    },
+    {
+        "city": "Batam", 
+        "city_id": 2171,
+        "province": "Kepulauan Riau",
+        "province_id": 21,
+        "location": {
+            "lat": "1.082828",
+            "lng": "104.030457"
+        },
+        "population": "944285"
+    },
+    {
+        "city": "Bandar Lampung", 
+        "city_id": 1871,
+        "province": "Lampung",
+        "province_id": 18,
+        "location": {
+            "lat": "-5.450000",
+            "lng": "105.266670"
+        },
+        "population": "881801"
+    },
+    {
+        "city": "Padang", 
+        "city_id": 1371,
+        "province": "Sumatera Barat",
+        "province_id": 13,
+        "location": {
+            "lat": "-0.9556",
+            "lng": "100.3606"
+        },
+        "population": "853562"
+    },
+    {
+        "city": "Malang", 
+        "city_id": 3573,
+        "province": "Jawa Timur",
+        "province_id": 35,
+        "location": {
+            "lat": "-7.983908",
+            "lng": "112.621391"
+        },
+        "population": "820243"
+    },
+    {
+        "city": "Denpasar", 
+        "city_id": 5171,
+        "province": "Bali",
+        "province_id": 51,
+        "location": {
+            "lat": "-8.650000",
+            "lng": "115.216667"
+        },
+        "population": "788589"
+    },
+    {
+        "city": "Samarinda", 
+        "city_id": 6472,
+        "province": "Kalimantan Timur",
+        "province_id": 64,
+        "location": {
+            "lat": "-0.502106",
+            "lng": "117.153709"
+        },
+        "population": "727500"
+    },
+    {
+        "city": "Balikpapan", 
+        "city_id": 6471,
+        "province": "Kalimantan Timur",
+        "province_id": 64,
+        "location": {
+            "lat": "-1.269160",
+            "lng": "116.825264"
+        },
+        "population": "639031"
+    },
+    {
+        "city": "Banjarmasin", 
+        "city_id": 6371,
+        "province": "Kalimantan Selatan",
+        "province_id": 63,
+        "location": {
+            "lat": "-3.316694",
+            "lng": "114.590111"
+        },
+        "population": "637282"
+    },
+    {
+        "city": "Serang", 
+        "city_id": 3673,
+        "province": "Banten",
+        "province_id": 36,
+        "location": {
+            "lat": "-6.120000",
+            "lng": "106.150276"
+        },
+        "population": "577785"
+    },
+    {
+        "city": "Pontianak", 
+        "city_id": 6171,
+        "province": "Kalimantan Barat",
+        "province_id": 61,
+        "location": {
+            "lat": "0.000000",
+            "lng": "109.333336"
+        },
+        "population": "554764"
+    },
+    {
+        "city": "Cimahi", 
+        "city_id": 3277,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-6.899541",
+            "lng": "107.533867"
+        },
+        "population": "541177"
+    },
+    {
+        "city": "Tasikmalaya", 
+        "city_id": 3278,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-7.319563",
+            "lng": "108.202972"
+        },
+        "population": "625481"
+    },
+    {
+        "city": "Jambi", 
+        "city_id": 1571,
+        "province": "Jambi",
+        "province_id": 15,
+        "location": {
+            "lat": "-1.609972",
+            "lng": "103.607254"
+        },
+        "population": "531857"
+    },
+    {
+        "city": "Surakarta", 
+        "city_id": 3372,
+        "province": "Jawa Tengah",
+        "province_id": 33,
+        "location": {
+            "lat": "7.5755",
+            "lng": "110.8243"
+        },
+        "population": "499337"
+    },
+    {
+        "city": "Manado", 
+        "city_id": 7171,
+        "province": "Sulawesi Utara",
+        "province_id": 71,
+        "location": {
+            "lat": "1.474830",
+            "lng": "124.842079"
+        },
+        "population": "410481"
+    },
+    {
+        "city": "Mataram", 
+        "city_id": 5271,
+        "province": "Nusa Tenggara Barat",
+        "province_id": 52,
+        "location": {
+            "lat": "-8.5833",
+            "lng": "116.1167"
+        },
+        "population": "402843"
+    },
+    {
+        "city": "Yogyakarta", 
+        "city_id": 3471,
+        "province": "DI Yogyakarta",
+        "province_id": 34,
+        "location": {
+            "lat": "-7.8014",
+            "lng": "110.3644"
+        },
+        "population": "388627"
+    },
+    {
+        "city": "Cilegon", 
+        "city_id": 3672,
+        "province": "Banten",
+        "province_id": 36,
+        "location": {
+            "lat": "-6.017312",
+            "lng": "106.04682"
+        },
+        "population": "374559"
+    },
+    {
+        "city": "Palu", 
+        "city_id": 7271,
+        "province": "Sulawesi Tengah",
+        "province_id": 72,
+        "location": {
+            "lat": "-0.8950",
+            "lng": "119.8594"
+        },
+        "population": "336532"
+    },
+    {
+        "city": "Kupang", 
+        "city_id": 5371,
+        "province": "Nusa Tenggara Timur",
+        "province_id": 53,
+        "location": {
+            "lat": "-10.1633",
+            "lng": "123.5778"
+        },
+        "population": "336239"
+    },
+    {
+        "city": "Ambon", 
+        "city_id": 8171,
+        "province": "Maluku",
+        "province_id": 81,
+        "location": {
+            "lat": "-3.7050",
+            "lng": "128.1700"
+        },
+        "population": "331254"
+    },
+    {
+        "city": "Bengkulu", 
+        "city_id": 1771,
+        "province": "Bengkulu",
+        "province_id": 17,
+        "location": {
+            "lat": "-3.7956",
+            "lng": "102.2592"
+        },
+        "population": "329071"
+    },
+    {
+        "city": "Cirebon", 
+        "city_id": 3274,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-6.737246",
+            "lng": "108.550659"
+        },
+        "population": "296389"
+    },
+    {
+        "city": "Kendari", 
+        "city_id": 7471,
+        "province": "Sulawesi Tenggara",
+        "province_id": 74,
+        "location": {
+            "lat": "-3.972201",
+            "lng": "122.514900"
+        },
+        "population": "289966"
+    },
+    {
+        "city": "Sukabumi", 
+        "city_id": 3272,
+        "province": "Jawa Barat",
+        "province_id": 32,
+        "location": {
+            "lat": "-6.923700",
+            "lng": "106.928726"
+        },
+        "population": "281434"
+    },
+    {
+        "city": "Kediri", 
+        "city_id": 3571,
+        "province": "Jawa Timur",
+        "province_id": 35,
+        "location": {
+            "lat": "-7.822840",
+            "lng": "112.011864"
+        },
+        "population": "268507"
+    },
+    {
+        "city": "Pekalongan", 
+        "city_id": 3375,
+        "province": "Jawa Tengah",
+        "province_id": 33,
+        "location": {
+            "lat": "-6.888701",
+            "lng": "109.668289"
+        },
+        "population": "263921"
+    },
+    {
+        "city": "Jayapura", 
+        "city_id": 9171,
+        "province": "Papua",
+        "province_id": 91,
+        "location": {
+            "lat": "-2.5333",
+            "lng": "140.7167"
+        },
+        "population": "256705"
+    },
+    {
+        "city": "Dumai", 
+        "city_id": 1472,
+        "province": "Riau",
+        "province_id": 14,
+        "location": {
+            "lat": "1.694394",
+            "lng": "101.445007"
+        },
+        "population": "253803"
+    },
+    {
+        "city": "Binjai", 
+        "city_id": 1275,
+        "province": "Sumatera Utara",
+        "province_id": 12,
+        "location": {
+            "lat": "3.598401",
+            "lng": "98.489166"
+        },
+        "population": "246154"
+    },
+    {
+        "city": "Tegal", 
+        "city_id": 3376,
+        "province": "Jawa Tengah",
+        "province_id": 33,
+        "location": {
+            "lat": "-6.879704",
+            "lng": "109.125595"
+        },
+        "population": "239599"
+    },
+    {
+        "city": "Pematangsiantar", 
+        "city_id": 1272,
+        "province": "Sumatera Utara",
+        "province_id": 12,
+        "location": {
+            "lat": "2.970042",
+            "lng": "99.068169"
+        },
+        "population": "234698"
+    },
+    {
+        "city": "Banda Aceh", 
+        "city_id": 1171,
+        "province": "Aceh",
+        "province_id": 11,
+        "location": {
+            "lat": "5.548290",
+            "lng": "95.323753"
+        },
+        "population": "223446"
+    },
+    {
+        "city": "Palangkaraya", 
+        "city_id": 6271,
+        "province": "Kalimantan Tengah",
+        "province_id": 62,
+        "location": {
+            "lat": "2.2100",
+            "lng": "113.9200"
+        },
+        "population": "220962"
+    },
+    {
+        "city": "Probolinggo", 
+        "city_id": 3574,
+        "province": "Jawa Timur",
+        "province_id": 35,
+        "location": {
+            "lat": "-7.756928",
+            "lng": "113.211502"
+        },
+        "population": "217062"
+    },
+    {
+        "city": "Lubuklinggau", 
+        "city_id": 1673,
+        "province": "Sumatera Selatan",
+        "province_id": 16,
+        "location": {
+            "lat": "-3.281100",
+            "lng": "102.910988"
+        },
+        "population": "200308"
+    }
+]
+
