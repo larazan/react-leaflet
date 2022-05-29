@@ -92,8 +92,8 @@ const ContentNews = ({ news, handleOnFlyTo, selected, setSelected, setSelectedIn
 
   return (
     <>
-      <div className="w-full max-w-md  h-screen overflow-auto flex-none px-0 hidden md:block custom-scrollbar">
-        <div className="bg-white mt-20">
+      <div className="w-full max-w-md  h-screen overflow-auto flex-none px-0 hidden2 md:block custom-scrollbar">
+        <div className="bg-white mt-10 md:mt-20">
           <div className="flex justify-between space-x-2 pb-2 px-3 border-b">
             <div className="flex flex-wrap w-2/3 items-center hidden md:flex">
               <div className="flex w-full">

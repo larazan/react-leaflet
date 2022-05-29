@@ -49,7 +49,7 @@ const Content = () => {
     <>
       <main>
         <div className="md:flex md:flex-no-wrap">
-          <div className="flex z-0 outline-0 relative lg:w-4/5 md:w-3/5 ">
+          <div className="flex z-0 outline-0 relative hidden md:flex lg:w-4/5 md:w-3/5 ">
             <MapContainer
               center={center}
               zoom={ZOOM_LEVEL}
@@ -75,7 +75,7 @@ const Content = () => {
               <MiniMap position="bottomright"  />
             </MapContainer>
           </div>
-          <div className="flex w-2/5">
+          <div className="flex w-full md:w-2/5">
             <ContentNews 
               news={news} 
               handleOnFlyTo={handleOnFlyTo} 
