@@ -104,7 +104,7 @@ const Modal2 = ({ showModal, closeModal }) => {
               </svg>
             </button>
           </div>
-          <div className="absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-8/12 lg:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none">
+          <div className="absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-full md:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none">
             <div className="flex justify-end py-2 px-2 md:hidden lg:hidden">
               <button className="h-8 w-8">
                 <svg

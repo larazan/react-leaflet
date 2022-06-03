@@ -228,13 +228,22 @@ const News = () => {
               data-event=""
               onClick={clickHandler}
             >
-              <div className="flex justify-between mb-3 w-full pb-3 border-b ">
-                <div className="flex inline-flex justify-center items-center space-x-2">
-                  <div className="h-8 w-8">
-                    <Avatar name="Wim Mostmans" size="35" round={true} />
+              <div className="flex justify-between mb-3 w-full pb-1 border-b2 ">
+                <div className="flex inline-flex justify-center items-center space-x-3">
+                  <div className="h-9 w-9">
+                    <Avatar name="Wim Mostmans" size="41" round={true} />
                   </div>
-                  <div className=" font-semibold text-gray-700">
-                    wim mostmans
+                  <div className="flex flex-col">
+                    <span className="text-[13px] font-semibold text-gray-600 capitalize">wim mostmans</span>
+                    <div className="flex inline-flex justify-center items-center space-x-1">
+                      <div className="h-6 w-6">
+                        <img src={getIcon(article.icon)} alt="" />
+                      </div>
+                      <div className="text-xs font-semibold text-gray-400">
+                        15 minutes ago
+                      </div>
+                    </div>
+                    
                   </div>
                 </div>
                 <div>
@@ -342,7 +351,7 @@ const News = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between">
+              {/* <div className="flex justify-between">
                 <div className="flex inline-flex justify-center items-center space-x-2">
                   <div className="h-8 w-8">
                     <img src={getIcon(article.icon)} alt="" />
@@ -369,7 +378,7 @@ const News = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="py-2">
                 <p className="font-light text-gray-700">{article.title}</p>
                 {article.images ? (

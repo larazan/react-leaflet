@@ -58,7 +58,7 @@ const IconList = ({ icon }) => {
       onMouseLeave={deactivate}
       onClick={activate}
     >
-      <h3 id={`${icon.name}-name`}>{icon.name}</h3>
+      {/* <h3 id={`${icon.name}-name`}>{icon.name}</h3> */}
       <div className="relative mb-3 h-24">
         <button
           type="button"
@@ -82,6 +82,7 @@ const IconList = ({ icon }) => {
             {icon.svg}
           </svg>
         </button>
+        <h3 className="pt-3" id={`${icon.name}-name`}>{icon.name}</h3>
       </div>
     </li>
   );

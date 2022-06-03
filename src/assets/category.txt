@@ -3,14 +3,25 @@ promote
 discount
 food & beverage
 shop
+hawker
 barbershop
 bakery
 coffeshop
 laundry
+jasa
+ooh / media luar ruangan / baliho
 
 JUAL BELI
 mobil
 motor
+elektronik / game
+toys
+furniture
+kosmetik
+clothing
+baby
+grocery
+kesehatan / obat
 goods / barang2
 
 EVENT
@@ -18,16 +29,28 @@ event
 information
 lowongan
 
+News
+news
+politik
+ekonomi / bisnis
+teknologi
+edukasi
+kesehatan
+lifestyle
+otomotif
+sports
+game
+movie / cinema
+entertainment
+
 PROPERTY
 house
+warehouse
 tanah / kavling
-rent kos
+indekos
 apartement
 ruko
 parkir
-
-SPORTS
-sports
 
 CRIMES
 dead
@@ -47,6 +70,9 @@ tsunami
 polution
 destroy
 drought
+landslide
+tornado
+storm
 
 ROAD
 road accident

@@ -120,25 +120,7 @@ const IconsContainer = () => {
           className="col-start-1 row-start-2"
         />
       </section>
-      <section className="contents">
-        <header className="col-start-2 row-start-1 flex flex-wrap items-baseline">
-          <h2 className="flex-none text-lg leading-6 font-medium text-gray-900 mr-3">
-            Solid
-          </h2>
-          <p className="hidden sm:block flex-auto text-gray-400 text-sm leading-5 font-medium">
-            Solid fill, 20x20 bounding box
-          </p>
-          <p className="hidden sm:block flex-none w-full text-sm leading-5 mt-3">
-            For buttons, form elements, and to support text, designed to be
-            rendered at 20x20.
-          </p>
-        </header>
-        <Icons
-          icons={iconsSmall}
-          filter={filter}
-          className="col-start-2 row-start-2"
-        />
-      </section>
+     
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
     </div>
   );
