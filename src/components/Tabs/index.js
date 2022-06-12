@@ -4,15 +4,23 @@ import { Link } from "react-router-dom";
 import Region from "../Region";
 import Key from "../Key";
 import News from "../News";
+import ContentNews from "../ContentNews";
 
-const Tabs = () => {
+const Tabs = ({
+  news,
+  handleOnFlyTo,
+  selected,
+  setSelected,
+  setSelectedIndex,
+  handleId,
+}) => {
   const [openTab, setOpenTab] = useState(1);
   const [color, setColor] = useState("green");
   return (
     <>
-      <div className="relative w-full max-w-md z-30 h-screen overflow-auto flex-none px-0 hidden md:block custom-scrollbar">
+      <div className="relative w-full max-w-md z-10 md:z-30 h-screen overflow-auto flex-none px-0 hidden2 md:block custom-scrollbar">
        
-          <div className="w-full ">
+          <div className="w-full hidden md:block">
             <ul
               className="fixed flex mb-0 list-none flex-wrap2 flex-row2 border-b bg-white"
               role="tablist"
@@ -208,10 +216,17 @@ const Tabs = () => {
             </ul>
           </div>
           <div className="static flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg  h-screen">
-            <div className="px-41 py-51 flex-auto mt-12">
+            <div className="px-41 py-51 flex-auto mt-0 md:mt-12">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <News />
+                  <ContentNews 
+                    news={news} 
+                    handleOnFlyTo={handleOnFlyTo} 
+                    selected={selected} 
+                    setSelected={setSelected} 
+                    setSelectedIndex={setSelectedIndex} 
+                    handleId={handleId}
+                  />
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <Region />

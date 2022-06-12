@@ -9,6 +9,7 @@ import L from "leaflet";
 
 import ContentNews from "../components/ContentNews";
 import RenderMarker from "../components/RenderMarker";
+import Tabs from "../components/Tabs";
 import MiniMap from "../components/MiniMap";
 
 import news from "../assets/data/news.json";
@@ -75,8 +76,8 @@ const Content = () => {
               <MiniMap position="bottomright"  />
             </MapContainer>
           </div>
-          <div className="flex w-full md:w-2/5">
-            <ContentNews 
+          <div className="md:w-2/5">
+            <Tabs 
               news={news} 
               handleOnFlyTo={handleOnFlyTo} 
               selected={selected} 

@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "name": "Tommy M. Fraga",
         "category": "news",
         "coordinates" : [ 
             -7.2532799, 112.7425691
@@ -16,6 +17,7 @@
     },
     {
         "id": 2,
+        "name": "Laurence R. Jones",
         "category": "news",
         "coordinates" : [ 
             -7.2692552, 112.6737247
@@ -31,6 +33,7 @@
     },
     {
         "id": 3,
+        "name": "Angela J. Henry",
         "category": "news",
         "coordinates" : [ 
             -7.3182376, 112.7536991
@@ -46,6 +49,7 @@
     },
     {
         "id": 4,
+        "name": "Florence M. Nimmons",
         "category": "news",
         "coordinates" : [ 
             -7.2172264, 112.7567751
@@ -69,6 +73,32 @@
         "slug": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-sed-do-eiusmod-tempor-incididunt-ut-labore-et-dolore-magna-aliqua-ut-enim-ad-minim-veniam-quis-nostrud-exercitation-ullamco-laboris-nisi-ut-aliquip-ex-ea-commodo-consequat-duis-aute-irure-dolor-in-reprehenderit-in-voluptate-velit-esse-cillum-dolore-eu-fugiat-nulla-pariatur-excepteur-sint-occaecat-cupidatat-non-proident-sunt-in-culpa-qui-officia-deserunt-mollit-anim-id-est-laborum",
         "images": "",
         "tags": ["ukraine", "war", "russia", "belarus"],
+        "icon": "explodeIcon",
+        "created_at": "2022-02-27T12:59-0500"
+    },
+    {
+        "id": 6,
+        "category": "news",
+        "coordinates" : [-7.448433, 112.688480],
+        "lat": "-7.448433",
+        "lng": "112.688480",
+        "title": "14.55: Info awal kecelakaan truk terguling di KM 763.200 Tol Porong-Sidoarjo. Posisi truk terguling di lajur kanan. Saat ini sedang proses evakuasi. Data lengkap belum diketahui. (odp-tm)",
+        "slug": "1455-info-awal-kecelakaan-truk-terguling-di-km-763200-tol-porong-sidoarjo-posisi-truk-terguling-di-lajur-kanan-saat-ini-sedang-proses-evakuasi-data-lengkap-belum-diketahui-odp-tm",
+        "images": "",
+        "tags": ["kecelakaan", "sidoarjo"],
+        "icon": "explodeIcon",
+        "created_at": "2022-02-27T12:59-0500"
+    },
+    {
+        "id": 7,
+        "category": "news",
+        "coordinates" : [-7.281933, 112.738939],
+        "lat": "-7.281933",
+        "lng": "112.738939",
+        "title": "Info BMKG Peringatan dini cuaca Jawa Timur, 9-11 Juni 2022. Waspadai hujan intensitas sedang hingga lebat disertai petir dan angin kencang sesaat.",
+        "slug": "info-bmkg-peringatan-dini-cuaca-jawa-timur-9-11-juni-2022-waspadai-hujan-intensitas-sedang-hingga-lebat-disertai-petir-dan-angin-kencang-sesaat",
+        "images": "",
+        "tags": ["peringatan", "bmkg"],
         "icon": "explodeIcon",
         "created_at": "2022-02-27T12:59-0500"
     }

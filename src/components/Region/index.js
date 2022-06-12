@@ -40,13 +40,13 @@ const Region = () => {
         </div>
 
         <div className="border-b cursor-pointer">
-          <div className="py-3 px-3">
+          <div className="mt-2 mb-4">
             <div className="py-2">
               <div className="flex flex-wrap text-lg font-light text-blue-500">
-                <ul className="px-2 w-full">
+                <ul className=" w-full">
                   {provinces.map((provinsi, index) => (
                     <li
-                      className="py-1 px-2 hover:bg-gray-200 capitalize"
+                      className="py-1 px-5 hover:bg-gray-200 capitalize"
                       key={index}
                     >
                       <a href="#" title="{provinsi.name}">
@@ -58,6 +58,13 @@ const Region = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="px-3 py-5 text-center">
+          <a href>
+            <span className="text-blue-400 font-semibold capitalize cursor-pointer">
+              call for further information
+            </span>
+          </a>
         </div>
       </div>
       {/* </div> */}

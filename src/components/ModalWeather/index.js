@@ -50,9 +50,9 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
     <>
       {showWeather ? (
         <div
-          className="main-modal fixed w-full h-full inset-0 z-20 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
-          // style={{ background: `rgba(12,15,19,.9)` }}
-          style={{ background: `rgba(251,251,251,.9)` }}
+          className="main-modal fixed w-full h-full inset-0 z-40 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
+          style={{ background: `rgba(12,15,19,.7)` }}
+          // style={{ background: `rgba(251,251,251,.9)` }}
           id="my-modal"
         >
           <div className="fixed md:px-2 md:py-2 lg:px-2 lg:py-2 top-2 md:top-3 lg:top-3 xl:top-3 left-2">
@@ -73,7 +73,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
               </svg>
             </button>
           </div>
-          <div className="absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-8/12 lg:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none">
+          <div className="absolute sm:mt-0 md:mt-28 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-8/12 lg:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none">
             <div className="flex justify-end py-2 px-2 md:hidden lg:hidden">
               <button className="h-8 w-8">
                 <svg

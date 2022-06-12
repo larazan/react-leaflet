@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 import imgCar from "../../assets/icons/download.svg";
 import imgExplode from "../../assets/icons/exploison.svg";
 import imgRifle from "../../assets/icons/rifle.svg";
 import imgKilled from "../../assets/icons/killed.svg";
 
-const RenderIcon = ({ ic }) => {
 
+const RenderIcon = ({ ic }) => {
   const getIcon = (iconName) => {
     let mapIcon = "";
     switch (iconName) {
@@ -26,12 +26,11 @@ const RenderIcon = ({ ic }) => {
     return mapIcon;
   };
 
-  
   return (
     <>
-    <img src={getIcon(ic)} alt="" />
+      <img src={getIcon(ic)} alt="" />
     </>
-  )
-}
+  );
+};
 
-export default RenderIcon
+export default RenderIcon;

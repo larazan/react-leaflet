@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { LocationMarkerIcon } from '@heroicons/react/outline';
 
+import cloudy from "../../assets/images/v2/02d.png";
+
 const Weather = ({ clickWeather }) => {
     const [info, setInfo] = useState({});
 
@@ -29,12 +31,15 @@ const Weather = ({ clickWeather }) => {
 
   return (
     <>
-    <div className="flex items-center space-x-1 cursor-pointer" onClick={clickWeather}>
+    <div className="flex items-center space-x-1 cursor-pointer px-2 border-white bg-gray-100 hover:bg-gray-100" onClick={clickWeather}>
             {/* <div className="text-xl font-bold">20 C</div> */}
-            <div className="flex-col justify-items-end text-right">
-              <div className="font-bold"><span>{info.temp?.current}{' '}&#176;C</span></div>
+            <div className="flex-col justify-items-end text-right ">
+              <div className='h-7 w-7'>
+                <img src={cloudy} alt='' />
+              </div>
+              <div className="text-xs font-semibold"><span>{info.temp?.current}{' '}&#176;C</span></div>
 
-              <div className="flex text-xs space-x-1 justify-center items-center">
+              {/* <div className="flex text-xs space-x-1 justify-center items-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-3 w-3"
@@ -48,7 +53,7 @@ const Weather = ({ clickWeather }) => {
                   />
                 </svg>
                 <span className="font-semibold">Surabaya</span>
-              </div>
+              </div> */}
             </div>
           </div>
     </>

@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Avatar from "react-avatar";
+import { Link } from "react-router-dom";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 
 import Comments from "../Comments";
 import ModalGallery from "../ModalGallery";
@@ -37,6 +39,16 @@ const getImage = (imgName) => {
 const Modal2 = ({ showModal, closeModal }) => {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [showDrop, setShowDrop] = useState(false);
+
+  const ref = useRef();
+  useOnClickOutside(ref, () => setShowDrop(false));
+
+  const openDrop = (e) => {
+    e.stopPropagation();
+    console.log("open drop");
+    setShowDrop((prev) => !prev);
+  };
 
   const handleClick = () => {
     setCurrentIndex(1);
@@ -81,7 +93,7 @@ const Modal2 = ({ showModal, closeModal }) => {
     <>
       {showModal ? (
         <div
-          className="main-modal fixed w-full h-full inset-0 z-20 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
+          className="main-modal fixed w-full h-full inset-0 z-30 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
           // style={{ background: `rgba(12,15,19,.9)` }}
           style={{ background: `rgba(251,251,251,.9)` }}
           id="my-modal"
@@ -106,7 +118,7 @@ const Modal2 = ({ showModal, closeModal }) => {
           </div>
           <div className="absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-full md:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none">
             <div className="flex justify-end py-2 px-2 md:hidden lg:hidden">
-              <button className="h-8 w-8">
+              <button className="h-8 w-8" onClick={() => closeModal(false)}>
                 <svg
                   className="h-8 w-8 font-bold"
                   xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +173,7 @@ const Modal2 = ({ showModal, closeModal }) => {
                     </div>
                   </div>
                   <div
-                    className="px-2 py-2 text-blue-500 inline-flex items-center hover:text-blue-700 cursor-pointer"
+                    className="px-2 py-2 text-blue-500 inline-flex items-center hover:text-blue-700 cursor-pointer hidden md:block"
                     title="facebook"
                   >
                     <svg
@@ -181,7 +193,7 @@ const Modal2 = ({ showModal, closeModal }) => {
                 </div>
               </div>
 
-              <div className="flex w-full2 space-x-2 justify-between md:justify-end lg:justify-end">
+              <div className="flex w-full2 space-x-2 justify-between md:justify-end lg:justify-end hidden md:block">
                 <div
                   className="bg-white px-2 py-2 font-extralight text-gray-500 border border-blue-600 inline-flex items-center rounded-full hover:border-white-100 hover:bg-blue-600 hover:text-white cursor-pointer"
                   title="facebook"
@@ -219,7 +231,101 @@ const Modal2 = ({ showModal, closeModal }) => {
                     15 minutes ago
                   </div>
                 </div>
-                <a href="#">
+                <div>
+                <div
+                      className="flex inline-flex justify-center items-center space-x-1"
+                      onClick={openDrop}
+                      
+                    >
+                      <div className="flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-6 w-6"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                        </svg>
+                      </div>
+                      {showDrop && (
+                        <div
+                          ref={ref}
+                          className={`sm:w-72 md:w-72 ${
+                            showDrop === false ? "hidden" : ""
+                          }  right-4 mt-24 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
+                        >
+                          <div className="py-2">
+                            <ul className="flex-col font-sans items-center justify-center text-sm">
+                              <Link to="">
+                                <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                                  <div className="flex items-center space-x-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      className="h-8 w-8"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      strokeWidth={1}
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                      />
+                                    </svg>
+                                    <span>Tidak tertarik dengan tweet ini</span>
+                                  </div>
+                                </li>
+                              </Link>
+                              <Link to="">
+                                <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                                  <div className="flex items-center space-x-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      className="h-8 w-8"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      strokeWidth={1}
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                                      />
+                                    </svg>
+                                    <span>Laporkan tweet ini</span>
+                                  </div>
+                                </li>
+                              </Link>
+                              <Link to="">
+                                <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                                  <div className="flex items-center space-x-2">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      className="h-8 w-8"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                      strokeWidth={1}
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                      />
+                                    </svg>
+                                    <span>Tambahkan/hapus dari daftar</span>
+                                  </div>
+                                </li>
+                              </Link>
+                            </ul>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                </div>
+                {/* <a href="#">
                   <div className="flex inline-flex justify-center items-center space-x-1">
                     <div className="text-sm font-semibold text-gray-800">
                       Source
@@ -236,10 +342,10 @@ const Modal2 = ({ showModal, closeModal }) => {
                       </svg>
                     </div>
                   </div>
-                </a>
+                </a> */}
               </div>
               <div className="py-2 pb-2">
-                <p className="text-lg font-semibold text-gray-700 text-justify2">
+                <p className="text-lg font-semibold text-gray-700 text-justify2 pb-2">
                   Graha Family minimalis siap huni dkt Citraland Pakuwon Indah
                   Dian Istana
                 </p>
