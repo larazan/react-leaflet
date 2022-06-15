@@ -12,6 +12,8 @@ import RenderIcon from "../RenderIcon";
 import imag from "../../assets/images/22399054_0.jpg";
 import imag2 from "../../assets/images/22399259_0.jpg";
 import imag3 from "../../assets/images/22399192_0.jpg";
+import bakery from "../../assets/images/bakery.jpg";
+import bmkg from "../../assets/images/bmkg.jpg";
 import twitter from "../../assets/images/twitter.svg";
 import facebook from "../../assets/images/facebook.svg";
 
@@ -26,6 +28,12 @@ const getImage = (imgName) => {
       break;
     case "imag3":
       imgNews = imag3;
+      break;
+    case "bakery":
+      imgNews = bakery;
+      break;
+    case "bmkg":
+      imgNews = bmkg;
       break;
   }
 
@@ -159,6 +167,10 @@ const ContentNews = ({
       localStorage.removeItem("favItem" + props.idx);
     }
   };
+
+  const replaceWithBr = (title) => {
+    return title.replace(/\n/g, "<br />")
+  }
 
   return (
     <>
@@ -384,7 +396,15 @@ const ContentNews = ({
                   </a> */}
               </div>
               <div className="py-2">
-                <p className="font-light text-gray-700">{article.title}</p>
+                {/* <div className="font-light text-gray-700">
+                  {
+                    article.title.split('\n').map(e => <p>{e}</p>)
+                  }
+                </div> */}
+                <div
+                  dangerouslySetInnerHTML={{__html: replaceWithBr(article.title)}}
+                  className="font-light text-gray-700"
+                />
                 {article.images ? (
                   <div className="py-2">
                     <img

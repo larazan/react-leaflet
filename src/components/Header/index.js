@@ -5,6 +5,7 @@ import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import Autocomplete from "../Autocomplete";
 import Weather from "../Weather";
 import ModalWeather from "../WeatherModal";
+import Filter from "../Filter";
 
 import compass from "../../assets/icons/compass.svg";
 
@@ -13,6 +14,11 @@ const Header = () => {
   const [showWeather, setShowWeather] = useState(false);
   const [showUserDrop, setShowUserDrop] = useState(false);
   const [showSearchDrop, setShowSearchDrop] = useState(false);
+  const [filOpen, setFilOpen] = useState(false);
+
+  const filToggle = () => {
+    setFilOpen(!filOpen);
+  };
 
   const ref = useRef();
   useOnClickOutside(ref, () => setShowUserDrop(false));
@@ -38,7 +44,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="z-20 h-10 md:h-14 w-screen absolute md:top-0 m-1 md:m-0 px-4 md:px-5 py-2 md:py-3 flex items-center justify-between bg-white border-b">
+      <header className="z-20 h-10 md:h-14 w-screen absolute top-0 md:top-0 m-0 md:m-0 px-4 md:px-5 py-2 md:py-3 flex items-center justify-between bg-white border-b">
         <div className="flex w-full md:w-3/5 justify-between">
           <div className="flex justify-between inline-flex w-full md:w-[100px]">
             {/* <button className="h-8 w-8 md:hidden">
@@ -133,20 +139,74 @@ const Header = () => {
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
-              
             </button>
             {showSearchDrop && (
-                <div
-                  
-                  className={`w-full md:w-72 ${
-                    showSearchDrop === false ? "hidden" : ""
-                  }  right-0 mt-9 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
-                >
-                  <div className="py-2">
-                   search
+              <div
+                className={`w-full md:w-72 ${
+                  showSearchDrop === false ? "hidden" : ""
+                }  right-0 mt-9 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
+              >
+                <div className="flex py-1.5 px-2 space-x-3">
+                  <div className="w-full relative text-gray-600 border-2 border-gray-500/100">
+                    <input
+                      type="search"
+                      name="serch"
+                      placeholder="Search"
+                      className="w-full bg-white h-8 px-2 pr-10 text-sm focus:outline-none"
+                    />
+                    <button
+                      type="submit"
+                      className="absolute right-0 top-0 mt-2 mr-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={1}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
+                    </button>
                   </div>
+                  <button onClick={filToggle}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 transform rotate-90"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                      />
+                    </svg>
+                  </button>
+                  <button onClick={openSearchDrop}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
                 </div>
-              )}
+              </div>
+            )}
             <button className="h-8 w-8 md:hidden" onClick={openUserDrop}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -275,6 +335,7 @@ const Header = () => {
             <Weather clickWeather={clickWeather} />
           </div>
         </div>
+        <Filter filOpen={filOpen} filToggle={filToggle} />
       </header>
 
       <ModalWeather showWeather={showWeather} closeWeather={setShowWeather} />

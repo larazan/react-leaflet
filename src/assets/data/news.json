@@ -97,8 +97,21 @@
         "lng": "112.738939",
         "title": "Info BMKG Peringatan dini cuaca Jawa Timur, 9-11 Juni 2022. Waspadai hujan intensitas sedang hingga lebat disertai petir dan angin kencang sesaat.",
         "slug": "info-bmkg-peringatan-dini-cuaca-jawa-timur-9-11-juni-2022-waspadai-hujan-intensitas-sedang-hingga-lebat-disertai-petir-dan-angin-kencang-sesaat",
-        "images": "",
+        "images": "bmkg",
         "tags": ["peringatan", "bmkg"],
+        "icon": "explodeIcon",
+        "created_at": "2022-02-27T12:59-0500"
+    },
+    {
+        "id": 8,
+        "category": "news",
+        "coordinates" : [-7.262521, 112.778081],
+        "lat": "-7.262521",
+        "lng": "112.778081",
+        "title": "BreadTalk PARTY 🥳🥳 <br /><br /> Semua Roti 8.000 \n Semua Sliced Cake mulai dr 16.000 \n Semua Roll Cakes 55.000 \n Semua Cookies mulai dr 55.000 Semua Whole Cakes mulai dr 129.000 \n\n minimum pembelian 8 item (mix) \n👉🏻 Periode 4 - 8 oktober \n👉🏻 4 okt khusus untuk pemegang kartu Bank Mandiri.",
+        "slug": "breadtalk-party-semua-roti-8000-semua-sliced-cake-mulai-dr-16000-semua-roll-cakes-55000-semua-cookies-mulai-dr-55000-semua-whole-cakes-mulai-dr-129000-minimum-pembelian-8-item-mix-periode-4-8-oktober-4-okt-khusus-untuk-pemegang-kartu-bank-mandiri",
+        "images": "bakery",
+        "tags": ["promo", "roti", "diskon", "breadtalk"],
         "icon": "explodeIcon",
         "created_at": "2022-02-27T12:59-0500"
     }
