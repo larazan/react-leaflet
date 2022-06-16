@@ -286,11 +286,11 @@ const ContentNews = ({
                         <div className="py-2">
                           <ul className="flex-col font-sans items-center justify-center text-sm">
                             <Link to="">
-                              <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
                                 <div className="flex items-center space-x-2">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-8 w-8"
+                                    className="h-6 w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -307,11 +307,11 @@ const ContentNews = ({
                               </li>
                             </Link>
                             <Link to="">
-                              <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
                                 <div className="flex items-center space-x-2">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-8 w-8"
+                                    className="h-6 w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -328,11 +328,11 @@ const ContentNews = ({
                               </li>
                             </Link>
                             <Link to="">
-                              <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
                                 <div className="flex items-center space-x-2">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-8 w-8"
+                                    className="h-6 w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -349,11 +349,11 @@ const ContentNews = ({
                               </li>
                             </Link>
                             <Link to="">
-                              <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
                                 <div className="flex items-center space-x-2">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-8 w-8"
+                                    className="h-6 w-6"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"

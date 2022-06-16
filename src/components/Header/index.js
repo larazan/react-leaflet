@@ -6,6 +6,7 @@ import Autocomplete from "../Autocomplete";
 import Weather from "../Weather";
 import ModalWeather from "../WeatherModal";
 import Filter from "../Filter";
+import RegionalOption from "../RegionalOption";
 
 import compass from "../../assets/icons/compass.svg";
 
@@ -15,9 +16,14 @@ const Header = () => {
   const [showUserDrop, setShowUserDrop] = useState(false);
   const [showSearchDrop, setShowSearchDrop] = useState(false);
   const [filOpen, setFilOpen] = useState(false);
+  const [regOpen, setRegOpen] = useState(false);
 
   const filToggle = () => {
     setFilOpen(!filOpen);
+  };
+
+  const regToggle = () => {
+    setRegOpen(!regOpen);
   };
 
   const ref = useRef();
@@ -108,7 +114,7 @@ const Header = () => {
               </svg>
             </button>
 
-            <button className="h-8 w-8 md:hidden">
+            <button className="h-8 w-8 md:hidden" onClick={regToggle}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -120,7 +126,7 @@ const Header = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
             </button>
@@ -147,12 +153,12 @@ const Header = () => {
                 }  right-0 mt-9 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
               >
                 <div className="flex py-1.5 px-2 space-x-3">
-                  <div className="w-full relative text-gray-600 border-2 border-gray-500/100">
+                  <div className="w-full relative text-gray-600 border-2 border-gray-400/100">
                     <input
                       type="search"
                       name="serch"
                       placeholder="Search"
-                      className="w-full bg-white h-8 px-2 pr-10 text-sm focus:outline-none"
+                      className="w-full bg-white h-8 px-2 pr-10 text-sm "
                     />
                     <button
                       type="submit"
@@ -204,6 +210,82 @@ const Header = () => {
                       />
                     </svg>
                   </button>
+                </div>
+                <div className="pt-2 pb-4">
+                  <ul className="px-4">
+                    <li className="">
+                      <a
+                        href="#"
+                        className="flex justify-between block text-sm text-gray-600 whitespace-nowrap capitalize px-2 py-3 border-b hover:bg-gray-100"
+                      >
+                        <span className="pl-2">promosi</span>
+                        <button className="flex items-center justify-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-gray-500 transform rotate-45"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={1}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 10l7-7m0 0l7 7m-7-7v18"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </li>
+                    <li className="">
+                      <a
+                        href="#"
+                        className="flex justify-between block text-sm text-gray-600 whitespace-nowrap capitalize px-2 py-3 border-b hover:bg-gray-100"
+                      >
+                        <span className="pl-2">bisnis</span>
+                        <button className="flex items-center justify-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-gray-500 transform rotate-45"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={1}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 10l7-7m0 0l7 7m-7-7v18"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </li>
+                    <li className="">
+                      <a
+                        href="#"
+                        className="flex justify-between block text-sm text-gray-600 whitespace-nowrap capitalize px-2 py-3 border-b hover:bg-gray-100"
+                      >
+                        <span className="pl-2">diskon</span>
+                        <button className="flex items-center justify-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-gray-500 transform rotate-45"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={1}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 10l7-7m0 0l7 7m-7-7v18"
+                            />
+                          </svg>
+                        </button>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             )}
@@ -336,6 +418,7 @@ const Header = () => {
           </div>
         </div>
         <Filter filOpen={filOpen} filToggle={filToggle} />
+        <RegionalOption regOpen={regOpen} regToggle={regToggle} />
       </header>
 
       <ModalWeather showWeather={showWeather} closeWeather={setShowWeather} />
