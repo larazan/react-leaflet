@@ -2,6 +2,9 @@ import createStore from "zustand";
 import { matchSorter } from "match-sorter";
 
 import tags from "./assets/data/tags";
+import marks from "./assets/data/marks";
+import keys from "./assets/data/keys.json";
+
 
 function importIcons(r, type, attrs) {
   return r.keys().map((fileName) => {
@@ -15,6 +18,8 @@ function importIcons(r, type, attrs) {
     };
   });
 }
+
+const allIcons = keys.map(s => ({ name: s.name, tags: marks[s.name] }))
 
 const iconsMedium = importIcons(
   require.context(`../src/assets/outline/`, false, /\.svg$/),
@@ -43,13 +48,13 @@ const iconsSmall = importIcons(
 const useStore = createStore((set) => ({
   query: "",
   filter: undefined,
-  iconCount: iconsMedium.length,
+  iconCount: allIcons.length,
   iMed: iconsMedium,
   search: (query) => {
     set({
       query,
       filter: query
-        ? matchSorter(iconsMedium, query, { keys: ["name", "tags"] }).map(
+        ? matchSorter(allIcons, query, { keys: ["name", "tags"] }).map(
             (x) => x.name
           )
         : undefined,

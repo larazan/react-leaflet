@@ -49,7 +49,7 @@ const SearchFilter = () => {
             htmlFor="search-input"
             className="flex-none pr-3 flex items-center"
           >
-            <span className="sr-only">Search all {iconCount} icons</span>
+            <span className="sr-only">Cari semua {iconCount} kategori ikon</span>
             <svg
               width="24"
               height="24"
@@ -72,7 +72,7 @@ const SearchFilter = () => {
             ref={searchInputRef}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder={`Search all ${iconCount} icons (Press “/” to focus)`}
+            placeholder={`Cari semua ${iconCount} kategori ikon`}
             className="flex-auto py-6 text-base leading-6 text-gray-500 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400"
           />
         </div>

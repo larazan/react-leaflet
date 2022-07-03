@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import RenderSvg from '../RenderSvg';
+
 const IconList = ({ icon }) => {
   const [state, setState] = useState("idle");
   const [activeType, setActiveType] = useState(undefined);
@@ -75,12 +77,9 @@ const IconList = ({ icon }) => {
           aria-expanded={state === "active" ? true : undefined}
           className="absolute inset-0 w-full flex items-center justify-center rounded-lg border border-gray-200 cursor-auto hover:border-2 hover:border-gray-600"
         >
-          <svg
-            {...icon.attrs}
-            className="transform transition-transform duration-500 ease-in-out"
-          >
-            {icon.svg}
-          </svg>
+          <div className="h-10 w-10 pt-2">
+            <RenderSvg c={`${icon.name}-12`} f={4} />
+          </div>
         </button>
         <h3 className="pt-3" id={`${icon.name}-name`}>{icon.name}</h3>
       </div>

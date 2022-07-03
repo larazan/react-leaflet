@@ -1,0 +1,210 @@
+[
+  {
+    "name": "barbershop",
+    "title": "barbershop, salon"
+  },
+  {
+    "name": "coffeeshop",
+    "title": "coffe shop"
+  },
+  {
+    "name": "discount",
+    "title": "diskon"
+  },
+  {
+    "name": "shop",
+    "title": "toko, tempat usaha"
+  },
+  {
+    "name": "promote",
+    "title": "promosi"
+  },
+  {
+    "name": "bakery",
+    "title": "bakery, toko kue"
+  },
+  {
+    "name": "laundry",
+    "title": "laundry"
+  },
+  {
+    "name": "hawker",
+    "title": "kaki lima"
+  },
+  {
+    "name": "foodbeverage",
+    "title": "makanan minuman"
+  },
+  {
+    "name": "reklame",
+    "title": "reklame, baliho"
+  },
+  {
+    "name": "moto",
+    "title": "motor"
+  },
+  {
+    "name": "jualmotor",
+    "title": "motor"
+  },
+  {
+      "name": "car",
+      "title": "mobil"
+  },
+  {
+    "name": "jualmobil",
+    "title": "mobil"
+  },
+  {
+    "name": "jasa",
+    "title": "jasa"
+  },
+  {
+    "name": "crime",
+    "title": "kejahatan"
+  },
+  {
+    "name": "dead",
+    "title": "kematian"
+  },
+  {
+    "name": "dead2",
+    "title": "kematian"
+  },
+  {
+    "name": "looting",
+    "title": "pencurian"
+  },
+  {
+    "name": "information",
+    "title": "informasi"
+  },
+  {
+    "name": "event",
+    "title": "event"
+  },
+  {
+    "name": "recruitment",
+    "title": "lowongan"
+  },
+  {
+    "name": "baby",
+    "title": "perlengkapan bayi"
+  },
+  {
+    "name": "clothing",
+    "title": "pakaian"
+  },
+  {
+    "name": "cosmetic",
+    "title": "kosmetik"
+  },
+  {
+    "name": "furniture",
+    "title": "perabot rumah"
+  },
+  {
+    "name": "grocery",
+    "title": "bahan makanan"
+  },
+  {
+    "name": "goods",
+    "title": "barang barang"
+  },
+  {
+    "name": "electronic",
+    "title": "barang elektronik"
+  },
+  {
+    "name": "medicine",
+    "title": "obat obatan"
+  },
+  {
+    "name": "medicine2",
+    "title": "obat obatan"
+  },
+  {
+    "name": "toys",
+    "title": "mainan"
+  },
+  {
+    "name": "education",
+    "title": "pendidikan"
+  },
+  {
+    "name": "economy",
+    "title": "ekonomi"
+  },
+  {
+    "name": "entertainment",
+    "title": "entertainment"
+  },
+  {
+    "name": "games",
+    "title": "permainan"
+  },
+  {
+    "name": "healthy",
+    "title": "kesehatan"
+  },
+  {
+    "name": "movies",
+    "title": "film"
+  },
+  {
+    "name": "news",
+    "title": "berita"
+  },
+  {
+    "name": "otomotif",
+    "title": "otomotif"
+  },
+  {
+    "name": "politics",
+    "title": "politik"
+  },
+  {
+    "name": "sports",
+    "title": "olahraga"
+  },
+  {
+    "name": "sports2",
+    "title": "olahraga"
+  },
+  {
+    "name": "technology",
+    "title": "teknologi"
+  },
+  {
+    "name": "apartement",
+    "title": "apartemen"
+  },
+  {
+    "name": "house",
+    "title": "rumah"
+  },
+  {
+    "name": "house2",
+    "title": "rumah"
+  },
+  {
+    "name": "kavling",
+    "title": "tanah kavling"
+  },
+  {
+    "name": "parkir",
+    "title": "parkir"
+  },
+  {
+    "name": "stop",
+    "title": "stop"
+  },
+  {
+    "name": "money",
+    "title": "uang"
+  },
+  {
+    "name": "warehouse",
+    "title": "gudang"
+  }
+]

@@ -1,53 +1,12 @@
 import React from "react";
 
-import tags from "../../assets/data/tags"
+import keys from "../../assets/data/keys.json"
 import useStore from "../../store";
 import Icons from "../Icons";
 
 const IconsContainer = () => {
   const filter = useStore((state) => state.filter);
   const query = useStore((state) => state.query);
-  const iMed = useStore((state) => state.iMed);
-
-  function importIcons(r, type, attrs) {
-    return r.keys().map((fileName) => {
-      const name = fileName.substr(2).replace(/\.svg$/, "");
-      return {
-        name,
-        type,
-        tags: tags[name] || [],
-        svg: r(fileName).default,
-        attrs,
-        ddd: fileName,
-      };
-    });
-  }
-
-  const iconsMedium = importIcons(
-    require.context(`../../assets/outline/`, false, /\.svg$/),
-    "md",
-    {
-      width: 24,
-      height: 24,
-      fill: "none",
-      viewBox: "0 0 24 24",
-      stroke: "currentColor",
-      strokeWidth: 2,
-    }
-  );
-
-  const iconsSmall = importIcons(
-    require.context(`../../assets/solid/`, false, /\.svg$/),
-    "sm",
-    {
-      width: 20,
-      height: 20,
-      viewBox: "0 0 20 20",
-      fill: "currentColor",
-    }
-  );
-  
-  console.log(iconsMedium);
 
   if (filter && filter.length === 0) {
     return (
@@ -80,15 +39,15 @@ const IconsContainer = () => {
           />
         </svg>
         <p className="text-lg leading-5 font-medium text-gray-900 mb-3">
-          Sorry! There are no icons for “{query}”.
+          Maaf! Tidak ada kategori ikon untuk “{query}”.
         </p>
         <p>
-          If you can’t find what you’re looking for,{" "}
+          Jika tidak menemukan apa yang kamu cari,{" "}
           <a
             href="https://github.com/tailwindlabs/heroicons/discussions/new?category=ideas"
             className="text-purple-600 border-b-2 border-purple-100 hover:bg-purple-50 transition-colors duration-150"
           >
-            make a suggestion on GitHub
+            silahkan buat permintaan
           </a>
           .
         </p>
@@ -104,18 +63,14 @@ const IconsContainer = () => {
       <section className="contents">
         <header className="col-start-1 row-start-1 flex flex-wrap items-baseline">
           <h2 className="flex-none text-lg leading-6 font-medium text-gray-900 mr-3">
-            Outline
+            Kategori
           </h2>
-          <p className="hidden sm:block flex-auto text-gray-400 text-sm leading-5 font-medium">
-            2px stroke weight, 24x24 bounding box
-          </p>
           <p className="hidden sm:block flex-none w-full text-sm leading-5 mt-3">
-            For primary navigation and marketing sections, designed to be
-            rendered at 24x24.
+            Pilih kategori sesuai postingan anda.
           </p>
         </header>
         <Icons
-          icons={iconsMedium}
+          icons={keys}
           filter={filter}
           className="col-start-1 row-start-2"
         />

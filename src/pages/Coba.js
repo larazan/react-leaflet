@@ -6,6 +6,7 @@ import AutoCompleteText from '../components/AutoCompleteText'
 import AutoCompleteHook from '../components/AutoCompleteHook'
 import SearchBar from '../components/SearchBar'
 import Search from '../components/Search'
+import RenderSvg from '../components/RenderSvg'
 
 import countries from '../assets/data/countries'
 
@@ -48,7 +49,7 @@ const Coba = memo(() => {
               <AutoCompleteHook suggestions={countries} />
             </div> */}
 
-            <div className="color-picker">
+            {/* <div className="color-picker">
               <div className="color-picker-label">change color:</div>
               <input type="color" value={color} onChange={onChange} />
             </div>
@@ -59,6 +60,9 @@ const Coba = memo(() => {
                   <div>{`<BaseIcon name="${icon}" />`}</div>
                 </div>
               ))}
+            </div> */}
+            <div>
+              <RenderSvg c='looting-12' f={4} />
             </div>
           </div>
         </div>
