@@ -8,15 +8,15 @@
     "title": "coffe shop"
   },
   {
-    "name": "discount",
+    "name": "diskon",
     "title": "diskon"
   },
   {
-    "name": "shop",
+    "name": "toko",
     "title": "toko, tempat usaha"
   },
   {
-    "name": "promote",
+    "name": "promosi",
     "title": "promosi"
   },
   {
@@ -28,11 +28,11 @@
     "title": "laundry"
   },
   {
-    "name": "hawker",
+    "name": "kakilima",
     "title": "kaki lima"
   },
   {
-    "name": "foodbeverage",
+    "name": "makanan",
     "title": "makanan minuman"
   },
   {
@@ -40,27 +40,19 @@
     "title": "reklame, baliho"
   },
   {
-    "name": "moto",
+    "name": "motor",
     "title": "motor"
   },
   {
-    "name": "jualmotor",
-    "title": "motor"
-  },
-  {
-      "name": "car",
+      "name": "mobil",
       "title": "mobil"
-  },
-  {
-    "name": "jualmobil",
-    "title": "mobil"
   },
   {
     "name": "jasa",
     "title": "jasa"
   },
   {
-    "name": "crime",
+    "name": "kejahatan",
     "title": "kejahatan"
   },
   {
@@ -68,15 +60,15 @@
     "title": "kematian"
   },
   {
-    "name": "dead2",
+    "name": "kematian",
     "title": "kematian"
   },
   {
-    "name": "looting",
+    "name": "pencurian",
     "title": "pencurian"
   },
   {
-    "name": "information",
+    "name": "informasi",
     "title": "informasi"
   },
   {
@@ -84,35 +76,35 @@
     "title": "event"
   },
   {
-    "name": "recruitment",
+    "name": "lowongan",
     "title": "lowongan"
   },
   {
-    "name": "baby",
+    "name": "bayi",
     "title": "perlengkapan bayi"
   },
   {
-    "name": "clothing",
+    "name": "pakaian",
     "title": "pakaian"
   },
   {
-    "name": "cosmetic",
+    "name": "kosmetik",
     "title": "kosmetik"
   },
   {
-    "name": "furniture",
+    "name": "mebel",
     "title": "perabot rumah"
   },
   {
-    "name": "grocery",
+    "name": "grosir",
     "title": "bahan makanan"
   },
   {
-    "name": "goods",
+    "name": "barang",
     "title": "barang barang"
   },
   {
-    "name": "electronic",
+    "name": "elektronik",
     "title": "barang elektronik"
   },
   {
@@ -120,19 +112,19 @@
     "title": "obat obatan"
   },
   {
-    "name": "medicine2",
+    "name": "obat",
     "title": "obat obatan"
   },
   {
-    "name": "toys",
+    "name": "mainan",
     "title": "mainan"
   },
   {
-    "name": "education",
+    "name": "pendidikan",
     "title": "pendidikan"
   },
   {
-    "name": "economy",
+    "name": "ekonomi",
     "title": "ekonomi"
   },
   {
@@ -144,7 +136,7 @@
     "title": "permainan"
   },
   {
-    "name": "healthy",
+    "name": "kesehatan",
     "title": "kesehatan"
   },
   {
@@ -152,7 +144,7 @@
     "title": "film"
   },
   {
-    "name": "news",
+    "name": "berita",
     "title": "berita"
   },
   {
@@ -160,31 +152,27 @@
     "title": "otomotif"
   },
   {
-    "name": "politics",
+    "name": "politik",
     "title": "politik"
   },
   {
-    "name": "sports",
+    "name": "olahraga",
     "title": "olahraga"
   },
   {
-    "name": "sports2",
-    "title": "olahraga"
+    "name": "turnamen",
+    "title": "turnamen"
   },
   {
-    "name": "technology",
+    "name": "teknologi",
     "title": "teknologi"
   },
   {
-    "name": "apartement",
+    "name": "apartemen",
     "title": "apartemen"
   },
   {
-    "name": "house",
-    "title": "rumah"
-  },
-  {
-    "name": "house2",
+    "name": "rumah",
     "title": "rumah"
   },
   {
@@ -199,12 +187,9 @@
     "name": "stop",
     "title": "stop"
   },
+ 
   {
-    "name": "money",
-    "title": "uang"
-  },
-  {
-    "name": "warehouse",
+    "name": "gudang",
     "title": "gudang"
   }
 ]

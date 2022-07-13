@@ -41,7 +41,7 @@ const SearchFilter = () => {
   return (
     <>
       <form
-        className="group sticky top-0 z-50 bg-white px-4 sm:px-6 lg:px-16 shadow"
+        className="group sticky top-0 z-50 bg-white px-4 sm:px-6 lg:px-16 border-b shadow2"
         onSubmit={(e) => e.preventDefault()}
       >
         <div className="max-w-10xl mx-auto flex">

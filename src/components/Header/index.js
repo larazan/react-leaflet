@@ -50,7 +50,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="z-20 h-10 md:h-14 w-screen absolute top-0 md:top-0 m-0 md:m-0 px-4 md:px-5 py-2 md:py-3 flex items-center justify-between bg-white border-b">
+      <header className="z-20 h-10 md:h-14 w-full absolute top-0 md:top-0  md:m-0 px-4 md:px-5 py-6 md:py-3 flex items-center justify-between bg-white border-b shadow">
         <div className="flex w-full md:w-3/5 justify-between">
           <div className="flex justify-between inline-flex w-full md:w-[100px]">
             {/* <button className="h-8 w-8 md:hidden">

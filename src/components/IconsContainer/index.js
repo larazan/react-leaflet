@@ -57,12 +57,12 @@ const IconsContainer = () => {
 
   return (
     <div
-      className="relative grid grid-cols-2 items-start gap-x-8 sm:gap-x-12 lg:gap-x-16 gap-y-4 sm:gap-y-8 max-w-10xl mx-auto pt-6 sm:pt-8 pb-12"
+      className="relative grid grid-cols-1 items-start gap-x-8 sm:gap-x-12 lg:gap-x-16 gap-y-4 sm:gap-y-8 max-w-10xl mx-auto pt-6 sm:pt-8 pb-12"
       style={{ gridTemplateRows: "auto auto" }}
     >
       <section className="contents">
         <header className="col-start-1 row-start-1 flex flex-wrap items-baseline">
-          <h2 className="flex-none text-lg leading-6 font-medium text-gray-900 mr-3">
+          <h2 className="flex-none text-lg leading-3 font-medium text-gray-900 mr-3">
             Kategori
           </h2>
           <p className="hidden sm:block flex-none w-full text-sm leading-5 mt-3">
@@ -75,8 +75,7 @@ const IconsContainer = () => {
           className="col-start-1 row-start-2"
         />
       </section>
-     
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
+    
     </div>
   );
 };

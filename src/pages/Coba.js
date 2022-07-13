@@ -7,6 +7,8 @@ import AutoCompleteHook from '../components/AutoCompleteHook'
 import SearchBar from '../components/SearchBar'
 import Search from '../components/Search'
 import RenderSvg from '../components/RenderSvg'
+import SearchFilter from '../components/SearchFilter'
+import IconsContainer from '../components/IconsContainer'
 
 import countries from '../assets/data/countries'
 
@@ -30,8 +32,8 @@ const Coba = memo(() => {
   return (
     <>
       <main>
-        <div className="md:flex md:flex-no-wrap">
-          <div className="flex z-0 outline-0 relative mt-20">
+        {/* <div className="md:flex md:flex-no-wrap"> */}
+          {/* <div className="flex z-0 outline-0 relative mt-20"> */}
             {/* <div>
             <SearchBar />
             </div> */}
@@ -61,11 +63,18 @@ const Coba = memo(() => {
                 </div>
               ))}
             </div> */}
-            <div>
-              <RenderSvg c='looting-12' f={4} />
+            <div class='flex items-center justify-center min-h-screen2'>
+                <div class='w-full max-w-2xl px-10  py-8  bg-white'>
+                    <div class='mx-auto pt-10'>
+                        
+                      <SearchFilter />
+                      <IconsContainer />
+
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+          {/* </div>
+        </div> */}
       </main>
     </>
   );

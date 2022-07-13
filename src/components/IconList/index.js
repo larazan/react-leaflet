@@ -75,13 +75,13 @@ const IconList = ({ icon }) => {
           aria-haspopup="true"
           aria-controls={`${icon.name}-${icon.type}`}
           aria-expanded={state === "active" ? true : undefined}
-          className="absolute inset-0 w-full flex items-center justify-center rounded-lg border border-gray-200 cursor-auto hover:border-2 hover:border-gray-600"
+          className="absolute inset-0 w-full flex items-center justify-center rounded-lg border border-gray-200 hover:border-2 hover:border-gray-600 cursor-pointer"
         >
-          <div className="h-10 w-10 pt-2">
+          <div className="h-12 w-12 pt-2">
             <RenderSvg c={`${icon.name}-12`} f={4} />
           </div>
         </button>
-        <h3 className="pt-3" id={`${icon.name}-name`}>{icon.name}</h3>
+        <h3 className="pt-3 text-sm text-gray-700" id={`${icon.name}-name`}>{icon.name}</h3>
       </div>
     </li>
   );

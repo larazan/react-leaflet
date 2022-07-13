@@ -1,27 +1,23 @@
-import React from 'react'
+import React from "react";
 
-import SearchFilter from '../components/SearchFilter'
-import IconsContainer from '../components/IconsContainer'
+import SearchFilter from "../components/SearchFilter";
+import IconsContainer from "../components/IconsContainer";
 
 const Filter = () => {
   return (
     <>
-    <main>
-        <div className="md:flex md:flex-no-wrap">
-          <div className="flex z-0 outline-0 relative mt-20">
-
-            <div>
-                <SearchFilter />
-                <div className="px-4 sm:px-6 lg:px-16">
-                <IconsContainer />
-                </div>
+      <main>
+        <div class="flex items-center justify-center min-h-screen2">
+          <div class="w-full max-w-2xl px-10  py-8  bg-white">
+            <div class="mx-auto pt-10">
+              <SearchFilter />
+              <IconsContainer />
             </div>
-
           </div>
         </div>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;

@@ -210,12 +210,12 @@ const ContentNews = ({
           </div>
         </div>
         {news.map((article, idx) => (
-          <div className="border-b cursor-pointer" key={idx} id={article.id}>
+          <div className="border-b cursor-pointer hover:bg-gray-100" key={idx} id={article.id}>
             <div
               className={`py-3 border-l-4  ${
                 parseInt(selected) === article.id
                   ? "border-red-500 selected"
-                  : "border-white"
+                  : "border-white hover:border-gray-100"
               } px-3`}
               data-id={article.id}
               data-lat={article.lat ? article.lat : ""}

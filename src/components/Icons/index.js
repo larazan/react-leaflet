@@ -17,7 +17,7 @@ const Icons = ({ icons, filter }) => {
 
   return (
     <ul
-      className="grid gap-8 text-center text-xs leading-4 col-start-1 row-start-2"
+      className="grid gap-4 text-center text-xs leading-4 col-start-1 row-start-2"
       // style={{ gridTemplateColumn: 'repeat(auto-fill, minmax(132px, 1fr))'}}
       style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(132px, 1fr))' }}
     >
