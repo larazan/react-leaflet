@@ -8,12 +8,19 @@ import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import Modal from "../Modal2";
 
 import RenderIcon from "../RenderIcon";
+import RenderSvg from "../RenderSvg";
 
 import imag from "../../assets/images/22399054_0.jpg";
 import imag2 from "../../assets/images/22399259_0.jpg";
 import imag3 from "../../assets/images/22399192_0.jpg";
 import bakery from "../../assets/images/bakery.jpg";
 import bmkg from "../../assets/images/bmkg.jpg";
+import tenis from "../../assets/images/tenis.jpg";
+import even from "../../assets/images/even.jpg";
+import ied from "../../assets/images/ied.jpg";
+import pln from "../../assets/images/pln.jpg";
+import bbm from "../../assets/images/bbm.jpg";
+
 import twitter from "../../assets/images/twitter.svg";
 import facebook from "../../assets/images/facebook.svg";
 
@@ -34,6 +41,21 @@ const getImage = (imgName) => {
       break;
     case "bmkg":
       imgNews = bmkg;
+      break;
+    case "tenis":
+      imgNews = tenis;
+      break;
+    case "pln":
+      imgNews = pln;
+      break;
+    case "even":
+      imgNews = even;
+      break;
+    case "ied":
+      imgNews = ied;
+      break;
+    case "bbm":
+      imgNews = bbm;
       break;
   }
 
@@ -235,7 +257,7 @@ const ContentNews = ({
                         </span>
                         <div className="flex inline-flex justify-center items-center space-x-1">
                           <div className="h-6 w-6">
-                            <RenderIcon ic={article.icon} />
+                            <RenderSvg c={article.ikon} f={1} g={0} />
                           </div>
                           <div className="text-xs font-semibold text-gray-400">
                             <ReactTimeAgo
@@ -249,7 +271,7 @@ const ContentNews = ({
                   ) : (
                     <>
                       <div className="h-9 w-9">
-                        <RenderIcon ic={article.icon} />
+                        <RenderSvg c={article.ikon} f={1} g={0} />
                       </div>
                       <div className="text-xs font-semibold text-gray-400">
                         <ReactTimeAgo

@@ -8,11 +8,12 @@
         ],
         "lat": "-7.2532799",
         "lng": "112.7425691",
-        "title": "The Bucha-Irpin bridge has been blown up to stop the Russian advancement towards Kyiv in this direction",
-        "slug": "the-bucha-irpin-bridge-has-been-blown-up-to-stop-the-russian-advancement-towards-kyiv-in-this-direction",
-        "images": "imag",
-        "tags": ["ukraine", "war", "russia"],
+        "title": "PT Pertamina (Persero) resmi menaikkan hargaproduk BBM non subsidi. Harga produk yang naik adalah Pertamax Turbo, Dexlite, dan Pertamina Dex.",
+        "slug": "pt-pertamina-persero-resmi-menaikkan-hargaproduk-bbm-non-subsidi-harga-produk-yang-naik-adalah-pertamax-turbo-dexlite-dan-pertamina-dex",
+        "images": "bbm",
+        "tags": ["bbm", "pertamina"],
         "icon": "killedIcon",
+        "ikon": "ekonomi-2",
         "created_at": "2022-02-26T12:59-0500"
     },
     {
@@ -24,11 +25,12 @@
         ],
         "lat": "-7.2692552",
         "lng": "112.6737247",
-        "title": "Russian tanks destroyed near Priluky",
-        "slug": "russian-tanks-destroyed-near-priluky",
-        "images": "imag2",
-        "tags": ["ukraine", "war", "russia"],
+        "title": "Elena Rybakina Petenis asal Kazakhstan berhasil menjadi juara tunggal putri Wimbledon 2022 setelah mengalahkan Ons Jabeur Petenis Tunisia pada Sabtu (9/7/2022) waktu setempat.",
+        "slug": "elena-rybakina-petenis-asal-kazakhstan-berhasil-menjadi-juara-tunggal-putri-wimbledon-2022-setelah-mengalahkan-ons-jabeur-petenis-tunisia-pada-sabtu-972022-waktu-setempat",
+        "images": "tenis",
+        "tags": ["olahraga", "tenis"],
         "icon": "rifleIcon",
+        "ikon": "olahraga-2",
         "created_at": "2022-02-25T12:59-0500"
     },
     {
@@ -40,11 +42,12 @@
         ],
         "lat": "-7.3182376",
         "lng": "112.7536991",
-        "title": "A group of Chechen saboteurs who were moving around Kyiv in the ambulance has just been shot by the Ukrainian military intelligence officers (GUR MOU) in Kyiv, partly shot, partly detained",
-        "slug": "a-group-of-chechen-saboteurs-who-were-moving-around-kyiv-in-the-ambulance-has-just-been-shot-by-the-ukrainian-military-intelligence-officers-gur-mou-in-kyiv-partly-shot-partly-detained",
-        "images": "imag3",
-        "tags": ["ukraine", "war", "russia"],
+        "title": "Keluarga Besar Suara Surabaya mengucapkan Selamat Hari Raya Idul Adha 1443 H. Semoga kita semua bisa memaknai pengorbanan dan keikhlasan.",
+        "slug": "keluarga-besar-suara-surabaya-mengucapkan-selamat-hari-raya-idul-adha-1443-h-semoga-kita-semua-bisa-memaknai-pengorbanan-dan-keikhlasan",
+        "images": "ied",
+        "tags": ["ied", "qurban"],
         "icon": "carIcon",
+        "ikon": "informasi-2",
         "created_at": "2022-02-24T12:59-0500"
     },
     {
@@ -56,11 +59,12 @@
         ],
         "lat": "-7.2172264",
         "lng": "112.7567751",
-        "title": "General Staff of Ukraine: Russian troops regrouped and accumulated armored vehicles and missile and artillery weapons in certain areas, primarily to surround and capture Kyiv and major cities of Ukraine, including Kharkiv, Chernihiv, Odessa, Kherson and Mariupol. A significant part of military equipment comes from the territory of Belarus and through the occupied Crimea",
-        "slug": "general-staff-of-ukraine-russian-troops-regrouped-and-accumulated-armored-vehicles-and-missile-and-artillery-weapons-in-certain-areas-primarily-to-surround-and-capture-kyiv-and-major-cities-of-ukraine-including-kharkiv-chernihiv-odessa-kherson-and-mariupol-a-significant-part-of-military-equipment-comes-from-the-territory-of-belarus-and-through-the-occupied-crimea",
-        "images": "",
-        "tags": ["ukraine", "war", "russia", "belarus"],
+        "title": "Yuk simak talkshow LIVE Facebook Manufacturing Surabaya 2022, Kamis 14 Juli 2022 Pukul 16.00 di Facebook E100 dengan host Fabian Yudhistira bersama perwakilan Pamerindo & Exhibitor.",
+        "slug": "yuk-simak-talkshow-live-facebook-manufacturing-surabaya-2022-kamis-14-juli-2022-pukul-1600-di-facebook-e100-dengan-host-fabian-yudhistira-bersama-perwakilan-pamerindo-and-exhibitor",
+        "images": "even",
+        "tags": ["pameran", "even"],
         "icon": "explodeIcon",
+        "ikon": "event-2",
         "created_at": "2022-02-27T12:59-0500"
     },
     {
@@ -74,6 +78,7 @@
         "images": "",
         "tags": ["ukraine", "war", "russia", "belarus"],
         "icon": "explodeIcon",
+        "ikon": "promosi-2",
         "created_at": "2022-02-27T12:59-0500"
     },
     {
@@ -87,6 +92,7 @@
         "images": "",
         "tags": ["kecelakaan", "sidoarjo"],
         "icon": "explodeIcon",
+        "ikon": "mobil-1",
         "created_at": "2022-02-27T12:59-0500"
     },
     {
@@ -100,10 +106,12 @@
         "images": "bmkg",
         "tags": ["peringatan", "bmkg"],
         "icon": "explodeIcon",
+        "ikon": "berita-2",
         "created_at": "2022-02-27T12:59-0500"
     },
     {
         "id": 8,
+        "name": "Mila Hassanah",
         "category": "news",
         "coordinates" : [-7.262521, 112.778081],
         "lat": "-7.262521",
@@ -113,6 +121,22 @@
         "images": "bakery",
         "tags": ["promo", "roti", "diskon", "breadtalk"],
         "icon": "explodeIcon",
+        "ikon": "bakery-2",
+        "created_at": "2022-02-27T12:59-0500"
+    },
+    {
+        "id": 9,
+        "name": "Utama Saputra",
+        "category": "news",
+        "coordinates" : [-7.241405, 112.709766],
+        "lat": "-7.241405",
+        "lng": "112.709766",
+        "title": "InfoPLN Pemeliharaan Jaringan TM 20 KV dan Konfigurasi Jaringan TM 20 kV di ULP Rungkut Rabu (13/7/2022) pkl 09.30-14.00 WIB. Berikut wilayah terdampaknya.",
+        "slug": "infopln-pemeliharaan-jaringan-tm-20-kv-dan-konfigurasi-jaringan-tm-20-kv-di-ulp-rungkut-rabu-1372022-pkl-0930-1400-wib-berikut-wilayah-terdampaknya",
+        "images": "pln",
+        "tags": ["info", "listrik", "pln"],
+        "icon": "explodeIcon",
+        "ikon": "stop-1",
         "created_at": "2022-02-27T12:59-0500"
     }
 ]
