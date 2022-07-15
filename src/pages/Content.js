@@ -39,9 +39,9 @@ const Content = () => {
   }
 
   const handleId = (id) => {
+    var h = 150;
     const el = document.getElementById(id)
-    el.scrollIntoView({ behavior: 'smooth' });
-    // el.scroll(0, 550);
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     setSelected(id)
   }
 

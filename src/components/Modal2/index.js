@@ -93,7 +93,7 @@ const Modal2 = ({ showModal, closeModal }) => {
     <>
       {showModal ? (
         <div
-          className="main-modal fixed w-full h-full inset-0 z-30 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
+          className="main-modal fixed w-full h-full inset-0 z-40 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
           // style={{ background: `rgba(12,15,19,.9)` }}
           style={{ background: `rgba(251,251,251,.9)` }}
           id="my-modal"
@@ -116,7 +116,7 @@ const Modal2 = ({ showModal, closeModal }) => {
               </svg>
             </button>
           </div>
-          <div className="absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-full md:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none">
+          <div className="absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-full md:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none z-40">
             <div className="flex justify-end py-2 px-2 md:hidden lg:hidden">
               <button className="h-8 w-8" onClick={() => closeModal(false)}>
                 <svg

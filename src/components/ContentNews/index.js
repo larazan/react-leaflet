@@ -77,6 +77,7 @@ const ContentNews = ({
   const [openShare, setOpenShare] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [showDrop, setShowDrop] = useState(false);
+  const [komen, setKomen] = useState(12);
 
   const ref = useRef();
   useOnClickOutside(ref, () => setShowDrop(false));
@@ -139,6 +140,7 @@ const ContentNews = ({
 
   const commentHandler = (e) => {
     e.stopPropagation();
+    setKomen(8)
     // console.log('comment click');
     // console.log("comment");
   };
@@ -462,7 +464,7 @@ const ContentNews = ({
                       </svg>
                     </div>
                     <div className="text-xs font-semibold text-gray-600">
-                      Comments
+                      Comments {komen}
                     </div>
                   </div>
                 </div>
