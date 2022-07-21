@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Avatar from "react-avatar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ReactTimeAgo from "react-time-ago";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 
@@ -79,6 +79,8 @@ const ContentNews = ({
   const [showDrop, setShowDrop] = useState(false);
   const [komen, setKomen] = useState(12);
 
+  const location = useLocation();
+
   const ref = useRef();
   useOnClickOutside(ref, () => setShowDrop(false));
 
@@ -108,6 +110,11 @@ const ContentNews = ({
     const id = e.currentTarget.dataset.id;
     const lat = e.currentTarget.dataset.lat;
     const lng = e.currentTarget.dataset.lng;
+
+    setSelected(parseInt(id));
+    setSelectedIndex(parseInt(id) - 1);
+    handleId(parseInt(id));
+    
     if (selected === parseInt(id)) {
       console.log("sama");
       openModal();
@@ -119,10 +126,9 @@ const ContentNews = ({
         openModal();
       }
     }
-    setSelected(parseInt(id));
-    setSelectedIndex(parseInt(id) - 1);
-    handleId(parseInt(id));
+    
     console.log(id);
+    console.log(selected);
   };
 
   const shareHandler = (e) => {
@@ -234,6 +240,12 @@ const ContentNews = ({
           </div>
         </div>
         {news.map((article, idx) => (
+          <Link
+            key={article.id}
+            to={`detail`}
+            // to=""
+            state={{ background: location }}
+          >
           <div className="border-b cursor-pointer hover:bg-gray-100" key={idx} id={article.id}>
             <div
               className={`py-3 border-l-4  ${
@@ -578,6 +590,7 @@ const ContentNews = ({
               </div>
             </div>
           </div>
+          </Link>
         ))}
         <div className="px-3 py-5 text-center">
           <a href>

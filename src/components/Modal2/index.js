@@ -93,10 +93,10 @@ const Modal2 = ({ showModal, closeModal }) => {
     <>
       {showModal ? (
         <div
-          className="main-modal fixed w-full h-full inset-0 z-40 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
+          className="main-modal fixed w-full h-screen inset-0 z-30 flex justify-center items-center2 animated fadeIn faster overflow-y-auto"
           // style={{ background: `rgba(12,15,19,.9)` }}
           style={{ background: `rgba(251,251,251,.9)` }}
-          id="my-modal"
+          id="my-modal2"
         >
           <div className="fixed md:px-2 md:py-2 lg:px-2 lg:py-2 top-2 md:top-3 lg:top-3 xl:top-3 left-2">
             <button className="h-8 w-8" onClick={() => closeModal(false)}>
@@ -116,7 +116,8 @@ const Modal2 = ({ showModal, closeModal }) => {
               </svg>
             </button>
           </div>
-          <div className="absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-full md:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none z-40">
+          <div className="absolute mt-0 md:mt-28 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-full md:w-8/12  md:rounded-lg lg:rounded-md md:shadow-lg lg:shadow-lg outline-none">
+            {/* <div className="fixed md:absolute sm:mt-0 md:mt-8 lg:mt-8 xl:mt-12 lg:border lg:border-teal-500 modal-container bg-white w-full md:w-8/12  md:rounded lg:rounded md:shadow-lg lg:shadow-lg outline-none z-40"> */}
             <div className="flex justify-end py-2 px-2 md:hidden lg:hidden">
               <button className="h-8 w-8" onClick={() => closeModal(false)}>
                 <svg
@@ -135,27 +136,11 @@ const Modal2 = ({ showModal, closeModal }) => {
                 </svg>
               </button>
             </div>
+            {/* <div className="flex-auto md:flex lg:flex flex-wrap -mt-8 md:-mt-0 lg:-mt-0 px-5 py-0 ">
+              <div className="flex w-full inline-flex py-3 px-2 justify-between md:justify-between "> */}
             <div className="flex-auto md:flex lg:flex flex-wrap -mt-8 md:-mt-0 lg:-mt-0 px-5 py-0 items-center justify-between border-b">
               <div className="flex w-full2 inline-flex py-0 xs:justify-between sm:justify-between md:justify-start lg:justify-start">
-                {/* <div className="flex items-center inline-flex space-x-1">
-                  <div
-                    className="px-2 py-2 text-gray-700 inline-flex items-center hover:text-gray-900 cursor-pointer"
-                    title="facebook"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                      <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                    </svg>
-                    <span className="pl-1 font-semibold">Source</span>
-                  </div>
-                </div> */}
-
-                <div className="relative py-3 left-0  space-x-1">
+                <div className=" py-3 left-0  space-x-1">
                   <div className="flex items-center inline-flex space-x-1">
                     <Avatar
                       name="ratri"
@@ -171,24 +156,6 @@ const Modal2 = ({ showModal, closeModal }) => {
                         12 follower
                       </span>
                     </div>
-                  </div>
-                  <div
-                    className="px-2 py-2 text-blue-500 inline-flex items-center hover:text-blue-700 cursor-pointer hidden md:block"
-                    title="facebook"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-7 w-7"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="pl-1 font-semibold"> On live map</span>
                   </div>
                 </div>
               </div>
@@ -215,10 +182,24 @@ const Modal2 = ({ showModal, closeModal }) => {
                     alt="twitter"
                   />
                 </div>
+                <div className="bg-white px-2 py-2 font-extralight text-blue-500 border border-blue-400 inline-flex items-center rounded-full hover:border-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
 
-            <div className="px-7 py-3 pb-5 border-b bg-gradient-to-t from-gray-100 to-white max-h-fit overflow-y-auto">
+            <div className="px-5 md:px-7 py-3 pb-5 border-b bg-gradient-to-t from-gray-100 to-white min-h-screen md:max-h-fit overflow-y-auto">
               <div className="flex justify-between">
                 <div className="flex inline-flex justify-center items-center space-x-2 pb-3">
                   <div className="h-8 w-8">
@@ -232,98 +213,97 @@ const Modal2 = ({ showModal, closeModal }) => {
                   </div>
                 </div>
                 <div>
-                <div
-                      className="flex inline-flex justify-center items-center space-x-1"
-                      onClick={openDrop}
-                      
-                    >
-                      <div className="flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                        </svg>
-                      </div>
-                      {showDrop && (
-                        <div
-                          ref={ref}
-                          className={`sm:w-72 md:w-72 ${
-                            showDrop === false ? "hidden" : ""
-                          }  right-4 mt-24 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
-                        >
-                          <div className="py-2">
-                            <ul className="flex-col font-sans items-center justify-center text-sm">
-                              <Link to="">
-                                <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
-                                  <div className="flex items-center space-x-2">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      className="h-8 w-8"
-                                      fill="none"
-                                      viewBox="0 0 24 24"
-                                      stroke="currentColor"
-                                      strokeWidth={1}
-                                    >
-                                      <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                      />
-                                    </svg>
-                                    <span>Tidak tertarik dengan tweet ini</span>
-                                  </div>
-                                </li>
-                              </Link>
-                              <Link to="">
-                                <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
-                                  <div className="flex items-center space-x-2">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      className="h-8 w-8"
-                                      fill="none"
-                                      viewBox="0 0 24 24"
-                                      stroke="currentColor"
-                                      strokeWidth={1}
-                                    >
-                                      <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                                      />
-                                    </svg>
-                                    <span>Laporkan tweet ini</span>
-                                  </div>
-                                </li>
-                              </Link>
-                              <Link to="">
-                                <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
-                                  <div className="flex items-center space-x-2">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      className="h-8 w-8"
-                                      fill="none"
-                                      viewBox="0 0 24 24"
-                                      stroke="currentColor"
-                                      strokeWidth={1}
-                                    >
-                                      <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                      />
-                                    </svg>
-                                    <span>Tambahkan/hapus dari daftar</span>
-                                  </div>
-                                </li>
-                              </Link>
-                            </ul>
-                          </div>
-                        </div>
-                      )}
+                  <div
+                    className="flex inline-flex justify-center items-center space-x-1"
+                    onClick={openDrop}
+                  >
+                    <div className="flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                      </svg>
                     </div>
+                    {showDrop && (
+                      <div
+                        ref={ref}
+                        className={`sm:w-72 md:w-72 ${
+                          showDrop === false ? "hidden" : ""
+                        }  right-4 mt-24 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
+                      >
+                        <div className="py-2">
+                          <ul className="flex-col font-sans items-center justify-center text-sm">
+                            <Link to="">
+                              <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                                <div className="flex items-center space-x-2">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-8 w-8"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={1}
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                  </svg>
+                                  <span>Tidak tertarik dengan tweet ini</span>
+                                </div>
+                              </li>
+                            </Link>
+                            <Link to="">
+                              <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                                <div className="flex items-center space-x-2">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-8 w-8"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={1}
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                                    />
+                                  </svg>
+                                  <span>Laporkan tweet ini</span>
+                                </div>
+                              </li>
+                            </Link>
+                            <Link to="">
+                              <li className="sm:py-1 md:py-2 px-6 hover:bg-gray-200">
+                                <div className="flex items-center space-x-2">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-8 w-8"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={1}
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                    />
+                                  </svg>
+                                  <span>Tambahkan/hapus dari daftar</span>
+                                </div>
+                              </li>
+                            </Link>
+                          </ul>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 {/* <a href="#">
                   <div className="flex inline-flex justify-center items-center space-x-1">
@@ -372,7 +352,10 @@ const Modal2 = ({ showModal, closeModal }) => {
               </div>
               <div className="py-2">
                 <div className="absolute p-4 z-20 h-full w-full">
-                  <button className="p-3 bg-gray-800 h-8 justify-center items-center flex self-end2 rounded-2xl opacity-80 hover:opacity-100" onClick={() => handleClick()}>
+                  <button
+                    className="p-3 bg-gray-800 h-8 justify-center items-center flex self-end2 rounded-2xl opacity-80 hover:opacity-100"
+                    onClick={() => handleClick()}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5 text-white"
@@ -457,19 +440,18 @@ const Modal2 = ({ showModal, closeModal }) => {
             </div>
 
             <Comments />
-
           </div>
         </div>
       ) : null}
 
-{clickedImg && (
-          <ModalGallery
-            clickedImg={clickedImg}
-            handelRotationRight={handelRotationRight}
-            setClickedImg={setClickedImg}
-            handelRotationLeft={handelRotationLeft}
-          />
-        )}
+      {clickedImg && (
+        <ModalGallery
+          clickedImg={clickedImg}
+          handelRotationRight={handelRotationRight}
+          setClickedImg={setClickedImg}
+          handelRotationLeft={handelRotationLeft}
+        />
+      )}
     </>
   );
 };
