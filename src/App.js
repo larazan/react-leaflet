@@ -22,11 +22,35 @@ import Pricing from "./pages/Pricing";
 import Modal2 from "./components/Modal2";
 
 import "./App.css";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [subdomain, setSubdomain] = useState(null)
+
+  useEffect(() => {
+    const host = window.location.host;
+
+    const arr = host
+        .split(".")
+        .splice(0, host.includes("localhost") ? -1 : -2);
+    if (arr.length > 0) setSubdomain(arr[0])
+  }, [])
+  
   const location = useLocation();
   const background = location.state && location.state.background;
   // let state = location.state as { backgroundLocation?: Location };
+
+  // if (subdomain === "dashboard") {
+  //   return (
+  //     <>
+  //       <Layout>
+  //         <Routes location={background || location}>
+  //          <Route path="/" element={<Coba />} />
+  //         </Routes>
+  //       </Layout>
+  //     </>
+  //   )
+  // }
 
   return (
       <>
@@ -49,6 +73,14 @@ function App() {
           <Route path="cabinet" element={<Cabinet />} />
           <Route path="filter" element={<Filter />} />
           <Route path="pricing" element={<Pricing />} />
+          <Route
+            path="*"
+            element={
+              <main className="mt-50" style={{ padding: "1rem" }}>
+                <p className="mt-50">There's nothing here!</p>
+              </main>
+            }
+          />
         </Routes>
 
         {background && (
@@ -57,6 +89,8 @@ function App() {
         </Routes>
       )}
       </Layout>
+
+
      
       </>
   );

@@ -27,9 +27,9 @@ const Login = () => {
       <main className="h-screen" style={{ backgroundColor: "#f0f5f8" }}>
         <div className="md:container md:mx-auto md:px-8">
           <div className="md:flex md:flex-no-wrap md:-mx-6">
-            <div className="px-6 mt-24 w-full">
+            <div className="px-6 mt-10 md:mt-24 w-full">
               <div className="flex p-10 space-x-6">
-                <div className="w-1/2">
+                <div className="w-full md:w-1/2">
                   <div>
                     <p className="text-2xl font-semibold">Login</p>
                   </div>
@@ -119,14 +119,14 @@ const Login = () => {
                         Dont have an account?{" "}
                         <Link to="/register">
                           <a href="#" className="text-blue-500 font-bold">
-                            Sign up
+                            Register
                           </a>
                         </Link>
                       </p>
                     </div>
                   </form>
                 </div>
-                <div className="w-1/2 border-l-2 pl-4">
+                <div className="w-1/2  border-l-2 pl-4 hidden md:block">
                   <div className="text-md font-bold">
                     Who is funding Liveuamap?
                   </div>

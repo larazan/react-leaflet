@@ -1,0 +1,3 @@
+lazy load image
+harga sembako
+https://hargapangan.id/index.php?option=com_gtpihps&task=json.commodityPrices&province_id=0&price_type_id=1&_=1659174441179

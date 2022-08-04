@@ -41,27 +41,27 @@ const Register = () => {
       <main className="h-screen" style={{ backgroundColor: "#f0f5f8" }}>
         <div className="md:container md:mx-auto md:px-4">
           <div className="md:flex md:flex-no-wrap md:-mx-6">
-            <div className="px-6 mt-24 w-full">
+            <div className="px-4 md:px-6 mt-16 md:mt-24 w-full">
               <div className="bg-white shadow-lg ">
-                <div className="flex p-10 space-x-6">
-                  <div className="w-2/3">
+                <div className="flex p-4 md:p-10 space-x-6">
+                  <div className="w-full md:w-2/3">
                     <div>
-                      <p className="text-2xl font-semibold">Sign up</p>
+                      <p className="text-lg md:text-2xl font-semibold">Sign up</p>
                     </div>
                     <form
                       className="flex flex-col"
                       onSubmit={formik.handleSubmit}
                     >
-                      <div className="my-2">
+                      <div className="my-1 md:my-2">
                         <label
                           htmlFor="firstName"
-                          className="text-gray-400 font-semibold"
+                          className="text-gray-400 font-semibold text-sm md:text-base"
                         >
                           First Name
                         </label>
                         <input
                           id="firstName"
-                          className="bg-indigo-50 mt-2 px-4 py-3 rounded-md w-full border border-gray-300"
+                          className="bg-indigo-50 mt-1 md:mt-2 px-2 md:px-4 py-2 md:py-3 rounded-md w-full border border-gray-300"
                           name="firstName"
                           type="text"
                           placeholder="First name"
@@ -75,16 +75,16 @@ const Register = () => {
                           </div>
                         ) : null}
                       </div>
-                      <div className="my-2">
+                      <div className="my-1 md:my-2">
                         <label
                           htmlFor="lastName"
-                          className="text-gray-400 font-semibold"
+                          className="text-gray-400 font-semibold text-sm md:text-base"
                         >
                           Last Name
                         </label>
                         <input
                           id="lastName"
-                          className="bg-indigo-50 mt-2 px-4 py-3 rounded-md w-full border border-gray-300"
+                          className="bg-indigo-50 mt-1 md:mt-2 px-2 md:px-4 py-2 md:py-3 rounded-md w-full border border-gray-300"
                           name="lastName"
                           type="text"
                           placeholder="Last Name"
@@ -98,16 +98,16 @@ const Register = () => {
                           </div>
                         ) : null}
                       </div>
-                      <div className="my-2">
+                      <div className="my-1 md:my-2">
                         <label
                           htmlFor="email"
-                          className="text-gray-400 font-semibold"
+                          className="text-gray-400 font-semibold text-sm md:text-base"
                         >
                           Email Address
                         </label>
                         <input
                           id="email"
-                          className="bg-indigo-50 mt-2 px-4 py-3 rounded-md w-full border border-gray-300"
+                          className="bg-indigo-50 mt-1 md:mt-2 px-2 md:px-4 py-2 md:py-3 rounded-md w-full border border-gray-300"
                           name="email"
                           type="email"
                           placeholder="Email"
@@ -121,16 +121,16 @@ const Register = () => {
                           </div>
                         ) : null}
                       </div>
-                      <div className="my-2">
+                      <div className="my-1 md:my-2">
                         <label
                           htmlFor="password"
-                          className="text-gray-400 font-semibold"
+                          className="text-gray-400 font-semibold text-sm md:text-base"
                         >
                           Password
                         </label>
                         <input
                           id="password"
-                          className="bg-indigo-50 mt-2 px-4 py-3 rounded-md w-full border border-gray-300"
+                          className="bg-indigo-50 mt-1 md:mt-2 px-2 md:px-4 py-2 md:py-3 rounded-md w-full border border-gray-300"
                           type="password"
                           name="password"
                           placeholder="Password"
@@ -144,16 +144,16 @@ const Register = () => {
                           </div>
                         ) : null}
                       </div>
-                      <div className="my-2">
+                      <div className="my-1 md:my-2">
                         <label
                           htmlFor="changepassword"
-                          className="text-gray-400 font-semibold"
+                          className="text-gray-400 font-semibold text-sm md:text-base"
                         >
                           Confirm Password
                         </label>
                         <input
                           id="changepassword"
-                          className="bg-indigo-50 mt-2 px-4 py-3 rounded-md w-full border border-gray-300"
+                          className="bg-indigo-50 mt-1 md:mt-2 px-2 md:px-4 py-2 md:py-3 rounded-md w-full border border-gray-300"
                           type="password"
                           name="password"
                           placeholder="Confirm Password"
@@ -169,17 +169,17 @@ const Register = () => {
                         ) : null}
                       </div>
 
-                      <div className="my-2 flex justify-end">
+                      <div className="my-1 md:my-2 flex justify-end">
                         <button
                           type="submit"
-                          className="mt-4 bg-gradient-to-tr from-blue-500 to-indigo-600 text-white px-10 py-3 rounded-md text-lg font-bold tracking-wide"
+                          className="mt-2 md:mt-4 bg-gradient-to-tr from-blue-500 to-indigo-600 text-white px-6 md:px-10 py-2 md:py-3 rounded-md text-base md:text-lg font-bold tracking-wide"
                         >
                           Submit
                         </button>
                       </div>
                     </form>
                   </div>
-                  <div className="w-1/3 border-l pl-4">
+                  <div className="w-1/3 border-l pl-4 hidden md:block">
                     <div className="text-md font-bold">
                       Who is funding Liveuamap?
                     </div>

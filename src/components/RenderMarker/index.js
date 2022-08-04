@@ -4,6 +4,55 @@ import L from "leaflet";
 
 import { lp, undersvg1, bg, undersvg2, svgl } from "../../assets/data/icons";
 
+import imag from "../../assets/images/22399054_0.jpg";
+import imag2 from "../../assets/images/22399259_0.jpg";
+import imag3 from "../../assets/images/22399192_0.jpg";
+import bakery from "../../assets/images/bakery.jpg";
+import bmkg from "../../assets/images/bmkg.jpg";
+import tenis from "../../assets/images/tenis.jpg";
+import even from "../../assets/images/even.jpg";
+import ied from "../../assets/images/ied.jpg";
+import pln from "../../assets/images/pln.jpg";
+import bbm from "../../assets/images/bbm.jpg";
+
+const getImage = (imgName) => {
+  let imgNews = "";
+  switch (imgName) {
+    case "imag":
+      imgNews = imag;
+      break;
+    case "imag2":
+      imgNews = imag2;
+      break;
+    case "imag3":
+      imgNews = imag3;
+      break;
+    case "bakery":
+      imgNews = bakery;
+      break;
+    case "bmkg":
+      imgNews = bmkg;
+      break;
+    case "tenis":
+      imgNews = tenis;
+      break;
+    case "pln":
+      imgNews = pln;
+      break;
+    case "even":
+      imgNews = even;
+      break;
+    case "ied":
+      imgNews = ied;
+      break;
+    case "bbm":
+      imgNews = bbm;
+      break;
+  }
+
+  return imgNews;
+};
+
 const returnsvg = (c, f) => {
   var a = c.split("-"),
     e = undersvg1,
@@ -132,6 +181,12 @@ const RenderMarker = ({
 
   ///////////////////////////////
 
+  
+
+  const replaceWithBr = (title) => {
+    return title.replace(/\n/g, "<br />")
+  }
+
   return (
     <>
       {news.map((city, index) =>
@@ -153,7 +208,23 @@ const RenderMarker = ({
             }}
           >
             <Popup>
-              <b>{city.title}</b>
+            {city.images ? (
+                  <div className="py-2">
+                    <img
+                      className="w-full"
+                      src={getImage(city.images)}
+                      alt="image"
+                    />
+                  </div>
+                ) : (
+                  <div className="py-3"></div>
+                )}
+              <div
+                  dangerouslySetInnerHTML={{__html: replaceWithBr(city.title)}}
+                  className="font-light text-gray-700"
+                />
+                
+              
             </Popup>
           </Marker>
         )

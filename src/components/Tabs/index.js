@@ -13,12 +13,13 @@ const Tabs = ({
   setSelected,
   setSelectedIndex,
   handleId,
+  newsActive
 }) => {
   const [openTab, setOpenTab] = useState(1);
   const [color, setColor] = useState("green");
   return (
     <>
-      <div className="relative w-full max-w-md z-10 md:z-30 h-screen overflow-auto flex-none px-0 hidden2 md:block custom-scrollbar">
+      <div className={`relative w-full max-w-md z-10 md:z-30 h-screen overflow-auto flex-none px-0 ${newsActive === true ? 'md:block' : 'hidden' } custom-scrollbar`}>
        
           <div className="w-full hidden md:block">
             <ul

@@ -1,17 +1,16 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useOnClickOutside } from "../../hooks/useOnClickOutside";
+import { useOnClickOutside } from "./../hooks/useOnClickOutside";
 
-import Autocomplete from "../Autocomplete";
-import Weather from "../Weather";
-import ModalWeather from "../WeatherModal";
-import Filter from "../Filter";
-import RegionalOption from "../RegionalOption"
-import InputSearch from "../InputSearch";
-import UserDrop from "../UserDrop";
+import Autocomplete from "./Autocomplete";
+import Weather from "./Weather";
+import ModalWeather from "./WeatherModal";
+import Filter from "./Filter";
+import RegionalOption from "./RegionalOption"
+import InputSearch from "./InputSearch";
+import UserDrop from "./UserDrop";
 
-
-const Header = () => {
+const Header2 = ({ clickNewsPageActive, clickMapPageActive }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showWeather, setShowWeather] = useState(false);
   const [showUserDrop, setShowUserDrop] = useState(false);
@@ -51,7 +50,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="hidden md:flex z-20 md:z-20 h-10 md:h-14 w-full absolute md:absolute top-0 md:m-0 px-4 md:px-5 py-6 md:py-3  items-center justify-between bg-white border-b shadow">
+    <header className="z-20 md:z-20 h-10 md:h-14 w-full absolute md:absolute top-0 md:m-0 px-4 md:px-5 py-6 md:py-3 flex md:hidden items-center justify-between bg-white border-b shadow">
         <div className="flex w-full md:w-3/5 justify-between">
           <div className="flex justify-between inline-flex w-full md:w-[100px]">
             {/* <button className="h-8 w-8 md:hidden">
@@ -77,7 +76,7 @@ const Header = () => {
                 alt="liveuamap"
               />
             </div>
-            <button className="h-8 w-8 md:hidden">
+            <button className="h-8 w-8 md:hidden" onClick={clickNewsPageActive}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -93,7 +92,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <button className="h-8 w-8 md:hidden">
+            <button className="h-8 w-8 md:hidden" onClick={clickMapPageActive}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -183,10 +182,8 @@ const Header = () => {
         <RegionalOption regOpen={regOpen} regToggle={regToggle} />
       </header>
 
-      <ModalWeather showWeather={showWeather} closeWeather={setShowWeather} />
-      
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header2

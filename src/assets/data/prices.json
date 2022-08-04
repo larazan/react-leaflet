@@ -1,0 +1,212 @@
+[
+    {
+      "class": "price_still",
+      "icon": "fa fa-pause",
+      "status": "Harga Tetap",
+      "title": "Beras Kualitas Bawah I",
+      "price": "Rp10.700",
+      "denom": "Per kg",
+      "prices": "0,0,0,0,0,0,0,0",
+      "desc": "Harga Tetap"
+    },
+    {
+      "class": "price_up",
+      "icon": "fa fa-arrow-up",
+      "status": "Naik",
+      "title": "Beras Kualitas Bawah II",
+      "price": "Rp10.450",
+      "denom": "Per kg",
+      "prices": "0,0,0,0,0,0,0,50",
+      "desc": "0.48% - Rp50"
+    },
+    {
+      "class": "price_still",
+      "icon": "fa fa-pause",
+      "status": "Harga Tetap",
+      "title": "Beras Kualitas Medium I",
+      "price": "Rp11.800",
+      "denom": "Per kg",
+      "prices": "0,50,0,0,0,0,0,0",
+      "desc": "Harga Tetap"
+    },
+    {
+      "class": "price_up",
+      "icon": "fa fa-arrow-up",
+      "status": "Naik",
+      "title": "Beras Kualitas Medium II",
+      "price": "Rp11.600",
+      "denom": "Per kg",
+      "prices": "0,0,0,0,0,0,0,50",
+      "desc": "0.43% - Rp50"
+    },
+    {
+      "class": "price_up",
+      "icon": "fa fa-arrow-up",
+      "status": "Naik",
+      "title": "Beras Kualitas Super I",
+      "price": "Rp13.100",
+      "denom": "Per kg",
+      "prices": "0,50,0,0,50,-50,0,50",
+      "desc": "0.38% - Rp50"
+    },
+    {
+      "class": "price_still",
+      "icon": "fa fa-pause",
+      "status": "Harga Tetap",
+      "title": "Beras Kualitas Super II",
+      "price": "Rp12.650",
+      "denom": "Per kg",
+      "prices": "0,0,0,0,50,-50,0,0",
+      "desc": "Harga Tetap"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Daging Ayam Ras Segar",
+      "price": "Rp35.950",
+      "denom": "Per kg",
+      "prices": "0,-50,-150,0,50,-50,-250,-200",
+      "desc": "0.55% - Rp200"
+    },
+    {
+      "class": "price_up",
+      "icon": "fa fa-arrow-up",
+      "status": "Naik",
+      "title": "Daging Sapi Kualitas 1",
+      "price": "Rp137.750",
+      "denom": "Per kg",
+      "prices": "0,-250,0,-300,0,-50,0,100",
+      "desc": "0.07% - Rp100"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Daging Sapi Kualitas 2",
+      "price": "Rp128.150",
+      "denom": "Per kg",
+      "prices": "0,-300,-50,0,0,0,0,-50",
+      "desc": "0.04% - Rp50"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Telur Ayam Ras Segar\r\n",
+      "price": "Rp29.400",
+      "denom": "Per kg",
+      "prices": "0,0,50,100,0,-50,50,-50",
+      "desc": "0.17% - Rp50"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Bawang Merah Ukuran Sedang",
+      "price": "Rp54.800",
+      "denom": "Per kg",
+      "prices": "0,-700,-500,-3500,-1000,-1150,-1000,-1150",
+      "desc": "2.06% - Rp1.150"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Bawang Putih Ukuran Sedang",
+      "price": "Rp29.350",
+      "denom": "Per kg",
+      "prices": "0,0,0,50,50,-100,0,-50",
+      "desc": "0.17% - Rp50"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Cabai Merah Besar",
+      "price": "Rp73.900",
+      "denom": "Per kg",
+      "prices": "0,-1700,-750,-2250,-550,-700,0,-1000",
+      "desc": "1.34% - Rp1.000"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Cabai Merah Keriting ",
+      "price": "Rp72.750",
+      "denom": "Per kg",
+      "prices": "0,-1100,-750,-2700,-550,-1300,0,-450",
+      "desc": "0.61% - Rp450"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Cabai Rawit Hijau",
+      "price": "Rp56.800",
+      "denom": "Per kg",
+      "prices": "0,-2900,-550,-1700,-1100,-650,-750,-600",
+      "desc": "1.05% - Rp600"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Cabai Rawit Merah",
+      "price": "Rp73.000",
+      "denom": "Per kg",
+      "prices": "0,-2150,-650,-3150,-1750,-750,-450,-800",
+      "desc": "1.08% - Rp800"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Minyak Goreng Curah",
+      "price": "Rp15.450",
+      "denom": "Per kg",
+      "prices": "0,0,-50,-100,-50,-50,0,-150",
+      "desc": "0.96% - Rp150"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Minyak Goreng Kemasan Bermerk 1",
+      "price": "Rp24.150",
+      "denom": "Per kg",
+      "prices": "0,-50,-100,-200,-100,0,-100,-100",
+      "desc": "0.41% - Rp100"
+    },
+    {
+      "class": "price_down",
+      "icon": "fa fa-arrow-down",
+      "status": "Turun",
+      "title": "Minyak Goreng Kemasan Bermerk 2",
+      "price": "Rp22.600",
+      "denom": "Per kg",
+      "prices": "0,-100,-100,-250,-50,-50,-50,-100",
+      "desc": "0.44% - Rp100"
+    },
+    {
+      "class": "price_still",
+      "icon": "fa fa-pause",
+      "status": "Harga Tetap",
+      "title": "Gula Pasir Kualitas Premium",
+      "price": "Rp15.950",
+      "denom": "Per kg",
+      "prices": "0,0,0,0,0,0,0,0",
+      "desc": "Harga Tetap"
+    },
+    {
+      "class": "price_still",
+      "icon": "fa fa-pause",
+      "status": "Harga Tetap",
+      "title": "Gula Pasir Lokal",
+      "price": "Rp14.550",
+      "denom": "Per kg",
+      "prices": "0,0,0,0,0,0,0,0",
+      "desc": "Harga Tetap"
+    }
+]

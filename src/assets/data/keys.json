@@ -1,195 +1,342 @@
 [
   {
+    "value": 1,
     "name": "barbershop",
     "title": "barbershop, salon"
   },
   {
+    "value": 1,
     "name": "coffeeshop",
     "title": "coffe shop"
   },
   {
+    "value": 1,
     "name": "diskon",
     "title": "diskon"
   },
   {
+    "value": 1,
     "name": "toko",
     "title": "toko, tempat usaha"
   },
   {
+    "value": 1,
     "name": "promosi",
     "title": "promosi"
   },
   {
+    "value": 1,
     "name": "bakery",
     "title": "bakery, toko kue"
   },
   {
+    "value": 1,
     "name": "laundry",
     "title": "laundry"
   },
   {
+    "value": 1,
     "name": "kakilima",
     "title": "kaki lima"
   },
   {
+    "value": 1,
     "name": "makanan",
     "title": "makanan minuman"
   },
   {
+    "value": 1,
     "name": "reklame",
     "title": "reklame, baliho"
   },
   {
+    "value": 1,
     "name": "motor",
     "title": "motor"
   },
   {
-      "name": "mobil",
-      "title": "mobil"
+    "value": 1,
+    "name": "mobil",
+    "title": "mobil"
   },
   {
+    "value": 1,
     "name": "jasa",
     "title": "jasa"
   },
   {
+    "value": 1,
     "name": "kejahatan",
     "title": "kejahatan"
   },
   {
+    "value": 1,
     "name": "dead",
     "title": "kematian"
   },
   {
+    "value": 1,
     "name": "kematian",
     "title": "kematian"
   },
   {
+    "value": 1,
     "name": "pencurian",
     "title": "pencurian"
   },
   {
+    "value": 1,
     "name": "informasi",
     "title": "informasi"
   },
   {
+    "value": 1,
     "name": "event",
     "title": "event"
   },
   {
+    "value": 1,
     "name": "lowongan",
     "title": "lowongan"
   },
   {
+    "value": 1,
     "name": "bayi",
     "title": "perlengkapan bayi"
   },
   {
+    "value": 1,
     "name": "pakaian",
     "title": "pakaian"
   },
   {
+    "value": 1,
     "name": "kosmetik",
     "title": "kosmetik"
   },
   {
+    "value": 1,
     "name": "mebel",
     "title": "perabot rumah"
   },
   {
+    "value": 1,
     "name": "grosir",
     "title": "bahan makanan"
   },
   {
+    "value": 1,
     "name": "barang",
     "title": "barang barang"
   },
   {
+    "value": 1,
     "name": "elektronik",
     "title": "barang elektronik"
   },
   {
+    "value": 1,
     "name": "medicine",
     "title": "obat obatan"
   },
   {
+    "value": 1,
     "name": "obat",
     "title": "obat obatan"
   },
   {
+    "value": 1,
     "name": "mainan",
     "title": "mainan"
   },
   {
+    "value": 1,
     "name": "pendidikan",
     "title": "pendidikan"
   },
   {
+    "value": 1,
     "name": "ekonomi",
     "title": "ekonomi"
   },
   {
+    "value": 1,
     "name": "entertainment",
     "title": "entertainment"
   },
   {
+    "value": 1,
     "name": "games",
     "title": "permainan"
   },
   {
+    "value": 1,
     "name": "kesehatan",
     "title": "kesehatan"
   },
   {
+    "value": 1,
     "name": "movies",
     "title": "film"
   },
   {
+    "value": 1,
     "name": "berita",
     "title": "berita"
   },
   {
+    "value": 1,
     "name": "otomotif",
     "title": "otomotif"
   },
   {
+    "value": 1,
     "name": "politik",
     "title": "politik"
   },
   {
+    "value": 1,
     "name": "olahraga",
     "title": "olahraga"
   },
   {
+    "value": 1,
     "name": "turnamen",
     "title": "turnamen"
   },
   {
+    "value": 1,
     "name": "teknologi",
     "title": "teknologi"
   },
   {
+    "value": 1,
+    "name": "lifestyle",
+    "title": "lifestyle"
+  },
+  {
+    "value": 1,
     "name": "apartemen",
     "title": "apartemen"
   },
   {
+    "value": 1,
     "name": "rumah",
     "title": "rumah"
   },
   {
+    "value": 1,
     "name": "kavling",
     "title": "tanah kavling"
   },
   {
+    "value": 1,
     "name": "parkir",
     "title": "parkir"
   },
   {
+    "value": 1,
     "name": "stop",
     "title": "stop"
   },
- 
   {
+    "value": 1,
     "name": "gudang",
     "title": "gudang"
+  },
+  {
+    "value": 1,
+    "name": "indekos",
+    "title": "indekos"
+  },
+  {
+    "value": 1,
+    "name": "ruko",
+    "title": "ruko"
+  },
+  {
+    "value": 1,
+    "name": "blokade",
+    "title": "blokade"
+  },
+  {
+    "value": 1,
+    "name": "macet",
+    "title": "macet"
+  },
+  {
+    "value": 1,
+    "name": "mogok",
+    "title": "mogok"
+  },
+  {
+    "value": 1,
+    "name": "kecelakaan",
+    "title": "kecelakaan"
+  },
+  {
+    "value": 1,
+    "name": "erupsi",
+    "title": "erupsi"
+  },
+  {
+    "value": 1,
+    "name": "tsunami",
+    "title": "tsunami"
+  },
+  {
+    "value": 1,
+    "name": "tornado",
+    "title": "tornado"
+  },
+  {
+    "value": 1,
+    "name": "badai",
+    "title": "badai"
+  },
+  {
+    "value": 1,
+    "name": "polusi",
+    "title": "polusi"
+  },
+  {
+    "value": 1,
+    "name": "pemadaman",
+    "title": "pemadaman"
+  },
+  {
+    "value": 1,
+    "name": "longsor",
+    "title": "longsor"
+  },
+  {
+    "value": 1,
+    "name": "kebakaran",
+    "title": "kebakaran"
+  },
+  {
+    "value": 1,
+    "name": "banjir",
+    "title": "banjir"
+  },
+  {
+    "value": 1,
+    "name": "gempa",
+    "title": "gempa"
+  },
+  {
+    "value": 1,
+    "name": "pembangunan",
+    "title": "pembangunan"
+  },
+  {
+    "value": 1,
+    "name": "kerusakan",
+    "title": "kerusakan"
+  },
+  {
+    "value": 1,
+    "name": "kekeringan",
+    "title": "kekeringan"
   }
 ]

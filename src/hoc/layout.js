@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
-import { matchRoutes, useLocation, useParams } from "react-router-dom"
+import React, { Component } from "react";
+import { matchRoutes, useLocation, useParams } from "react-router-dom";
 
-import Header from '../components/Header'
-
-
+import Header from "../components/Header";
 
 // class Layout extends Component {
 //   render() {
@@ -20,7 +18,6 @@ import Header from '../components/Header'
 
 // export default Layout
 
-
 // import React from 'react'
 
 const Layout = (props) => {
@@ -30,22 +27,18 @@ const Layout = (props) => {
   console.log(location.pathname);
 
   const renderHeader = () => {
-    if (location.pathname !== '/login' && location.pathname !== '/register') {
-      return <Header/>
-    };
-  }
+    if (location.pathname !== "/login" && location.pathname !== "/register") {
+      return <Header />;
+    }
+  };
 
   return (
     <div className="flex flex-col h-screen max-h-screen">
-      {
-        renderHeader()
-      }
-          
-          <div className="">
-            {props.children}
-          </div>
-    </div>
-  )
-}
+      {renderHeader()}
 
-export default Layout
+      <div className="">{props.children}</div>
+    </div>
+  );
+};
+
+export default Layout;
