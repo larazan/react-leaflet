@@ -16,6 +16,8 @@ import MiniMap from "../components/MiniMap";
 
 import mark from "../assets/icons/marker.png";
 
+import "../peta.css";
+
 const markerIcon = L.Icon.extend({
     options: {
       iconSize: [39, 39],
@@ -66,15 +68,16 @@ const Submit = () => {
   return (
     <>
       <main>
-        <div className="md:flex md:flex-no-wrap">
+        <div className="flex flex-col md:flex-row relative2 md:flex-no-wrap">
         {/* <Sidebar /> */}
-          <div className="flex z-0 outline-0 relative lg:w-4/5 md:w-4/6 ">
+          <div className="flex relative z-0 inset-4 md:inset-x-0 md:top-0 md:outline-0 md:h-screen w-[22rem] lg:w-4/5 md:w-3/6 ">
             <MapContainer
               center={center}
               zoom={ZOOM_LEVEL}
               zoomControl={false}
-              className="h-screen w-screen"
+              className="h-screen  w-screen"
               whenCreated={setMap}
+              
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -102,7 +105,7 @@ const Submit = () => {
               <MiniMap position="bottomright"  />
             </MapContainer>
           </div>
-          <div className="flex w-2/6">
+          <div className="flex w-full md:w-3/6">
             <ContentSubmit position={position} showMyLocation={showMyLocation} />
           </div>
         </div>

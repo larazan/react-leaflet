@@ -12,6 +12,7 @@ import {
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
 
+import RenderSvg from "../RenderSvg";
 import TagsInput from "../TagsInput";
 
 const ContentSubmit = ({ position, showMyLocation }) => {
@@ -63,10 +64,10 @@ const ContentSubmit = ({ position, showMyLocation }) => {
 
   return (
     <>
-      <div className="w-full max-w-md  h-screen overflow-auto flex-none px-0 hidden md:block custom-scrollbar">
-        <div className="bg-white mt-20">
+      <div className="w-full max-w-md  h-screen md:overflow-auto flex-none px-0 hidden2 block custom-scrollbar2">
+        <div className="bg-white mt-10 md:mt-20">
           <div className="flex justify-between space-x-2 pb-2 px-3 border-b">
-            <div className="flex flex-wrap w-2/3 items-center hidden md:flex">
+            <div className="flex flex-wrap w-2/3 items-center ">
               <div className="flex w-full">
                 <span className="text-md font-bold text-gray-800 uppercase ">
                   Create Event
@@ -74,7 +75,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
               </div>
             </div>
             <div className="flex flex-row-reverse w-1/3">
-              <div className="flex flex-wrap pl-2 items-center hidden md:flex">
+              <div className="flex flex-wrap pl-2 items-center ">
                 <span
                   className="text-xs font-extrabold text-blue-500  cursor-pointer"
                   onClick={showMyLocation}
@@ -86,35 +87,34 @@ const ContentSubmit = ({ position, showMyLocation }) => {
           </div>
           <div className="px-6 mt-2 w-full mb-16">
             <form className="flex flex-col" onSubmit={formik.handleSubmit}>
-              
-              { lat !== 0 && 
-              <div className="">
-                <div className="flex justify-between">
-                  <input
-                    id="latitude"
-                    className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
-                    name="latitude"
-                    type="text"
-                    placeholder="Latitude"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={lat}
-                  />
-                  <input
-                    id="longitude"
-                    className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
-                    type="text"
-                    name="longitude"
-                    placeholder="Password"
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    value={lng}
-                  />
+              {lat !== 0 && (
+                <div className="">
+                  <div className="flex justify-between">
+                    <input
+                      id="latitude"
+                      className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
+                      name="latitude"
+                      type="text"
+                      placeholder="Latitude"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={lat}
+                    />
+                    <input
+                      id="longitude"
+                      className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
+                      type="text"
+                      name="longitude"
+                      placeholder="Password"
+                      onBlur={formik.handleBlur}
+                      onChange={formik.handleChange}
+                      value={lng}
+                    />
+                  </div>
                 </div>
-              </div>
-              }
+              )}
 
-              <div className=" mb-2">
+              {/* <div className=" mb-2">
                 <select
                   name="category"
                   className="text-sm bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
@@ -125,6 +125,28 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   <option>Promosi</option>
                   <option>Event</option>
                 </select>
+              </div> */}
+
+              <div className="mb-2">
+                <div className="mt-3 flex justify-between space-x-2 pb-2 px-0">
+                  <div className="flex flex-wrap w-2/3 items-center">
+                    <div className="flex items-center w-full space-x-2">
+                      <div className="h-7 w-7">
+                        <RenderSvg c="coffeeshop-2" f={1} g={0} />
+                      </div>
+                      <span className="text-sm font-semibold text-gray-600 ">
+                        Coffee Shop
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-row-reverse w-1/3">
+                    <div className="flex flex-wrap pl-2 items-center ">
+                      <span className="text-sm font-extrabold text-blue-500  cursor-pointer underline-offset-4 border-gray-800 border-b">
+                        Ubah
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="mt-1 mb-0">
@@ -146,7 +168,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                 ) : null}
               </div>
 
-              <div className="flex2 items-center px-1">
+              <div className="flex2 items-center px-1 p-1">
                 <div className="flex items-center justify-between">
                   <div
                     className="icon"
@@ -167,7 +189,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
 
                   <div
                     className="icon"
-                      onClick={() => setShowEmojis(!showEmojis)}
+                    onClick={() => setShowEmojis(!showEmojis)}
                   >
                     <EmojiHappyIcon className="text-[#1d9bf0] h-[22px] cursor-pointer" />
                   </div>
@@ -177,18 +199,18 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   </div>
 
                   {showEmojis && (
-                <Picker
-                  onSelect={addEmoji}
-                  style={{
-                    position: "absolute",
-                    marginTop: "465px",
-                    marginLeft: -40,
-                    maxWidth: "320px",
-                    borderRadius: "20px",
-                  }}
-                  theme="dark"
-                />
-              )}
+                    <Picker
+                      onSelect={addEmoji}
+                      style={{
+                        position: "absolute",
+                        marginTop: "465px",
+                        marginLeft: -40,
+                        maxWidth: "320px",
+                        borderRadius: "20px",
+                      }}
+                      theme="dark"
+                    />
+                  )}
                 </div>
               </div>
 
@@ -265,13 +287,10 @@ const ContentSubmit = ({ position, showMyLocation }) => {
               </div> */}
 
               <div className="my-2">
-                <TagsInput
-                  selectedTags={selectedTags}
-                  tagsI={["Nodejs"]}
-                />
+                <TagsInput selectedTags={selectedTags} tagsI={["Nodejs"]} />
               </div>
 
-              <div className="my-2 flex justify-end">
+              <div className="my-2 flex justify-end mb-3">
                 <button
                   type="submit"
                   className="mt-4 w-full bg-gradient-to-tr from-blue-500 to-indigo-600 text-white px-10 py-2 rounded-md text-lg font-bold tracking-wide"

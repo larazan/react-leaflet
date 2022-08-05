@@ -78,6 +78,7 @@ const ContentNews = ({
   const [favorites, setFavorites] = useState([]);
   const [showDrop, setShowDrop] = useState(false);
   const [komen, setKomen] = useState(12);
+  const [suka, setSuka] = useState(230);
 
   const location = useLocation();
 
@@ -476,7 +477,7 @@ const ContentNews = ({
                       </svg>
                     </div>
                     <div className="text-xs font-semibold text-gray-600">
-                      Comments {komen}
+                      {komen > 0 ? komen : 'Comment'}
                     </div>
                   </div>
                 </div>
@@ -502,7 +503,7 @@ const ContentNews = ({
                         </svg>
                       </div>
                       <div className="text-xs font-semibold text-gray-600">
-                        {""}
+                        {suka}
                       </div>
                     </div>
                   </div>
@@ -510,7 +511,7 @@ const ContentNews = ({
                   <div
                     onClick={() => addFav({ article, idx })}
                     data-event="fav"
-                    className="w-1/3 text-center cursor-pointer"
+                    className="flex w-1/3 text-center justify-center cursor-pointer"
                   >
                     <div className="flex inline-flex justify-center items-center space-x-1">
                       <div className="h-5 w-5 ">
@@ -530,7 +531,7 @@ const ContentNews = ({
                         </svg>
                       </div>
                       <div className="text-xs font-semibold text-gray-600">
-                        {""}
+                        {suka}
                       </div>
                     </div>
                   </div>
