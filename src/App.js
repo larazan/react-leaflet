@@ -60,6 +60,8 @@ function App() {
           <Route path="/" element={<Content />} >
             <Route path="detail" element={<Modal2 />} />
           </Route>
+          <Route path="post" element={<Filter />} />
+          <Route path="post/:cat" element={<Submit />} />
           <Route path="home" element={<Home />} />
           <Route path="keys" element={<Icons />} />
           <Route path="regions" element={<Regions />} />
@@ -68,10 +70,8 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="submit" element={<Submit />} />
           <Route path="coba" element={<Coba />} />
           <Route path="cabinet" element={<Cabinet />} />
-          <Route path="filter" element={<Filter />} />
           <Route path="pricing" element={<Pricing />} />
           <Route
             path="*"

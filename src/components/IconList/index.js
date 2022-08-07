@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import RenderSvg from '../RenderSvg';
 
@@ -54,6 +55,7 @@ const IconList = ({ icon }) => {
   }, [state]);
 
   return (
+    <Link to={`/post/${icon.name}`}>
     <li
       className="relative flex flex-col-reverse "
       onMouseEnter={activate}
@@ -61,7 +63,8 @@ const IconList = ({ icon }) => {
       onClick={activate}
     >
       {/* <h3 id={`${icon.name}-name`}>{icon.name}</h3> */}
-      <div className="relative mb-3 h-24">
+      <div className="relative mb-2 md:mb-3 h-24">
+        
         <button
           type="button"
           onKeyDown={onKeyDown}
@@ -84,6 +87,7 @@ const IconList = ({ icon }) => {
         <h3 className="pt-3 text-sm text-gray-700" id={`${icon.name}-name`}>{icon.name}</h3>
       </div>
     </li>
+    </Link>
   );
 };
 

@@ -14,13 +14,17 @@ import "emoji-mart/css/emoji-mart.css";
 
 import RenderSvg from "../RenderSvg";
 import TagsInput from "../TagsInput";
+import Datepick from "../Datepick";
 
-const ContentSubmit = ({ position, showMyLocation }) => {
+const ContentSubmit = ({ position, showMyLocation, catName }) => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
+  const [showFile, setShowFile] = useState(false);
+  const [showLink, setShowLink] = useState(false);
   const [showEmojis, setShowEmojis] = useState(false);
+  const [showDate, setShowDate] = useState(false);
 
   useEffect(() => {
     if (position != null) {
@@ -45,6 +49,18 @@ const ContentSubmit = ({ position, showMyLocation }) => {
       alert(JSON.stringify(values, null, 2));
     },
   });
+
+  const clickOpenFile = () => {
+    setShowFile((prev) => !prev)
+  }
+
+  const clickOpenLink = () => {
+    setShowLink((prev) => !prev)
+  }
+
+  const clickOpenDate = () => {
+    setShowDate((prev) => !prev)
+  }
 
   const addEmoji = (e) => {
     let sym = e.unified.split("-");
@@ -88,8 +104,8 @@ const ContentSubmit = ({ position, showMyLocation }) => {
           <div className="px-6 mt-2 w-full mb-16">
             <form className="flex flex-col" onSubmit={formik.handleSubmit}>
               {lat !== 0 && (
-                <div className="">
-                  <div className="flex justify-between">
+                <div className="w-full ">
+                  <div className="flex justify-between ">
                     <input
                       id="latitude"
                       className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
@@ -102,10 +118,10 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                     />
                     <input
                       id="longitude"
-                      className="text-xs text-[#1d9bf0] bg-white px-1 py-1 w-full focus-within:outline-none"
+                      className="text-right text-xs text-[#1d9bf0] bg-white px-1 py-1 right-0 w-full focus-within:outline-none"
                       type="text"
                       name="longitude"
-                      placeholder="Password"
+                      placeholder="Longitude"
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
                       value={lng}
@@ -132,10 +148,10 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   <div className="flex flex-wrap w-2/3 items-center">
                     <div className="flex items-center w-full space-x-2">
                       <div className="h-7 w-7">
-                        <RenderSvg c="coffeeshop-2" f={1} g={0} />
+                        <RenderSvg c={`${catName}-2`} f={1} g={0} />
                       </div>
-                      <span className="text-sm font-semibold text-gray-600 ">
-                        Coffee Shop
+                      <span className="text-sm font-semibold text-gray-600 capitalize">
+                        {catName}
                       </span>
                     </div>
                   </div>
@@ -171,7 +187,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
               <div className="flex2 items-center px-1 p-1">
                 <div className="flex items-center justify-between">
                   <div
-                    className="icon"
+                    className="icon flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer"
                     // onClick={() => filePickerRef.current.click()}
                   >
                     <PhotographIcon className="text-[#1d9bf0] h-[22px]" />
@@ -183,19 +199,19 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                     />
                   </div>
 
-                  <div className="icon rotate-90">
+                  <div className="icon rotate-90 flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer" onClick={clickOpenLink}>
                     <LinkIcon className="text-[#1d9bf0] h-[22px]" />
                   </div>
 
                   <div
-                    className="icon"
+                    className="icon flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer"
                     onClick={() => setShowEmojis(!showEmojis)}
                   >
-                    <EmojiHappyIcon className="text-[#1d9bf0] h-[22px] cursor-pointer" />
+                    <EmojiHappyIcon className="text-[#1d9bf0] h-[22px] " />
                   </div>
 
-                  <div className="icon">
-                    <CalendarIcon className="text-[#1d9bf0] h-[22px]" />
+                  <div className="icon flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer" onClick={clickOpenDate}>
+                    <CalendarIcon className="text-[#1d9bf0] h-[22px] " />
                   </div>
 
                   {showEmojis && (
@@ -236,7 +252,8 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   </span>
                 </div>
               </div>
-
+              
+              {showLink ? (
               <div className="my-2">
                 <input
                   id="link"
@@ -249,8 +266,8 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   value={formik.values.link}
                 />
               </div>
-
-              <div className="my-2">
+              ) : null }
+              {/* <div className="my-2">
                 <input
                   id="tags2"
                   className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
@@ -266,7 +283,7 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                     {formik.errors.tags}
                   </div>
                 ) : null}
-              </div>
+              </div> */}
 
               {/* <div class="px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-purple-200 dark:bg-gray-400">
                 <span class="flex flex-wrap pl-4 pr-2 py-2 m-1 justify-between items-center text-sm font-medium rounded-xl cursor-pointer bg-purple-500 text-gray-200 hover:bg-purple-600 hover:text-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100">
@@ -285,6 +302,10 @@ const ContentSubmit = ({ position, showMyLocation }) => {
                   </svg>
                 </span>
               </div> */}
+              
+              <div className="my-2">
+                <Datepick />
+              </div>
 
               <div className="my-2">
                 <TagsInput selectedTags={selectedTags} tagsI={["Nodejs"]} />

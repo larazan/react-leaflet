@@ -8,6 +8,7 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
+import { useParams } from "react-router-dom";
 
 import ContentSubmit from "../components/ContentSubmit";
 import Sidebar from "../components/Sidebar";
@@ -36,6 +37,8 @@ const Submit = () => {
   const ZOOM_LEVEL = 12;
   
   const location = useGeoLocation();
+
+  let { cat } = useParams();
 
   const HandleClickMap = () => {
     const map = useMapEvents({
@@ -70,7 +73,7 @@ const Submit = () => {
       <main>
         <div className="flex flex-col md:flex-row relative2 md:flex-no-wrap">
         {/* <Sidebar /> */}
-          <div className="flex relative z-0 inset-4 md:inset-x-0 md:top-0 md:outline-0 md:h-screen w-[22rem] lg:w-4/5 md:w-3/6 ">
+          <div className="peta flex relative z-0 inset-4 md:inset-x-0 md:top-0 md:outline-0 md:h-screen  md:w-3/6 lg:w-4/6">
             <MapContainer
               center={center}
               zoom={ZOOM_LEVEL}
@@ -105,8 +108,8 @@ const Submit = () => {
               <MiniMap position="bottomright"  />
             </MapContainer>
           </div>
-          <div className="flex w-full md:w-3/6">
-            <ContentSubmit position={position} showMyLocation={showMyLocation} />
+          <div className="flex w-full md:w-3/6 lg:2/6">
+            <ContentSubmit position={position} showMyLocation={showMyLocation} catName={cat} />
           </div>
         </div>
       </main>
