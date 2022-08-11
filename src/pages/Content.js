@@ -97,12 +97,12 @@ const Content = () => {
     <Header2 clickNewsPageActive={clickNewsPageActive} clickMapPageActive={clickMapPageActive} />
       <main>
         <div className="md:flex md:flex-no-wrap">
-          <div className={`flex z-0 outline-0 relative ${mapActive === true ? 'flex' : 'hidden md:flex' } lg:w-4/5 md:w-3/5 `}>
+          <div className={`map-wrapper flex z-0 outline-0 relative ${mapActive === true ? 'flex' : 'hidden md:flex' } w-screen h-screen md:w-3/5 lg:w-4/5`}>
             <MapContainer
               center={center}
               zoom={ZOOM_LEVEL}
               zoomControl={false}
-              className="h-screen w-screen"
+              className="relative h-screen w-screen w-[100%] h-[100%]"
               whenCreated={setMap}
             >
               <TileLayer

@@ -20,7 +20,7 @@ const InputSearch = ({ showSearchDrop, filToggle, openSearchDrop }) => {
               <div
                 className={`w-full md:w-72 ${
                   showSearchDrop === false ? "hidden" : ""
-                }  right-0 mt-9 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
+                }  right-0 mt-9 absolute z-20 font-normal bg-[#f1f1f2] shadow-md rounded-sm overflow-hidden border`}
               >
                 <div className="flex py-1.5 px-2 space-x-3">
                   <div className="w-full relative text-gray-600 border-2 border-gray-400/100">

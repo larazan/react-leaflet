@@ -147,8 +147,12 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <InputSearch showSearchDrop={showSearchDrop} filToggle={filToggle} openSearchDrop={openSearchDrop} />
-            
+            <InputSearch
+              showSearchDrop={showSearchDrop}
+              filToggle={filToggle}
+              openSearchDrop={openSearchDrop}
+            />
+
             <button className="h-8 w-8 md:hidden" onClick={openUserDrop}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -164,8 +168,10 @@ const Header = () => {
                   d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                 />
               </svg>
-              <UserDrop showUserDrop={showUserDrop} setShowUserDrop={setShowUserDrop} />
-              
+              <UserDrop
+                showUserDrop={showUserDrop}
+                setShowUserDrop={setShowUserDrop}
+              />
             </button>
           </div>
           <div className="hidden md:flex">
@@ -178,13 +184,39 @@ const Header = () => {
           <div className="hidden md:flex ">
             <Weather clickWeather={clickWeather} />
           </div>
+          
+        </div>
+        <div className="flex flex-row space-x-4">
+        <div className="flex">
+            <button className="flex inline-flex items-center justify-center rounded border px-3 py-1.5 space-x-2 hover:bg-gray-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                />
+              </svg>
+              <span className="font-semibold">Posting</span>
+            </button>
+          </div>
+          <div className="flex">
+            <button className="flex inline-flex items-center justify-center rounded border px-6 py-1.5 space-x-2 bg-[#fe2c55] opacity-90 hover:opacity-100">
+              <span className="font-semibold text-white">Masuk</span>
+            </button>
+          </div>
         </div>
         <Filter filOpen={filOpen} filToggle={filToggle} />
         <RegionalOption regOpen={regOpen} regToggle={regToggle} />
       </header>
 
       <ModalWeather showWeather={showWeather} closeWeather={setShowWeather} />
-      
     </>
   );
 };

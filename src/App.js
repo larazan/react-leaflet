@@ -20,6 +20,7 @@ import Cabinet from "./pages/Cabinet";
 import Filter from "./pages/Filter";
 import Pricing from "./pages/Pricing";
 import Modal2 from "./components/Modal2";
+import Detail from "./pages/Detail";
 
 import "./App.css";
 import { useState, useEffect } from "react";
@@ -58,7 +59,7 @@ function App() {
         {/* <Routes location={state?.backgroundLocation || location}> */}
         <Routes location={background || location}>
           <Route path="/" element={<Content />} >
-            <Route path="detail" element={<Modal2 />} />
+            <Route path="detail" element={<Detail />} />
           </Route>
           <Route path="post" element={<Filter />} />
           <Route path="post/:cat" element={<Submit />} />
@@ -73,6 +74,7 @@ function App() {
           <Route path="coba" element={<Coba />} />
           <Route path="cabinet" element={<Cabinet />} />
           <Route path="pricing" element={<Pricing />} />
+          <Route path="d" element={<Detail />} />
           <Route
             path="*"
             element={
