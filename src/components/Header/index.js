@@ -52,7 +52,7 @@ const Header = () => {
   return (
     <>
       <header className="hidden md:flex z-20 md:z-20 h-10 md:h-14 w-full absolute md:absolute top-0 md:m-0 px-4 md:px-5 py-6 md:py-3  items-center justify-between bg-white border-b shadow">
-        <div className="flex w-full md:w-3/5 justify-between">
+        <div className="flex w-full md:w-3/5 justify-between space-x-4">
           <div className="flex justify-between inline-flex w-full md:w-[100px]">
             {/* <button className="h-8 w-8 md:hidden">
               <svg
@@ -71,11 +71,13 @@ const Header = () => {
               </svg>
             </button> */}
             <div className="flex justify-center items-center">
+              <Link to={"/"} >
               <img
                 className="h-5 md:h-7"
                 src="https://liveuamap.com/images/logo_luam.svg"
                 alt="liveuamap"
               />
+              </Link>
             </div>
             <button className="h-8 w-8 md:hidden">
               <svg
@@ -174,16 +176,16 @@ const Header = () => {
               />
             </button>
           </div>
-          <div className="hidden md:flex">
+          <div className="hidden w-full md:flex">
             <Autocomplete
               options={["Chennai", "Mumbai", "Bangalore"]}
               value={selectedOption}
               onChange={setSelectedOption}
             />
           </div>
-          <div className="hidden md:flex ">
+          {/* <div className="hidden  md:flex ">
             <Weather clickWeather={clickWeather} />
-          </div>
+          </div> */}
           
         </div>
         <div className="flex flex-row space-x-4">

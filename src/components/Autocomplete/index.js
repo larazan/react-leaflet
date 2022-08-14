@@ -66,16 +66,32 @@ const Autocomplete = ({ options, value, onChange }) => {
 
   return (
     <>
-      <div className="relative w-80 flex" ref={ref}>
+      <div className="relative w-full flex" ref={ref}>
         <input
           type="text"
-          className="w-full border-2 px-4 py-1 outline-none bg-[#f1f1f2] rounded-full"
+          className="w-full border-1 px-4 py-2.5 outline-none bg-[#f1f1f2] rounded-full text-sm text-gray-700 placeholder-gray-600 focus:placeholder-gray-500 focus:border-purple-300 focus:outline-none focus:shadow-outline-purple"
           value={value}
           onChange={(e) => handleChange(e.target.value)}
           onFocus={() => setShowOptions(true)}
           onKeyDown={handleNav}
           placeholder="search something"
         />
+        <div class="absolute inset-y-0 right-4 flex items-center pl-2 cursor-pointer">
+          <svg
+            class="w-4 h-4"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="fill-current text-slate-500"
+              d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"
+            ></path>
+            <path
+              class="fill-current text-slate-400"
+              d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"
+            ></path>
+          </svg>
+        </div>
 
         <ul
           className={`absolute w-full top-12 rounded-lg bg-white shadow-lg drop-shadow-lg py-2 ${
@@ -84,7 +100,8 @@ const Autocomplete = ({ options, value, onChange }) => {
         >
           {filteredOptions.length > 0 ? (
             filteredOptions.map((option, i, arr) => {
-              let className = "px-4 py-2 hover:bg-gray-100 flex flex-inline items-center justify-center2";
+              let className =
+                "px-4 py-2 hover:bg-gray-100 flex flex-inline items-center justify-center2";
 
               if (i === 0) className += "";
               else if (i === arr.length) className += "pt-1 pb-2 rounded-b-lg";
@@ -103,13 +120,22 @@ const Autocomplete = ({ options, value, onChange }) => {
                   onClick={() => select(option)}
                 >
                   <span className="mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-</svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
                   </span>
-                  <span className="text-sm font-semibold">
-                  {option}
-                  </span>
+                  <span className="text-sm font-semibold">{option}</span>
                 </li>
               );
             })

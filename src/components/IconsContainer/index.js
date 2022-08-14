@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import keys from "../../assets/data/keys.json"
 import useStore from "../../store";
@@ -43,12 +44,13 @@ const IconsContainer = () => {
         </p>
         <p>
           Jika tidak menemukan apa yang kamu cari,{" "}
-          <a
-            href="https://github.com/tailwindlabs/heroicons/discussions/new?category=ideas"
+          <Link to={"/request"} >
+          <span
             className="text-purple-600 border-b-2 border-purple-100 hover:bg-purple-50 transition-colors duration-150"
           >
             silahkan buat permintaan
-          </a>
+          </span>
+          </Link>
           .
         </p>
       </div>

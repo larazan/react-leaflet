@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 
 import Comments from "../Comments";
+import DetailComment from "../DetailComment";
 import ModalGallery from "../ModalGallery";
 
 import data from "../../assets/data/images.json";
@@ -138,68 +139,76 @@ const Modal2 = ({ showModal, closeModal }) => {
             </div>
             {/* <div className="flex-auto md:flex lg:flex flex-wrap -mt-8 md:-mt-0 lg:-mt-0 px-5 py-0 ">
               <div className="flex w-full inline-flex py-3 px-2 justify-between md:justify-between "> */}
-            <div className="flex-auto md:flex lg:flex flex-wrap -mt-8 md:-mt-0 lg:-mt-0 px-5 py-0 items-center justify-between border-b">
-              <div className="flex w-full2 inline-flex py-0 xs:justify-between sm:justify-between md:justify-start lg:justify-start">
-                <div className=" py-3 left-0  space-x-1">
-                  <div className="flex items-center inline-flex space-x-1">
-                    <Avatar
-                      name="ratri"
-                      size="40"
-                      round={true}
-                      className="flex items-center justify-center shadow-xl rounded-full w-12 h-12 align-middle border-none sm:w-20 lg:w-60"
-                    />
+             <div className="flex md:flex lg:flex flex-wrap  md:-mt-0 lg:-mt-0 px-5 py-0 items-center justify-between border-b">
+                  <div className="flex w-full2 inline-flex py-0 xs:justify-between sm:justify-between md:justify-start lg:justify-start">
+                    <div className=" py-3 left-0  space-x-1">
+                      <div className="flex items-center inline-flex space-x-1">
+                        <Avatar
+                          name="ratri"
+                          size="40"
+                          round={true}
+                          className="flex items-center justify-center shadow-xl rounded-full w-12 h-12 align-middle border-none sm:w-20 lg:w-60"
+                        />
 
-                    <div className="block place-self-center px-2 text-sm text-gray-600 capitalize font-semibold">
-                      Ratri
-                      <br />
-                      <span className="text-xs font-extralight ">
-                        12 follower
-                      </span>
+                        <div className="block place-self-center px-2 text-sm text-gray-600 capitalize font-semibold">
+                          Ratri
+                          <br />
+                          <span className="text-xs font-light2 ">
+                            12 follower
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex w-full2 space-x-1 md:space-x-2 justify-end md:justify-end lg:justify-end hidden2 md:block">
+                    <div
+                      className="bg-blue-600 px-2 py-2 font-extralight text-white border border-blue-600 inline-flex items-center rounded-full hover:border-blue-700 hover:bg-blue-700 hover:text-white cursor-pointer"
+                      title="facebook"
+                    >
+                      <svg
+                        fill="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1"
+                        class="w-4 h-4"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </div>
+
+                    <div
+                      className="bg-blue-400 px-2 py-2 font-extralight text-gray-500 border border-blue-400 inline-flex items-center rounded-full hover:border-blue-500 hover:bg-blue-500 hover:text-gray-800 cursor-pointer"
+                      title="tweet"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                      </svg>
+                    </div>
+                    <div className="px-2 py-2 font-extralight text-white border bg-[#fe2c55] border-[#fe2c55] opacity-90 hover:opacity-100 inline-flex items-center rounded-full cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="flex w-full2 space-x-2 justify-between md:justify-end lg:justify-end hidden md:block">
-                <div
-                  className="bg-white px-2 py-2 font-extralight text-gray-500 border border-blue-600 inline-flex items-center rounded-full hover:border-white-100 hover:bg-blue-600 hover:text-white cursor-pointer"
-                  title="facebook"
-                >
-                  <img
-                    className="h-4 w-4"
-                    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU2LjY5MyA1Ni42OTMiIGhlaWdodD0iNTYuNjkzcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1Ni42OTMgNTYuNjkzIiB3aWR0aD0iNTYuNjkzcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik00MC40MywyMS43MzloLTcuNjQ1di01LjAxNGMwLTEuODgzLDEuMjQ4LTIuMzIyLDIuMTI3LTIuMzIyYzAuODc3LDAsNS4zOTUsMCw1LjM5NSwwVjYuMTI1bC03LjQzLTAuMDI5ICBjLTguMjQ4LDAtMTAuMTI1LDYuMTc0LTEwLjEyNSwxMC4xMjV2NS41MThoLTQuNzd2OC41M2g0Ljc3YzAsMTAuOTQ3LDAsMjQuMTM3LDAsMjQuMTM3aDEwLjAzM2MwLDAsMC0xMy4zMiwwLTI0LjEzN2g2Ljc3ICBMNDAuNDMsMjEuNzM5eiIvPjwvc3ZnPg=="
-                    alt="facebook"
-                  />
-                </div>
-
-                <div
-                  className="bg-white px-2 py-2 font-extralight text-gray-500 border border-blue-400 inline-flex items-center rounded-full hover:border-blue-400 hover:bg-blue-400 hover:text-gray-800 cursor-pointer"
-                  title="tweet"
-                >
-                  <img
-                    className="h-4 w-4"
-                    src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNNCw0NDAuNWM1NS42LDUsMTA1LjctOSwxNTEuMy00My4yYy00Ny43LTQuMi03OS42LTI4LTk3LjQtNzIuNmMxNS42LDEuOSwzMC4yLDIuNCw0NS43LTEuOCAgIGMtNTEuNC0xNi03OC44LTQ5LjYtODIuNS0xMDMuOGMxNS40LDcuMiwyOS45LDEyLjQsNDcsMTIuNmMtMzAuNS0yMi45LTQ2LjEtNTIuNi00NS41LTkwYzAuMy0xNy4yLDQuOS0zMy40LDE0LTQ4LjcgICBDOTMuMSwxNTkuMSwxNjQsMTk1LjcsMjUxLjMsMjAxLjhjLTAuNS0zLjgtMC44LTYuOC0xLjItOS45Yy03LjItNTUuNCwyOC44LTEwNS44LDgzLjgtMTE2LjNjMzQuNS02LjYsNjUsMi41LDkwLjgsMjYuMyAgIGM0LDMuNiw3LjQsNC40LDEyLjQsMy4xYzIwLjEtNS4xLDM5LjItMTIuNSw1Ny43LTIyLjVjLTcuMSwyMy40LTIxLjcsNDEtNDEuNSw1NS44YzQuNS0wLjgsOS4xLTEuNCwxMy42LTIuMyAgIGM0LjctMSw5LjQtMi4xLDE0LjEtMy40YzQuNS0xLjIsOC45LTIuNiwxMy4zLTQuMWM0LjUtMS41LDktMy4yLDE0LjMtNC4xYy0yLjYsMy42LTUuMSw3LjQtNy45LDEwLjljLTExLjYsMTQuNy0yNSwyNy42LTM5LjcsMzkuMSAgIGMtMS41LDEuMi0yLjgsMy44LTIuNyw1LjZjMC44LDM1LjUtNC4yLDcwLjEtMTUuNywxMDMuN2MtMjIuNiw2Ni4yLTYyLDExOS44LTEyMS4xLDE1OC4xYy0yOS4yLDE4LjktNjEuMSwzMS4zLTk1LjIsMzguNSAgIGMtMzMuOCw3LjEtNjcuOCw4LjQtMTAxLjksNC40Yy0zNC4yLTQtNjYuNy0xNC4xLTk3LjMtMjkuOWMtOC4xLTQuMS0xNS45LTguNy0yMy44LTEzLjFDMy42LDQ0MS4zLDMuOCw0NDAuOSw0LDQ0MC41eiIvPjwvZz48L3N2Zz4="
-                    alt="twitter"
-                  />
-                </div>
-                <div className="bg-white px-2 py-2 font-extralight text-blue-500 border border-blue-400 inline-flex items-center rounded-full hover:border-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div className="px-5 md:px-7 py-3 pb-5 border-b bg-gradient-to-t from-gray-100 to-white min-h-screen md:max-h-fit overflow-y-auto">
+            <div className="px-5 md:px-7 py-3 pb-5 border-b bg-gradient-to-t from-gray-100 to-white min-h-screen2 md:max-h-fit overflow-y-auto">
               <div className="flex justify-between">
                 <div className="flex inline-flex justify-center items-center space-x-2 pb-3">
                   <div className="h-8 w-8">
@@ -351,7 +360,7 @@ const Modal2 = ({ showModal, closeModal }) => {
                 </p>
               </div>
               <div className="py-2">
-                <div className="absolute p-4 z-20 h-full w-full">
+                <div className="absolute p-4 z-20 h-full2 w-full">
                   <button
                     className="p-3 bg-gray-800 h-8 justify-center items-center flex self-end2 rounded-2xl opacity-80 hover:opacity-100"
                     onClick={() => handleClick()}
@@ -439,7 +448,7 @@ const Modal2 = ({ showModal, closeModal }) => {
               </div>
             </div>
 
-            <Comments />
+            <DetailComment />
           </div>
         </div>
       ) : null}

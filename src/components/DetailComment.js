@@ -95,8 +95,8 @@ const openReplyHandler = () => {
                       Reply
                     </button>
                   </div>
-                  <div className="text-gray-400">{"•"}</div>
-                  <div className="flex items-center">
+                  {/* <div className="text-gray-400">{"•"}</div> */}
+                  {/* <div className="flex items-center">
                     <div className="flex -space-x-2 mr-2">
                       <img
                         className="rounded-full w-6 h-6 border border-white"
@@ -112,7 +112,7 @@ const openReplyHandler = () => {
                     <div className="text-sm text-gray-500 font-semibold">
                       5 Replies
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="mt-4 space-y-4">
 
