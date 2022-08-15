@@ -12,7 +12,7 @@ const Region = () => {
             <div className="flex w-full">
               <a
                 className="text-md font-bold text-gray-800 uppercase "
-                href="#"
+                href="/"
               >
                 Regions
               </a>
@@ -23,7 +23,7 @@ const Region = () => {
             <div className="flex flex-wrap pl-2 items-center hidden md:flex">
               <a
                 className="text-xs font-extrabold text-blue-500 uppercase "
-                href="#"
+                href="/"
               >
                 About
               </a>
@@ -31,7 +31,7 @@ const Region = () => {
             <div className="flex flex-wrap  items-center hidden md:flex">
               <a
                 className="text-xs font-extrabold text-blue-500 uppercase "
-                href="#"
+                href="/"
               >
                 Api
               </a>
@@ -49,7 +49,7 @@ const Region = () => {
                       className="py-1 px-5 hover:bg-gray-200 capitalize"
                       key={index}
                     >
-                      <a href="#" title="{provinsi.name}">
+                      <a href="/" title="{provinsi.name}">
                         {provinsi.name}
                       </a>
                     </li>

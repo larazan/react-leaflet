@@ -9,7 +9,9 @@ import Filter from "../Filter";
 import RegionalOption from "../RegionalOption"
 import InputSearch from "../InputSearch";
 import UserDrop from "../UserDrop";
-
+import UserDropMenu from "../UserDropMenu";
+import Notifications from "../../partials/header/Notifications";
+import UserMenu from "../../partials/header/UserMenu";
 
 const Header = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -155,7 +157,7 @@ const Header = () => {
               openSearchDrop={openSearchDrop}
             />
 
-            <button className="h-8 w-8 md:hidden" onClick={openUserDrop}>
+            {/* <button className="h-8 w-8 md:hidden" onClick={openUserDrop}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -174,7 +176,8 @@ const Header = () => {
                 showUserDrop={showUserDrop}
                 setShowUserDrop={setShowUserDrop}
               />
-            </button>
+            </button> */}
+            <UserDrop />
           </div>
           <div className="hidden w-full md:flex">
             <Autocomplete
@@ -213,6 +216,9 @@ const Header = () => {
               <span className="font-semibold text-white">Masuk</span>
             </button>
           </div>
+          
+            <UserDropMenu />
+          
         </div>
         <Filter filOpen={filOpen} filToggle={filToggle} />
         <RegionalOption regOpen={regOpen} regToggle={regToggle} />

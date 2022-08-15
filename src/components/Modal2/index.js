@@ -3,7 +3,7 @@ import Avatar from "react-avatar";
 import { Link } from "react-router-dom";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 
-import Comments from "../Comments";
+// import Comments from "../Comments";
 import DetailComment from "../DetailComment";
 import ModalGallery from "../ModalGallery";
 

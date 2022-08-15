@@ -9,7 +9,7 @@ function Frontend(props) {
   console.log(location.pathname);
 
   const renderHeader = () => {
-    if (location.pathname !== "/login" && location.pathname !== "/register") {
+    if (location.pathname !== "/login" && location.pathname !== "/register" && location.pathname !== "/forgot") {
       return <Header />;
     }
   };

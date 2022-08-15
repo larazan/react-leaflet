@@ -1,9 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   MapContainer,
   TileLayer,
   Marker,
-  Popup,
   ZoomControl,
   useMapEvents,
 } from "react-leaflet";
@@ -11,7 +10,6 @@ import L from "leaflet";
 import { useParams } from "react-router-dom";
 
 import ContentSubmit from "../components/ContentSubmit";
-import Sidebar from "../components/Sidebar";
 import useGeoLocation from "../hooks/useGeolocation";
 import MiniMap from "../components/MiniMap";
 

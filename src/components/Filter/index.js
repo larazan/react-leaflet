@@ -45,7 +45,7 @@ const Filter = ({ filOpen, filToggle }) => {
               <div className="">
                 {/* <div className="flex justify-between px-8 py-4 border-b">
                                     <div className="flex">
-                                        <a href="#" className="block text-sm font-semibold text-gray-800 uppercase whitespace-nowrap ">
+                                        <a href="/" className="block text-sm font-semibold text-gray-800 uppercase whitespace-nowrap ">
                                             Men
                                         </a>
                                     </div>
@@ -59,7 +59,7 @@ const Filter = ({ filOpen, filToggle }) => {
                                 </div>
                                 <div className="flex justify-between px-8 py-4 border-b">
                                     <div className="flex">
-                                        <a href="#" className="block text-sm font-semibold text-gray-800 uppercase whitespace-nowrap ">
+                                        <a href="/" className="block text-sm font-semibold text-gray-800 uppercase whitespace-nowrap ">
                                             Women
                                         </a>
                                     </div>
@@ -73,21 +73,21 @@ const Filter = ({ filOpen, filToggle }) => {
                                 </div> */}
 
                 <a
-                  href="#"
+                  href="/"
                   className="block text-sm font-semibold text-gray-800 uppercase whitespace-nowrap px-8 py-4 border-b hover:bg-gray-100"
                 >
                   Terbaru
                 </a>
                 <a
-                  href="#"
+                  href="/"
                   className="block text-sm font-semibold text-gray-800 uppercase whitespace-nowrap px-8 py-4 border-b hover:bg-gray-100"
                 >
                   Terpopuler
                 </a>
-                {/* <a href="#" className="block text-sm font-light whitespace-nowrap px-8 py-4 border-b">
+                {/* <a href="/" className="block text-sm font-light whitespace-nowrap px-8 py-4 border-b">
                                     Account
                                 </a>
-                                <a href="#" className="block text-sm font-light whitespace-nowrap px-8 py-4 border-b">
+                                <a href="/" className="block text-sm font-light whitespace-nowrap px-8 py-4 border-b">
                                     Help
                                 </a> */}
               </div>

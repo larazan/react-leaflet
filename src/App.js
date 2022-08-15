@@ -13,6 +13,7 @@ import Maps from "./pages/Maps";
 import Content from "./pages/Content";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Forgot from "./pages/Forgot";
 import Coba from "./pages/Coba";
 import Dashboard from "./pages/Dashboard";
 import Submit from "./pages/Submit";
@@ -23,12 +24,17 @@ import Modal2 from "./components/Modal2";
 import Detail from "./pages/Detail";
 import Request from "./pages/Request";
 import Empat04 from "./pages/Empat04";
+import NewsPost from "./components/NewsPost";
+import NewsComment from "./components/NewsComment";
+import NewsLike from "./components/NewsLike";
 
 import Frontend from "./hoc/Frontend";
 import Backend from "./hoc/Backend";
+import Profile from "./hoc/Profile";
 
 import "./App.css";
 import { useState, useEffect } from "react";
+
 
 function App() {
   const [subdomain, setSubdomain] = useState(null)
@@ -74,12 +80,19 @@ function App() {
             <Route path="content" element={<Content />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="forgot" element={<Forgot />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="coba" element={<Coba />} />
             <Route path="cabinet" element={<Cabinet />} />
             <Route path="pricing" element={<Pricing />} />
+            <Route path="profile" element={<Profile />} >
+              <Route index element={<NewsPost />} />
+              <Route path="with_comments" element={<NewsComment />} />
+              <Route path="likes" element={<NewsLike />} />
+            </Route>
             <Route path="d" element={<Detail />} />
             <Route path="request" element={<Request />} />
+            
           </Route>
           <Route path="/dashboard" element={<Backend />}>
             <Route index element={<Dashboard />} />

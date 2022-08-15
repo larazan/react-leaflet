@@ -1,6 +1,5 @@
 import React from "react";
 
-import imgExplode from "../../assets/icons/exploison.svg";
 import imag3 from "../../assets/images/22399192_0.jpg";
 
 const Modal = ({ showModal, closeModal }) => {

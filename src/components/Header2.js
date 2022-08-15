@@ -9,6 +9,7 @@ import Filter from "./Filter";
 import RegionalOption from "./RegionalOption"
 import InputSearch from "./InputSearch";
 import UserDrop from "./UserDrop";
+import UserDropMenu from "./UserDropMenu";
 
 const Header2 = ({ clickNewsPageActive, clickMapPageActive }) => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -148,7 +149,7 @@ const Header2 = ({ clickNewsPageActive, clickMapPageActive }) => {
             </button>
             <InputSearch showSearchDrop={showSearchDrop} filToggle={filToggle} openSearchDrop={openSearchDrop} />
             
-            <button className="h-8 w-8 md:hidden" onClick={openUserDrop}>
+            {/* <button className="h-8 w-8 md:hidden" onClick={openUserDrop}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -164,8 +165,8 @@ const Header2 = ({ clickNewsPageActive, clickMapPageActive }) => {
                 />
               </svg>
               <UserDrop showUserDrop={showUserDrop} setShowUserDrop={setShowUserDrop} />
-              
-            </button>
+            </button> */}
+            <UserDropMenu />
           </div>
           <div className="hidden md:flex">
             <Autocomplete

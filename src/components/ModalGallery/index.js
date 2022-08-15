@@ -1,13 +1,5 @@
 import React from "react";
 
-import omah1 from "../../assets/images/omah1.jpg";
-import omah2 from "../../assets/images/omah2.jpg";
-import omah3 from "../../assets/images/omah3.jpg";
-import omah4 from "../../assets/images/omah4.jpg";
-import omah5 from "../../assets/images/omah5.jpg";
-
-
-
 const ModalGallery = ({
   clickedImg,
   setClickedImg,

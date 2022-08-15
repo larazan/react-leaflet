@@ -8,7 +8,6 @@ import {
   ClipboardListIcon,
   UserIcon,
   DotsCircleHorizontalIcon,
-  DotsHorizontalIcon,
 } from "@heroicons/react/outline";
 
 import SidebarLink from '../SidebarLink';

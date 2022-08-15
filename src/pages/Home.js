@@ -1,8 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   MapContainer,
   TileLayer,
-  ZoomControl,
   Marker,
   Popup,
 } from "react-leaflet";

@@ -3,30 +3,10 @@ import {
   Sparklines,
   SparklinesLine,
   SparklinesSpots,
-  SparklinesBars,
 } from "react-sparklines";
 import axios from "axios";
 
 import symbolIdList from "../icon";
-
-import AutoCompleteText from "../components/AutoCompleteText";
-import AutoCompleteHook from "../components/AutoCompleteHook";
-import SearchBar from "../components/SearchBar";
-import Search from "../components/Search";
-import RenderSvg from "../components/RenderSvg";
-import SearchFilter from "../components/SearchFilter";
-import IconsContainer from "../components/IconsContainer";
-
-import countries from "../assets/data/countries";
-
-const BaseIcon = memo((props) => {
-  const { className = "", name } = props;
-  return (
-    <svg className={`icon-wrapper ${className}`} aria-hidden="true">
-      <use xlinkHref={`#${name}`}></use>
-    </svg>
-  );
-});
 
 const Coba = memo(() => {
   const [info, setInfo] = useState({});
