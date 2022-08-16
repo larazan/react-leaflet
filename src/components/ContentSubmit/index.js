@@ -15,6 +15,7 @@ import "emoji-mart/css/emoji-mart.css";
 import RenderSvg from "../RenderSvg";
 import TagsInput from "../TagsInput";
 import Datepick from "../Datepick";
+import FilterModal from "../FilterModal";
 
 const ContentSubmit = ({ position, showMyLocation, catName }) => {
   const [input, setInput] = useState("");
@@ -25,6 +26,20 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
   const [showLink, setShowLink] = useState(false);
   const [showEmojis, setShowEmojis] = useState(false);
   const [showDate, setShowDate] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const filePickerRef = useRef(null);
+  const [filterModalOpen, setFilterModalOpen] = useState(false)
+
+  const addImageToPost = (e) => {
+    const reader = new FileReader();
+    if (e.target.files[0]) {
+      reader.readAsDataURL(e.target.files[0]);
+    }
+
+    reader.onload = (readerEvent) => {
+      setSelectedFile(readerEvent.target.result);
+    };
+  };
 
   useEffect(() => {
     if (position != null) {
@@ -156,50 +171,81 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
                     </div>
                   </div>
                   <div className="flex flex-row-reverse w-1/3">
+                    <button onClick={(e) => {
+                    e.stopPropagation();
+                    setFilterModalOpen(true);
+                  }}>
                     <div className="flex flex-wrap pl-2 items-center ">
                       <span className="text-sm font-extrabold text-blue-500  cursor-pointer underline-offset-4 border-gray-800 border-b">
                         Ubah
                       </span>
                     </div>
+                    </button>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-1 mb-0">
-                <textarea
-                  id="body"
-                  className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
-                  type="text"
-                  name="body"
-                  rows="4"
-                  placeholder="Text Anything"
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.body}
-                ></textarea>
-                {formik.touched.body && formik.errors.body ? (
-                  <div className="py-1 text-xs text-red-400 font-semibold italic">
-                    {formik.errors.body}
-                  </div>
-                ) : null}
+              <div className="mt-1 mb-0 divide-y divide-gray-700 w-full">
+                <div
+                  className={`${selectedFile && "pb-7"} ${
+                    input && "space-y-2.5"
+                  }`}
+                >
+                  <textarea
+                    id="body"
+                    // className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
+                    className="bg-transparent bg-gray-1002 bg-opacity-502 px-2 py-2 focus-within:outline-blue-200 outline-none  text-lg placeholder-gray-500 tracking-wide w-full min-h-[50px]"
+                    type="text"
+                    name="body"
+                    rows="2"
+                    placeholder="What's happening?"
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
+                    value={formik.values.body}
+                  ></textarea>
+                  {selectedFile && (
+                    <div className="relative">
+                      <div
+                        className="absolute w-8 h-8 bg-[#15181c] hover:bg-[#272c26] bg-opacity-75 rounded-full flex items-center justify-center top-1 left-1 cursor-pointer"
+                        onClick={() => setSelectedFile(null)}
+                      >
+                        <XIcon className="text-white h-5" />
+                      </div>
+                      <img
+                        src={selectedFile}
+                        alt=""
+                        className="rounded-2xl max-h-80 object-contain"
+                      />
+                    </div>
+                  )}
+
+                  {formik.touched.body && formik.errors.body ? (
+                    <div className="py-1 text-xs text-red-400 font-semibold italic">
+                      {formik.errors.body}
+                    </div>
+                  ) : null}
+                </div>
               </div>
 
               <div className="flex2 items-center px-1 p-1">
                 <div className="flex items-center justify-between">
                   <div
                     className="icon flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer"
-                    // onClick={() => filePickerRef.current.click()}
+                    onClick={() => filePickerRef.current.click()}
                   >
                     <PhotographIcon className="text-[#1d9bf0] h-[22px]" />
                     <input
                       type="file"
-                      //   ref={filePickerRef}
+                      ref={filePickerRef}
                       hidden
-                      //   onChange={addImageToPost}
+                      onChange={addImageToPost}
                     />
                   </div>
 
-                  <div className="icon rotate-90 flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer" onClick={clickOpenLink}>
+                  <div
+                    className="icon rotate-90 flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer"
+                    onClick={clickOpenLink}
+                  >
                     <LinkIcon className="text-[#1d9bf0] h-[22px]" />
                   </div>
 
@@ -210,7 +256,10 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
                     <EmojiHappyIcon className="text-[#1d9bf0] h-[22px] " />
                   </div>
 
-                  <div className="icon flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer" onClick={clickOpenDate}>
+                  <div
+                    className="icon flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer"
+                    onClick={clickOpenDate}
+                  >
                     <CalendarIcon className="text-[#1d9bf0] h-[22px] " />
                   </div>
 
@@ -229,44 +278,45 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
                   )}
                 </div>
               </div>
+              {showFile ? (
+                <div className="my-2">
+                  <div className="flex border-dashed border-2 w-full h-32 mt-2 rounded  justify-center items-center text-gray-400 font-semibold">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                      />
+                    </svg>
 
-              <div className="my-2">
-                <div className="flex border-dashed border-2 w-full h-32 mt-2 rounded  justify-center items-center text-gray-400 font-semibold">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                    />
-                  </svg>
-
-                  <span className="text-sm block text-grey">
-                    Drop your files here
-                  </span>
+                    <span className="text-sm block text-grey">
+                      Drop your files here
+                    </span>
+                  </div>
                 </div>
-              </div>
-              
+              ) : null}
+
               {showLink ? (
-              <div className="my-2">
-                <input
-                  id="link"
-                  className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
-                  name="link"
-                  type="text"
-                  placeholder="Link"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.link}
-                />
-              </div>
-              ) : null }
+                <div className="my-2">
+                  <input
+                    id="link"
+                    className="text-sm text-[#1d9bf0] bg-white mt-2 px-2 py-2 rounded w-full border border-gray-300 focus-within:outline-blue-400"
+                    name="link"
+                    type="text"
+                    placeholder="Link"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.link}
+                  />
+                </div>
+              ) : null}
               {/* <div className="my-2">
                 <input
                   id="tags2"
@@ -302,21 +352,31 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
                   </svg>
                 </span>
               </div> */}
-              
-              <div className="my-2">
-                <Datepick />
-              </div>
+              {showDate ? (
+                <div className="my-2 z-10">
+                  <Datepick />
+                </div>
+              ) : null}
 
               <div className="my-2">
                 <TagsInput selectedTags={selectedTags} tagsI={["Nodejs"]} />
               </div>
+
+              
+                <FilterModal
+                  id="search-modal"
+                  searchId="search"
+                  modalOpen={filterModalOpen}
+                  setModalOpen={setFilterModalOpen}
+                />
+             
 
               <div className="my-2 flex justify-end mb-3">
                 <button
                   type="submit"
                   className="mt-4 w-full bg-gradient-to-tr from-blue-500 to-indigo-600 text-white px-10 py-2 rounded-md text-lg font-bold tracking-wide"
                 >
-                  Submit
+                  Post
                 </button>
               </div>
             </form>

@@ -120,23 +120,17 @@ function Profile(props) {
                   border-t"
               >
                 <li className="md:border-t md:border-gray-700 md:-mt-px md:text-gray-700">
-                  <Link className="inline-block p-3" to="#">
-                    <i className="fas fa-th-large text-xl md:text-xs"></i>
+                  <Link className="inline-block p-3" to="/profile">
                     <span className="hidden md:inline">post</span>
                   </Link>
                 </li>
                 <li>
                   <Link className="inline-block p-3" to="with_comments">
-                    <i className="far fa-square text-xl md:text-xs"></i>
                     <span className="hidden md:inline">post & comment</span>
                   </Link>
                 </li>
                 <li>
                   <Link className="inline-block p-3" to="likes">
-                    <i
-                      className="fas fa-user border border-gray-500
-                           px-1 pt-1 rounded text-xl md:text-xs"
-                    ></i>
                     <span className="hidden md:inline">like</span>
                   </Link>
                 </li>
