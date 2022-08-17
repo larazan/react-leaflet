@@ -7,6 +7,7 @@ import {
 import axios from "axios";
 
 import symbolIdList from "../icon";
+import UserAvatar from "../components/UserAvatar";
 
 const Coba = memo(() => {
   const [info, setInfo] = useState({});
@@ -70,7 +71,11 @@ useEffect(() => {
         <div className="flex items-center justify-center min-h-screen2">
           <div className="w-full max-w-2xl2 px-10 py-8 bg-white">
             <div className="mx-auto pt-10">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+
+              <div>
+                <UserAvatar name="Ratri wiranti" />
+              </div>
+              {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
                 
                 <div className="relative mx-auto w-full">
                   <a
@@ -298,7 +303,7 @@ useEffect(() => {
                   </a>
                 </div>
 
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

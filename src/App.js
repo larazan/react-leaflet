@@ -27,6 +27,9 @@ import Empat04 from "./pages/Empat04";
 import NewsPost from "./components/NewsPost";
 import NewsComment from "./components/NewsComment";
 import NewsLike from "./components/NewsLike";
+import Message from "./pages/Message";
+import Followers from "./pages/Followers";
+import Following from "./pages/Following";
 
 import Frontend from "./hoc/Frontend";
 import Backend from "./hoc/Backend";
@@ -79,6 +82,7 @@ function App() {
             <Route path="maps" element={<Maps />} />
             <Route path="content" element={<Content />} />
             <Route path="login" element={<Login />} />
+            <Route path="messages" element={<Message />} />
             <Route path="register" element={<Register />} />
             <Route path="forgot" element={<Forgot />} />
             <Route path="dashboard" element={<Dashboard />} />
@@ -89,10 +93,12 @@ function App() {
               <Route index element={<NewsPost />} />
               <Route path="with_comments" element={<NewsComment />} />
               <Route path="likes" element={<NewsLike />} />
+              <Route path="followers" element={<Followers />} />
+              <Route path="following" element={<Following />} />
             </Route>
             <Route path="d" element={<Detail />} />
             <Route path="request" element={<Request />} />
-            
+            <Route path="*" element={<Empat04 />} />
           </Route>
           <Route path="/dashboard" element={<Backend />}>
             <Route index element={<Dashboard />} />
