@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Avatar from "react-avatar";
 import { Link } from "react-router-dom";
 
-const UserAvatar = ({ name }) => {
+const UserAvatar = ({ name, size, round }) => {
   const [img, setImg] = useState(false);
   return (
     <>
@@ -15,7 +15,7 @@ const UserAvatar = ({ name }) => {
               alt="profile"
             />
           ) : (
-            <Avatar name={name} size="41" round={true} />
+            <Avatar name={name} size={size} round={round} />
           )}
         </div>
         {/*  */}

@@ -40,8 +40,44 @@ function Profile(props) {
     if (lastUrl === "followers" || lastUrl === "following") {
       return (
         <main className="md:mt-10 bg-gray-100 bg-opacity-25">
-          <div className="lg:w-8/12 pt-10 lg:mx-auto mb-8">
-            <div className="px-px md:px-3">
+          <div className="lg:w-8/12 md:pt-10 lg:mx-auto mb-8">
+          <header className="flex md:hidden z-20 md:z-20 h-10 md:h-14 w-full  top-0 md:m-0 px-4 md:px-5 py-6 md:py-3  items-center justify-between bg-gray-100 border-b shadow">
+        <div className="flex inline-flex w-full justify-center items_center space-x-3">
+            <div className="flex w-1/4 w-full">
+                <button className="p-1 rounded-full bg-gray-300">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M11 17l-5-5m0 0l5-5m-5 5h12"
+                    />
+                    </svg>
+                </button>
+            </div>
+            <div className="flex w-3/4 items-center justify-center2 space-x-2">
+                <div className="no-flex2 ">
+                    <img
+                        className="w-8 h-8 md:w-40 md:h-40 object-cover rounded-full border p-0"
+                        src="https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                        alt="profile"
+                        />
+                </div>
+                <div>
+                    <span className="text-lg inline-block font-semibold sm:mb-0">
+                    mrtravlerrr_
+                    </span>
+                </div>
+            </div>
+        </div>
+      </header>
+            <div className="px-0 md:px-0 py-3">
             <ul className="flex items-center justify-around md:justify-center space-x-12 uppercase tracking-widest font-semibold  text-gray-600 border-b">
               <li className={` ${lastUrl === 'followers' ? 'md:border-b-4 md:border-blue-400 md:-mt-px md:text-gray-700' : ''} `}>
                 <NavLink 
@@ -102,7 +138,7 @@ function Profile(props) {
                   >
                     ikuti
                   </a>
-                  <Link to="/messages">
+                  <Link to="/messages/3">
                   <button className="flex justify-center items-center h-10 w-10 p-2 border rounded-full hover:bg-gray-200">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -308,7 +344,7 @@ function Profile(props) {
                   }
                   to="with_comments"
                 >
-                  <span className="hidden2 md:inline">post & comment</span>
+                  <span className="hidden2 md:inline">detail</span>
                 </NavLink>
               </li>
               <li className={` ${lastUrl === 'likes' ? 'md:border-t md:border-gray-700 md:-mt-px md:text-gray-700' : ''} `}>
@@ -318,7 +354,7 @@ function Profile(props) {
                 }
                   to="likes"
                 >
-                  <span className="hidden2 md:inline">like</span>
+                  <span className="hidden2 md:inline">more</span>
                 </NavLink>
               </li>
             </ul>

@@ -28,8 +28,10 @@ import NewsPost from "./components/NewsPost";
 import NewsComment from "./components/NewsComment";
 import NewsLike from "./components/NewsLike";
 import Message from "./pages/Message";
+import MessageBox from "./pages/MessageBox";
 import Followers from "./pages/Followers";
 import Following from "./pages/Following";
+import SetupProfile from "./pages/SetupProfile";
 
 import Frontend from "./hoc/Frontend";
 import Backend from "./hoc/Backend";
@@ -83,12 +85,14 @@ function App() {
             <Route path="content" element={<Content />} />
             <Route path="login" element={<Login />} />
             <Route path="messages" element={<Message />} />
+            <Route path="messages/:id" element={<MessageBox />} />
             <Route path="register" element={<Register />} />
             <Route path="forgot" element={<Forgot />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="coba" element={<Coba />} />
             <Route path="cabinet" element={<Cabinet />} />
             <Route path="pricing" element={<Pricing />} />
+            <Route path="change_profile" element={<SetupProfile />} />
             <Route path="profile" element={<Profile />} >
               <Route index element={<NewsPost />} />
               <Route path="with_comments" element={<NewsComment />} />

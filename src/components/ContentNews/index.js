@@ -243,7 +243,7 @@ const ContentNews = ({
         {news.map((article, idx) => (
           <Link
             key={article.id}
-            to={`detail`}
+            to={`d`}
             // to=""
             state={{ background: location }}
           >
