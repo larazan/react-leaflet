@@ -337,22 +337,22 @@ function Profile(props) {
                   <span className="hidden2 md:inline">post</span>
                 </NavLink>
               </li>
-              <li className={` ${lastUrl === 'with_comments' ? 'md:border-t md:border-gray-700 md:-mt-px md:text-gray-700' : ''} `}>
+              <li className={` ${lastUrl === 'detail' ? 'md:border-t md:border-gray-700 md:-mt-px md:text-gray-700' : ''} `}>
                 <NavLink 
                   className={({ isActive }) =>
                     isActive ? "inline-block p-3 text-blue-400 font-bold" : "inline-block p-3"
                   }
-                  to="with_comments"
+                  to="detail"
                 >
                   <span className="hidden2 md:inline">detail</span>
                 </NavLink>
               </li>
-              <li className={` ${lastUrl === 'likes' ? 'md:border-t md:border-gray-700 md:-mt-px md:text-gray-700' : ''} `}>
+              <li className={` ${lastUrl === 'more' ? 'md:border-t md:border-gray-700 md:-mt-px md:text-gray-700' : ''} `}>
                 <NavLink 
                 className={({ isActive }) =>
                   isActive ? "inline-block p-3 text-blue-400 font-bold" : "inline-block p-3"
                 }
-                  to="likes"
+                  to="more"
                 >
                   <span className="hidden2 md:inline">more</span>
                 </NavLink>

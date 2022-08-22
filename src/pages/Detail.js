@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import Avatar from "react-avatar";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useOnClickOutside } from "./../hooks/useOnClickOutside";
 
@@ -7,6 +6,10 @@ import ModalGallery from "../components/ModalGallery";
 import RenderSvg from "../components/RenderSvg";
 import Footer from "../components/Footer";
 import DetailComment from "../components/DetailComment";
+import UserAvatar from "../components/UserAvatar";
+
+import twitter from "./../assets/images/twitter.svg";
+import facebook from "./../assets/images/facebook.svg";
 
 import data from "./../assets/data/images.json";
 import omah1 from "./../assets/images/omah1.jpg";
@@ -42,9 +45,68 @@ const Detail = () => {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [showDrop, setShowDrop] = useState(false);
+  const [openShare, setOpenShare] = useState(false);
+  const [favorites, setFavorites] = useState([]);
+  const [komen, setKomen] = useState(12);
+  const [suka, setSuka] = useState(230);
 
   const ref = useRef();
   useOnClickOutside(ref, () => setShowDrop(false));
+
+  const getArray = JSON.parse(localStorage.getItem("favorites") || "0");
+
+  useEffect(() => {
+    if (getArray !== 0) {
+      setFavorites([...getArray]);
+    }
+  }, []);
+
+  const shareHandler = (e) => {
+    e.stopPropagation();
+    const id = e.currentTarget.dataset.id;
+    // setShareId(parseInt(id));
+    // console.log(id);
+    setOpenShare((prev) => !prev);
+  };
+
+  const commentHandler = (e) => {
+    e.stopPropagation();
+    setKomen(8)
+    // console.log('comment click');
+    // console.log("comment");
+  };
+
+  const addFav = (props) => {
+    // e.stopPropagation()
+    // console.log("tambah favorit");
+    let array = favorites;
+    let addArray = true;
+    array.map((item, key) => {
+      if (item === props.idx) {
+        array.splice(key, 1);
+        addArray = false;
+      }
+    });
+    if (addArray) {
+      array.push(props.idx);
+    }
+    setFavorites([...array]);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    var storage = localStorage.getItem("favItem" + props.idx || "0");
+    if (storage == null) {
+      localStorage.setItem(
+        "favItem" + props.idx,
+        JSON.stringify(props.article)
+      );
+    } else {
+      localStorage.removeItem("favItem" + props.idx);
+    }
+  };
+
+  const replaceWithBr = (title) => {
+    return title.replace(/\n/g, "<br />")
+  }
 
   const openDrop = (e) => {
     e.stopPropagation();
@@ -102,15 +164,15 @@ const Detail = () => {
                   <div className="flex w-full2 inline-flex py-0 xs:justify-between sm:justify-between md:justify-start lg:justify-start">
                     <div className=" py-3 left-0  space-x-1">
                       <div className="flex items-center inline-flex space-x-1">
-                        <Avatar
-                          name="ratri"
+                        <UserAvatar
+                          name="berliana lovell"
                           size="40"
                           round={true}
                           className="flex items-center justify-center shadow-xl rounded-full w-12 h-12 align-middle border-none sm:w-20 lg:w-60"
                         />
 
                         <div className="block place-self-center px-2 text-sm text-gray-600 capitalize font-semibold">
-                          Ratri
+                          berliana lovell
                           <br />
                           <span className="text-xs font-light2 ">
                             12 follower
@@ -389,6 +451,142 @@ const Detail = () => {
                     </a>
                   </div>
                 </div>
+
+                <div className="flex justify-between w-full py-4 px-6 border-b">
+                <div
+                  className="flex w-1/3 cursor-pointer"
+                  onClick={commentHandler}
+                >
+                  <div className="flex inline-flex justify-center items-center space-x-1">
+                    <div className="h-5 w-5">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1}
+                          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                        />
+                      </svg>
+                    </div>
+                    <div className="text-xs font-semibold text-gray-600">
+                      {komen > 0 ? komen : 'Comment'}
+                    </div>
+                  </div>
+                </div>
+                {favorites.includes() ? (
+                  <div
+                    onClick={() => addFav({})}
+                    data-event="fav"
+                    className="flex w-1/3 text-center justify-center cursor-pointer"
+                  >
+                    <div className="flex inline-flex justify-center items-center space-x-1">
+                      <div className="h-5 w-5 text-rose-500">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div className="text-xs font-semibold text-gray-600">
+                        {suka}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    onClick={() => addFav({})}
+                    data-event="fav"
+                    className="flex w-1/3 text-center justify-center cursor-pointer"
+                  >
+                    <div className="flex inline-flex justify-center items-center space-x-1">
+                      <div className="h-5 w-5 ">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div className="text-xs font-semibold text-gray-600">
+                        {suka}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                <div
+                  href="#"
+                  onClick={shareHandler}
+                  // data-id={idx}
+                  data-event="share"
+                  className="w-1/3 text-right cursor-pointer"
+                >
+                  <div className="flex inline-flex justify-center items-center space-x-1">
+                    <div className="text-xs font-semibold text-gray-600">
+                      Share
+                    </div>
+                    <div className="h-5 w-5 rounded-full border">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1}
+                          d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                        />
+                      </svg>
+                    </div>
+                    {/* {shareId === idx ? ( */}
+                      <div className="absolute flex z-[20] right-1 rounded-full border items-center justify-between shadow-md">
+                        <a
+                          data-id="22436481"
+                          className="facebook-icon fb w-12 h-10 p-2 px-3 bg-white items-center rounded-l-2xl"
+                          href="#"
+                        >
+                          <button className="h-6 w-6">
+                            <img src={facebook} alt="" />
+                          </button>
+                        </a>
+                        <a
+                          data-id="22436481"
+                          className="twitter-icon twi w-12 h-10 p-2 px-3 bg-white items-center rounded-r-2xl"
+                          href="#"
+                        >
+                          <button className="h-6 w-6">
+                            <img src={twitter} alt="" />
+                          </button>
+                        </a>
+                      </div>
+                    {/* ) : null} */}
+                  </div>
+                </div>
+              </div>
 
                 <div className="px-8 py-2">
                   <div className="py-3 text-bold text-md">Related Tags</div>

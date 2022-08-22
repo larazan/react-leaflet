@@ -25,8 +25,8 @@ import Detail from "./pages/Detail";
 import Request from "./pages/Request";
 import Empat04 from "./pages/Empat04";
 import NewsPost from "./components/NewsPost";
-import NewsComment from "./components/NewsComment";
-import NewsLike from "./components/NewsLike";
+import More from "./components/More";
+import DetailProfile from "./components/DetailProfile";
 import Message from "./pages/Message";
 import MessageBox from "./pages/MessageBox";
 import Followers from "./pages/Followers";
@@ -95,8 +95,8 @@ function App() {
             <Route path="change_profile" element={<SetupProfile />} />
             <Route path="profile" element={<Profile />} >
               <Route index element={<NewsPost />} />
-              <Route path="with_comments" element={<NewsComment />} />
-              <Route path="likes" element={<NewsLike />} />
+              <Route path="detail" element={<DetailProfile />} />
+              <Route path="more" element={<More />} />
               <Route path="followers" element={<Followers />} />
               <Route path="following" element={<Following />} />
             </Route>

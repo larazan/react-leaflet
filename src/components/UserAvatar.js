@@ -6,8 +6,8 @@ const UserAvatar = ({ name, size, round }) => {
   const [img, setImg] = useState(false);
   return (
     <>
-      <div className="group relative w-fit h-fit">
-        <div className="h-10 w-10 group cursor-pointer">
+      <div className="group relative2 w-fit h-fit">
+        <div className="z-0 h-10 w-10 group cursor-pointer">
           {img ? (
             <img
               className="w-10 h-10 md:w-10 md:h-10 object-cover rounded-full border p-0"
@@ -20,7 +20,7 @@ const UserAvatar = ({ name, size, round }) => {
         </div>
         {/*  */}
         <div
-          className={`sm:w-72 md:w-72 hidden group-hover:block mt-0.5 absolute z-20 font-normal bg-white shadow-md rounded-lg overflow-hidden border`}
+          className={`sm:w-72 md:w-72 hidden group-hover:block mt-0.5 absolute z-10 font-normal bg-white shadow-md rounded-lg overflow-hidden border`}
         >
           <div className="flex flex-col p-4 space-y-3">
             <div className="flex flex-row justify-between">
@@ -36,15 +36,14 @@ const UserAvatar = ({ name, size, round }) => {
                 </a>
               </div>
             </div>
-            <div>
+            {/* <div>
               <h2 className="text-lg inline-block font-semibold md:mr-2 mb-0 md:mb-0">
                 mrtravlerrr_
               </h2>
-            </div>
-            <div>
+            </div> */}
+            <div className="pb-2">
               <h1 className="font-semibold">Mr Travlerrr...</h1>
-              <span>Travel, Nature and Music</span>
-              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <span className="font-light text-md text-gray-700">Travel, Nature and Music Lorem ipsum dolor sit amet consectetur</span>
             </div>
             <div>
               <ul className="flex justify-around space-x-8 text-center p-0 text-gray-600 leading-snug text-sm">

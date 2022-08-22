@@ -9,6 +9,7 @@ import Modal from "../Modal2";
 
 import RenderIcon from "../RenderIcon";
 import RenderSvg from "../RenderSvg";
+import UserAvatar from "../UserAvatar";
 
 import imag from "../../assets/images/22399054_0.jpg";
 import imag2 from "../../assets/images/22399259_0.jpg";
@@ -264,7 +265,7 @@ const ContentNews = ({
                   {article.name ? (
                     <>
                       <div className="h-9 w-9">
-                        <Avatar name={article.name} size="41" round={true} />
+                        <UserAvatar name={article.name} size="41" round={true} />
                       </div>
                       <div className="flex flex-col">
                         <span className="text-[13px] font-semibold text-gray-600 capitalize">

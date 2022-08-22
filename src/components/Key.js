@@ -1,8 +1,8 @@
 import React from "react";
 
-import RenderSvg from "../RenderSvg";
+import RenderSvg from "./RenderSvg";
 
-import keys from '../../assets/data/keys.json'
+import keys from '../assets/data/keys.json'
 
 const Key = () => {
   return (

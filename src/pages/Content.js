@@ -21,6 +21,7 @@ const Content = () => {
   const [map, setMap] = useState(null);
   const [selected, setSelected] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [expand, setExpand] = useState(false);
   const [center, setCenter] = useState({ lat: -7.2491, lng: 112.7508 });
   const ZOOM_LEVEL = 12;
 
@@ -38,6 +39,10 @@ const Content = () => {
     setNewsActive(false)
     setMapActive(true)
   } 
+
+  const clickExpand = () => {
+    setExpand((prev) => !prev)
+  }
 
   useEffect(() => {
     const host = window.location.host;
@@ -132,6 +137,8 @@ const Content = () => {
               setSelectedIndex={setSelectedIndex} 
               handleId={handleId}
               newsActive={newsActive}
+              clickExpand={clickExpand}
+              expand={expand}
             />
           </div>
         </div>

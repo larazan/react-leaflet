@@ -13,6 +13,10 @@ const openReplyHandler = () => {
     <>
       <div className="px-8 pb-4">
         <div className="py-3 text-bold text-md">Comment</div>
+        <div className="mt-3">
+          <InputReply openReply={true} />
+        </div>
+        
         <div className="flex items-center justify-between pb-4 ">
           <div className="top-0 py-2 space-y-4">
             <div className="flex">

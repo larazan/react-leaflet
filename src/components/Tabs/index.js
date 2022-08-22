@@ -13,7 +13,9 @@ const Tabs = ({
   setSelected,
   setSelectedIndex,
   handleId,
-  newsActive
+  newsActive,
+  clickExpand,
+  expand
 }) => {
   const [openTab, setOpenTab] = useState(1);
   const [color, setColor] = useState("green");

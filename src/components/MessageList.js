@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Avatar from "react-avatar";
 
-import UserAvatar from "./UserAvatar";
 
 const MessageList = () => {
   const [img, setImg] = useState(false);
@@ -18,7 +18,7 @@ const MessageList = () => {
         <div className="flex flex-col p-4 space-y-3">
           <div className="flex flex-row justify-center items-center space-x-6 md:space-x-0">
             <div className="h-13 w-13 w-1/6">
-              <UserAvatar name="Ratri Wiranti" size="52" round={true} />
+              <Avatar name="Ratri Wiranti" size="52" round={true} />
             </div>
             <div className="w=5/6">
               <div className="flex justify-between">

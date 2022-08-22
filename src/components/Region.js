@@ -1,6 +1,6 @@
 import React from "react";
 
-import provinces from "../../assets/data/provinces.json";
+import cities from '../assets/data/kota.json'
 
 const Region = () => {
   return (
@@ -44,13 +44,13 @@ const Region = () => {
             <div className="py-2">
               <div className="flex flex-wrap text-lg font-light text-blue-500">
                 <ul className=" w-full">
-                  {provinces.map((provinsi, index) => (
+                  {cities.map((city, index) => (
                     <li
                       className="py-1 px-5 hover:bg-gray-200 capitalize"
                       key={index}
                     >
-                      <a href="/" title="{provinsi.name}">
-                        {provinsi.name}
+                      <a href="/" title={city.city}>
+                        {city.city}
                       </a>
                     </li>
                   ))}
