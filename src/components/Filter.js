@@ -35,7 +35,7 @@ const Filter = ({ filOpen, filToggle }) => {
               type="submit"
               className=" flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-sky-500 hover:bg-sky-600 rounded-2xl py-2 px-3 w-full transition duration-150 ease-in"
             >
-              <span class="font-semibold">Terapkan</span>
+              <span className="font-semibold">Terapkan</span>
             </button>
           </div>
         </header>

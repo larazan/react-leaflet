@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 
 import Autocomplete from "../Autocomplete";
-import Weather from "../Weather";
 import ModalWeather from "../WeatherModal";
 import Filter from "../Filter";
 import RegionalOption from "../RegionalOption"

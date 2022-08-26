@@ -16,6 +16,7 @@ import RenderSvg from "../RenderSvg";
 import TagsInput from "../TagsInput";
 import Datepick from "../Datepick";
 import FilterModal from "../FilterModal";
+import ModalDropzone from "../ModalDropzone";
 
 const ContentSubmit = ({ position, showMyLocation, catName }) => {
   const [input, setInput] = useState("");
@@ -29,6 +30,7 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const filePickerRef = useRef(null);
   const [filterModalOpen, setFilterModalOpen] = useState(false)
+  const [dropzoneModalOpen, setDropzoneModalOpen] = useState(false)
 
   const addImageToPost = (e) => {
     const reader = new FileReader();
@@ -256,12 +258,17 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
                     <EmojiHappyIcon className="text-[#1d9bf0] h-[22px] " />
                   </div>
 
+                  <button onClick={(e) => {
+                    e.stopPropagation();
+                    setDropzoneModalOpen(true);
+                  }}>    
                   <div
                     className="icon flex h-10 w-10 p-2 hover:bg-[#e8f5fd] hover:text-cyan-400 rounded-full items-center justify-center cursor-pointer"
-                    onClick={clickOpenDate}
+                    // onClick={clickOpenDate}
                   >
                     <CalendarIcon className="text-[#1d9bf0] h-[22px] " />
                   </div>
+                  </button>
 
                   {showEmojis && (
                     <Picker
@@ -335,12 +342,12 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
                 ) : null}
               </div> */}
 
-              {/* <div class="px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-purple-200 dark:bg-gray-400">
-                <span class="flex flex-wrap pl-4 pr-2 py-2 m-1 justify-between items-center text-sm font-medium rounded-xl cursor-pointer bg-purple-500 text-gray-200 hover:bg-purple-600 hover:text-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100">
+              {/* <div className="px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-purple-200 dark:bg-gray-400">
+                <span className="flex flex-wrap pl-4 pr-2 py-2 m-1 justify-between items-center text-sm font-medium rounded-xl cursor-pointer bg-purple-500 text-gray-200 hover:bg-purple-600 hover:text-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100">
                   UI/UX
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 ml-3 hover:text-gray-300"
+                    className="h-5 w-5 ml-3 hover:text-gray-300"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -368,6 +375,11 @@ const ContentSubmit = ({ position, showMyLocation, catName }) => {
                   searchId="search"
                   modalOpen={filterModalOpen}
                   setModalOpen={setFilterModalOpen}
+                />
+
+                <ModalDropzone 
+                  modalOpen={dropzoneModalOpen}
+                  setModalOpen={setDropzoneModalOpen}
                 />
              
 

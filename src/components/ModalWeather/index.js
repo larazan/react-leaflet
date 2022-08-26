@@ -208,7 +208,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center justify-center items-center p-2">
                           <div className="flex flex-col items-center hidden md:flex">
                             <img
-                              class="mb-2"
+                              className="mb-2"
                               width="30"
                               src="https://www.metaweather.com/static/img/weather/hr.svg"
                               alt=""
@@ -226,7 +226,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center justify-center items-center p-2">
                           <div className="flex flex-col items-center hidden md:flex">
                             <img
-                              class="mb-2"
+                              className="mb-2"
                               width="30"
                               src="https://www.metaweather.com/static/img/weather/hr.svg"
                               alt=""
@@ -244,7 +244,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center justify-center items-center p-2">
                           <div className="flex flex-col items-center hidden md:flex">
                             <img
-                              class="mb-2"
+                              className="mb-2"
                               width="30"
                               src="https://www.metaweather.com/static/img/weather/hr.svg"
                               alt=""
@@ -262,7 +262,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center justify-center items-center p-2">
                           <div className="flex flex-col items-center hidden md:flex">
                             <img
-                              class="mb-2"
+                              className="mb-2"
                               width="30"
                               src="https://www.metaweather.com/static/img/weather/hr.svg"
                               alt=""
@@ -280,7 +280,7 @@ const ModalWeather = ({ showWeather, closeWeather }) => {
                         <li className="-mb-px mr-2 last:mr-0 flex-auto text-center justify-center items-center p-2">
                           <div className="flex flex-col items-center hidden md:flex">
                             <img
-                              class="mb-2"
+                              className="mb-2"
                               width="30"
                               src="https://www.metaweather.com/static/img/weather/hr.svg"
                               alt=""

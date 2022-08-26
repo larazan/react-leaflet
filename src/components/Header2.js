@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useOnClickOutside } from "./../hooks/useOnClickOutside";
 
 import Autocomplete from "./Autocomplete";
-import Weather from "./Weather";
 import ModalWeather from "./WeatherModal";
 import Filter from "./Filter";
 import RegionalOption from "./RegionalOption"
@@ -175,9 +174,7 @@ const Header2 = ({ clickNewsPageActive, clickMapPageActive }) => {
               onChange={setSelectedOption}
             />
           </div>
-          <div className="hidden md:flex ">
-            <Weather clickWeather={clickWeather} />
-          </div>
+         
         </div>
         <Filter filOpen={filOpen} filToggle={filToggle} />
         <RegionalOption regOpen={regOpen} regToggle={regToggle} />

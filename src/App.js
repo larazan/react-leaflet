@@ -5,10 +5,7 @@ import {
   useLocation
 } from "react-router-dom";
 
-import Layout from "./hoc/layout";
 import Home from "./pages/Home";
-import Regions from "./pages/Regions";
-import Icons from "./pages/Icons";
 import Maps from "./pages/Maps";
 import Content from "./pages/Content";
 import Login from "./pages/Login";
@@ -79,8 +76,6 @@ function App() {
             <Route path="post" element={<Filter />} />
             <Route path="post/:cat" element={<Submit />} />
             <Route path="home" element={<Home />} />
-            <Route path="keys" element={<Icons />} />
-            <Route path="regions" element={<Regions />} />
             <Route path="maps" element={<Maps />} />
             <Route path="content" element={<Content />} />
             <Route path="login" element={<Login />} />

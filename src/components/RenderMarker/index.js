@@ -217,7 +217,7 @@ const RenderMarker = ({
                     />
                   </div>
                 ) : (
-                  <div className="py-3"></div>
+                  <div className="py-1"></div>
                 )}
               <div
                   dangerouslySetInnerHTML={{__html: replaceWithBr(city.title)}}

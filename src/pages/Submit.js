@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 import ContentSubmit from "../components/ContentSubmit";
 import useGeoLocation from "../hooks/useGeolocation";
 import MiniMap from "../components/MiniMap";
+import LeafletControlGeocoder from "../components/LeafletControlGeocoder";
 
 import mark from "../assets/icons/marker.png";
 
@@ -104,6 +105,7 @@ const Submit = () => {
                 </Popup>
               </Marker> */}
               <MiniMap position="bottomright"  />
+              <LeafletControlGeocoder />
             </MapContainer>
           </div>
           <div className="flex w-full md:w-3/6 lg:2/6">

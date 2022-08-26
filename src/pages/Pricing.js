@@ -1,105 +1,110 @@
 import React from "react";
+
 import Footer from "../components/Footer";
+import Faq from "../components/Faq";
 
 const Pricing = () => {
   return (
     <>
       <main>
         <div className="md:flex md:flex-no-wrap2">
-          <div className="w-full h-full flex z-0 outline-0 relative2">
-            <div class="w-full h-full md:h-screen bg-cyan-300 px-5 py-20 text-gray-600 mt-10 mb-0">
-              <div class="text-center max-w-xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold mb-5">Pricing</h1>
-                <h3 class="text-xl font-medium mb-10">
+          <div className="w-full h-full flex flex-col z-0 outline-0 relative2">
+            <div className="w-full h-full md:h-screen bg-cyan-300 px-5 py-20 text-gray-600 mt-10 mb-0">
+              <div className="text-center max-w-xl mx-auto">
+                <h1 className="text-5xl md:text-6xl font-bold mb-5">Pricing</h1>
+                <h3 className="text-xl font-medium mb-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                   repellat dignissimos laboriosam odit accusamus porro
                 </h3>
               </div>
-              <div class="max-w-4xl mx-auto md:flex">
-                <div class="w-full md:w-1/3 md:max-w-none bg-white px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md shadow-lg shadow-gray-600 md:flex md:flex-col">
-                  <div class="w-full flex-grow">
-                    <h2 class="text-center font-bold uppercase mb-4">
+              <div className="max-w-4xl mx-auto md:flex">
+                <div className="w-full md:w-1/3 md:max-w-none bg-white px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md shadow-lg shadow-gray-600 md:flex md:flex-col">
+                  <div className="w-full flex-grow">
+                    <h2 className="text-center font-bold uppercase mb-4">
                       PERSONAL
                     </h2>
-                    <h3 class="text-center font-bold text-4xl mb-5">$5/mo</h3>
-                    <ul class="text-sm px-5 mb-8">
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Lorem ipsum
+                    <h3 className="text-center font-bold text-4xl mb-5">$5/mo</h3>
+                    <ul className="text-sm px-5 mb-8">
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Lorem ipsum
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Dolor sit
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Dolor sit
                         amet
                       </li>
                     </ul>
                   </div>
-                  <div class="w-full">
-                    <button class="font-bold bg-gray-600 hover:bg-gray-700 text-white rounded-md px-10 py-2 transition-colors w-full">
+                  <div className="w-full">
+                    <button className="font-bold bg-gray-600 hover:bg-gray-700 text-white rounded-md px-10 py-2 transition-colors w-full">
                       Buy Now
                     </button>
                   </div>
                 </div>
-                <div class="w-full md:w-1/3 md:max-w-none bg-white px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:-mx-3 md:mb-0 rounded-md shadow-lg shadow-gray-600 md:relative md:z-50 md:flex md:flex-col">
-                  <div class="w-full flex-grow">
-                    <h2 class="text-center font-bold uppercase mb-4">TEAM</h2>
-                    <h3 class="text-center font-bold text-4xl md:text-5xl mb-5">
+                <div className="w-full md:w-1/3 md:max-w-none bg-white px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:-mx-3 md:mb-0 rounded-md shadow-lg shadow-gray-600 md:relative md:z-50 md:flex md:flex-col">
+                  <div className="w-full flex-grow">
+                    <h2 className="text-center font-bold uppercase mb-4">TEAM</h2>
+                    <h3 className="text-center font-bold text-4xl md:text-5xl mb-5">
                       $15/mo
                     </h3>
-                    <ul class="text-sm px-5 mb-8">
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Lorem ipsum
+                    <ul className="text-sm px-5 mb-8">
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Lorem ipsum
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Dolor sit
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Dolor sit
                         amet
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Consectetur
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Consectetur
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Adipisicing
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Adipisicing
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Elit repellat
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Elit repellat
                       </li>
                     </ul>
                   </div>
-                  <div class="w-full">
-                    <button class="font-bold bg-gray-600 hover:bg-gray-700 text-white rounded-md px-10 py-2 transition-colors w-full">
+                  <div className="w-full">
+                    <button className="font-bold bg-gray-600 hover:bg-gray-700 text-white rounded-md px-10 py-2 transition-colors w-full">
                       Buy Now
                     </button>
                   </div>
                 </div>
-                <div class="w-full md:w-1/3 md:max-w-none bg-white px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md shadow-lg shadow-gray-600 md:flex md:flex-col">
-                  <div class="w-full flex-grow">
-                    <h2 class="text-center font-bold uppercase mb-4">PRO</h2>
-                    <h3 class="text-center font-bold text-4xl mb-5">$35/mo</h3>
-                    <ul class="text-sm px-5 mb-8">
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Lorem ipsum
+                <div className="w-full md:w-1/3 md:max-w-none bg-white px-8 md:px-10 py-8 md:py-10 mb-3 mx-auto md:my-6 rounded-md shadow-lg shadow-gray-600 md:flex md:flex-col">
+                  <div className="w-full flex-grow">
+                    <h2 className="text-center font-bold uppercase mb-4">PRO</h2>
+                    <h3 className="text-center font-bold text-4xl mb-5">$35/mo</h3>
+                    <ul className="text-sm px-5 mb-8">
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Lorem ipsum
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Dolor sit
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Dolor sit
                         amet
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Consectetur
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Consectetur
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Adipisicing
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Adipisicing
                       </li>
-                      <li class="leading-tight">
-                        <i class="mdi mdi-check-bold text-lg"></i> Much more...
+                      <li className="leading-tight">
+                        <i className="mdi mdi-check-bold text-lg"></i> Much more...
                       </li>
                     </ul>
                   </div>
-                  <div class="w-full">
-                    <button class="font-bold bg-gray-600 hover:bg-gray-700 text-white rounded-md px-10 py-2 transition-colors w-full">
+                  <div className="w-full">
+                    <button className="font-bold bg-gray-600 hover:bg-gray-700 text-white rounded-md px-10 py-2 transition-colors w-full">
                       Buy Now
                     </button>
                   </div>
                 </div>
               </div>
+              
             </div>
+
+            <Faq />
 
             {/* <section
               className="

@@ -7,7 +7,6 @@ import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 // import Modal from "../Modal";
 import Modal from "../Modal2";
 
-import RenderIcon from "../RenderIcon";
 import RenderSvg from "../RenderSvg";
 import UserAvatar from "../UserAvatar";
 

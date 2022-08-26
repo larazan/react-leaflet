@@ -41,9 +41,9 @@ const SetupProfile = () => {
                 </label>
                 <div className="flex items-center">
                   <img className="rounded-full h-16 w-16" src="https://www.gravatar.com/avatar/3de1623fb7eab4ef32b519c7c91d17aa?s=256&d=mm" alt="" />
-                  <a href="" class="inline-flex bg-green-600 px-3 ml-3 py-1 justify-center rounded boder border-transparent text-xs leading-5 font-medium text-white">choose file</a>
+                  <a href="" className="inline-flex bg-green-600 px-3 ml-3 py-1 justify-center rounded boder border-transparent text-xs leading-5 font-medium text-white">choose file</a>
                 </div>
-                <input accept="image/jpg, image/jpeg, image/png" class="js-avatar-input hidden" type="file" name="user[avatar]" id="user_avatar"></input>
+                <input accept="image/jpg, image/jpeg, image/png" className="js-avatar-input hidden" type="file" name="user[avatar]" id="user_avatar"></input>
               </div>
               <div className="mb-6 flex space-x-4">
                 <div>
@@ -147,7 +147,7 @@ const SetupProfile = () => {
                 </label>
                 <div className="py-2">
                   <input type="checkbox" name="" id="" className="mr-1 bg-white shadow " />
-                  <span class="ml-2 text-sm text-gray-700 pt-1">Display "Message" button on my profile (Pexels reviews all messages to protect against spam)</span>
+                  <span className="ml-2 text-sm text-gray-700 pt-1">Display "Message" button on my profile (Pexels reviews all messages to protect against spam)</span>
                 </div>
               </div>
               <div className="mb-6">
@@ -159,11 +159,11 @@ const SetupProfile = () => {
                 </label>
                 <div className="py-2">
                   <input type="checkbox" name="" id="" className="mr-1 bg-white shadow " />
-                  <span class="ml-2 text-sm text-gray-700 pt-1">I’m open to receiving an email to share how I used photos and videos.</span>
+                  <span className="ml-2 text-sm text-gray-700 pt-1">I’m open to receiving an email to share how I used photos and videos.</span>
                 </div>
                 <div className="py-2">
                   <input type="checkbox" name="" id="" className="mr-1 bg-white shadow " />
-                  <span class="ml-2 text-sm text-gray-700 pt-1">I’m open to receiving an email when someone shares how they used my photo or video.</span>
+                  <span className="ml-2 text-sm text-gray-700 pt-1">I’m open to receiving an email when someone shares how they used my photo or video.</span>
                 </div>
               </div>
               <div className="mb-6">
@@ -175,19 +175,19 @@ const SetupProfile = () => {
                 </label>
                 <div className="py-2">
                   <input type="checkbox" name="" id="" className="mr-1 bg-white shadow " />
-                  <span class="ml-2 text-sm text-gray-700 pt-1">Receive a monthly email with stats about your photos</span>
+                  <span className="ml-2 text-sm text-gray-700 pt-1">Receive a monthly email with stats about your photos</span>
                 </div>
                 <div className="py-2">
                   <input type="checkbox" name="" id="" className="mr-1 bg-white shadow " />
-                  <span class="ml-2 text-sm text-gray-700 pt-1">Receive photographer related news</span>
+                  <span className="ml-2 text-sm text-gray-700 pt-1">Receive photographer related news</span>
                 </div>
                 <div className="py-2">
                   <input type="checkbox" name="" id="" className="mr-1 bg-white shadow " />
-                  <span class="ml-2 text-sm text-gray-700 pt-1">Receive an email when reaching a new milestone</span>
+                  <span className="ml-2 text-sm text-gray-700 pt-1">Receive an email when reaching a new milestone</span>
                 </div>
                 <div className="py-2">
                   <input type="checkbox" name="" id="" className="mr-1 bg-white shadow " />
-                  <span class="ml-2 text-sm text-gray-700 pt-1">Receive a newsletter with the best photos on Pexels</span>
+                  <span className="ml-2 text-sm text-gray-700 pt-1">Receive a newsletter with the best photos on Pexels</span>
                 </div>
               </div>
               <div className="mb-6">
