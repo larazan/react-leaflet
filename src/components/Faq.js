@@ -79,8 +79,8 @@ const Faq = () => {
                     type="checkbox"
                     className=" peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
                   />
-                  <div className="min-h-[50px] py-2 w-full pl-3 flex-col items-center leading-none">
-                    <div className="py-2">
+                  <div className="min-h-[50px] py-2 w-full pl-3 pr-3 md:pr-0 flex-col items-center leading-5 md:leading-none">
+                    <div className="py-2 px-0 ">
                       <h1 className="font-semibold">{faq.question}</h1>
                     </div>
                     <span className="text-[12px] text-gray-400 font-thin "></span>
