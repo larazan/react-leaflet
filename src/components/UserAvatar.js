@@ -20,7 +20,7 @@ const UserAvatar = ({ name, size, round }) => {
         </div>
         {/*  */}
         <div
-          className={`sm:w-72 md:w-72 hidden group-hover:block mt-0.5 absolute z-10 font-normal bg-white shadow-md rounded-lg overflow-hidden border`}
+          className={`w-64 md:w-72 hidden group-hover:block mt-0.5 absolute z-10 font-normal bg-white shadow-md rounded-lg overflow-hidden border`}
         >
           <div className="flex flex-col p-4 space-y-3">
             <div className="flex flex-row justify-between">

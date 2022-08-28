@@ -110,9 +110,12 @@ const MessageBox = () => {
                   <div className="chat-message">
                     <div className="flex items-end">
                       <div className="flex flex-col space-y-2 text-xs md:text-sm max-w-xs mx-0 order-2 items-start">
-                        <div>
+                        <div className="flex flex-col space-y-1">
                           <span className="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
                             Can be verified on any platform using docker
+                          </span>
+                          <span className="grid text-xs font-light text-gray-500 justify-items-start">
+                            30/08/2022, 30:00
                           </span>
                         </div>
                       </div>
@@ -121,10 +124,13 @@ const MessageBox = () => {
                   <div className="chat-message">
                     <div className="flex items-end justify-end">
                       <div className="flex flex-col space-y-2 text-xs md:text-sm max-w-xs mx-0 order-1 items-end">
-                        <div>
+                        <div className="flex flex-col space-y-1">
                           <span className="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white">
                             Your error message says permission denied, npm
                             global installs must be given root privileges.
+                          </span>
+                          <span className="grid text-xs font-light text-gray-500 justify-items-end">
+                            30/08/2022, 30:00
                           </span>
                         </div>
                       </div>

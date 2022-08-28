@@ -109,7 +109,30 @@ function Profile(props) {
     } else {
       return (
         <main className="md:mt-10 bg-gray-100 bg-opacity-25">
-        <div className="lg:w-8/12 pt-10 lg:mx-auto mb-8">
+          <header className="flex md:hidden z-20 md:z-20 h-10 md:h-14 w-full  top-0 md:m-0 px-4 md:px-5 py-6 md:py-3  items-center justify-between2">
+          <div className="flex inline-flex w-full justify-center items_center space-x-3">
+            <div className="flex  w-full">
+              <button className="p-1 rounded-full2 hover:bg-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M11 17l-5-5m0 0l5-5m-5 5h12"
+                  />
+                </svg>
+              </button>
+            </div>
+            
+          </div>
+        </header>
+        <div className="lg:w-8/12 md:pt-10 lg:mx-auto mb-8">
           <header className="flex flex-wrap items-center p-4 md:py-8">
             <div className="md:w-3/12 md:ml-16">
               <img
