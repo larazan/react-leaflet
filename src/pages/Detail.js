@@ -47,6 +47,7 @@ const Detail = () => {
   const [showDrop, setShowDrop] = useState(false);
   const [openShare, setOpenShare] = useState(false);
   const [favorites, setFavorites] = useState([]);
+  const [showModalGallery, setShowModalGallery] = useState(false);
   const [komen, setKomen] = useState(12);
   const [suka, setSuka] = useState(230);
 
@@ -117,6 +118,7 @@ const Detail = () => {
   const handleClick = () => {
     setCurrentIndex(1);
     setClickedImg(omah1);
+    setShowModalGallery(true)
   };
 
   const handelRotationRight = () => {
@@ -380,7 +382,7 @@ const Detail = () => {
                     </p>
                   </div>
                   <div className="py-2">
-                    <div className="absolute p-4 z-20 h-full2 w-full">
+                    <div className="absolute p-4 z-20 h-full2 w-full2">
                       <button
                         className="p-3 bg-gray-800 h-8 justify-center items-center flex self-end2 rounded-2xl opacity-80 hover:opacity-100"
                         onClick={() => handleClick()}
@@ -617,6 +619,8 @@ const Detail = () => {
           handelRotationRight={handelRotationRight}
           setClickedImg={setClickedImg}
           handelRotationLeft={handelRotationLeft}
+          showModalGallery={showModalGallery} 
+          closeModalGallery={setShowModalGallery}
         />
       )}
 

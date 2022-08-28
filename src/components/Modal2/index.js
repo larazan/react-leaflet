@@ -41,6 +41,7 @@ const Modal2 = ({ showModal, closeModal }) => {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [showDrop, setShowDrop] = useState(false);
+  const [showModalGallery, setShowModalGallery] = useState(false);
 
   const ref = useRef();
   useOnClickOutside(ref, () => setShowDrop(false));
@@ -54,6 +55,7 @@ const Modal2 = ({ showModal, closeModal }) => {
   const handleClick = () => {
     setCurrentIndex(1);
     setClickedImg(omah1);
+    setShowModalGallery(true)
   };
 
   const handelRotationRight = () => {
@@ -459,6 +461,8 @@ const Modal2 = ({ showModal, closeModal }) => {
           handelRotationRight={handelRotationRight}
           setClickedImg={setClickedImg}
           handelRotationLeft={handelRotationLeft}
+          showModalGallery={showModalGallery} 
+          closeModalGallery={setShowModalGallery}
         />
       )}
     </>
