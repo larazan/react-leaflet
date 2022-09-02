@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 import Header2 from "../components/Header2";
 import Footer from "../components/Footer";
 import RenderSvg from "../components/RenderSvg";
+import FooterNav from "./FooterNav";
 
 import jakarta from "../assets/images/jakarta.jpg"
 import surabaya from "../assets/images/surabaya.jpg"
@@ -11,6 +12,11 @@ import bandung from "../assets/images/bandung.jpg"
 import semarang from "../assets/images/semarang.jpg"
 import makassar from "../assets/images/makassar.jpg"
 import batam from "../assets/images/batam.jpg"
+
+import template from "../assets/images/templates.png"
+import upsell from "../assets/images/upsell.png"
+import modal from "../assets/images/modal.png"
+import stats from "../assets/images/stats.png"
 
 const Home = () => {
   
@@ -144,7 +150,7 @@ const Home = () => {
                     <div className="flex justify-center items-center h-full">
                       <div className="">
                         <span className="text-2xl  font-bold">
-                          See All
+                          More
                         </span>
                       </div>
                     </div>
@@ -287,7 +293,72 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <div class="flex flex-col hidden md:block gap-5 py-10 items-center justify-center bg-white">
+
+  <card class="   w-[50rem] py-7 px-5">
+    <div class="grid grid-cols-6 gap-3">
+      
+      <div class="col-span-2">
+        <img src={template} />
+      </div>
+
+      <div class="col-span-4">
+        <p class="text-gray-700 font-bold text-3xl"> Create additional revenue with our "profit boosters" </p>
+        <p class="text-gray-500 mt-4 text-lg"> As well as high-converting cart pages, you can also easily create one-click upsell funnels, bump offers, trials, recurring payments and much more. </p>
+      </div>
+
+    </div>
+  </card>
+
+  <card class=" w-[50rem] py-7 px-5">
+    <div class="grid grid-cols-6 gap-3">
+      
+      <div class="col-span-4">
+        <p class="text-gray-700 font-bold text-3xl"> Deploy one-click upsell funnels designed to convert </p>
+        <p class="text-gray-500 mt-4 text-lg"> Sell more and create quick, high-converting funnels in just a few minutes, or, add upsell buttons to your own pages for truly customizable funnels, all powered by ThriveCart. </p>
+      </div>
+
+      <div class="col-span-2">
+        <img src={upsell} />
+      </div>
+
+    </div>
+  </card>
+
+  <card class="w-[50rem] py-7 px-5">
+    <div class="grid grid-cols-6 gap-3">
+      
+      <div class="col-span-2">
+        <img src={modal} />
+      </div>
+
+      <div class="col-span-4">
+        <p class="text-gray-700 font-bold text-3xl"> Embed your cart anywhere to capture more sales </p>
+        <p class="text-gray-500 mt-4 text-lg"> Easily create popup or embeddable carts to add to any site in seconds, and turn your visitors into customers wherever they are. </p>
+      </div>
+
+    </div>
+  </card>
+
+  <card class=" w-[50rem] py-7 px-5">
+    <div class="grid grid-cols-6 gap-3">
+      
+      <div class="col-span-4">
+        <p class="text-gray-700 font-bold text-3xl"> Reduce churn and recover your revenue automatically </p>
+        <p class="text-gray-500 mt-4 text-lg"> We notify customers when payments are due, before cards expire, chase overdue payments, manage subscriptions and give detailed reports. </p>
+      </div>
+
+      <div class="col-span-2">
+        <img src={stats} />
+      </div>
+
+    </div>
+  </card>
+
+</div>
       </main>
+      <FooterNav />
       <Footer />
     </>
   );

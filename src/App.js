@@ -29,6 +29,8 @@ import MessageBox from "./pages/MessageBox";
 import Followers from "./pages/Followers";
 import Following from "./pages/Following";
 import SetupProfile from "./pages/SetupProfile";
+import Cluster from "./pages/Cluster";
+import Wide from "./pages/Wide";
 
 import Frontend from "./hoc/Frontend";
 import Backend from "./hoc/Backend";
@@ -87,6 +89,7 @@ function App() {
             <Route path="coba" element={<Coba />} />
             <Route path="cabinet" element={<Cabinet />} />
             <Route path="pricing" element={<Pricing />} />
+            <Route path="cluster" element={<Cluster />} />
             <Route path="change_profile" element={<SetupProfile />} />
             <Route path="profile" element={<Profile />} >
               <Route index element={<NewsPost />} />

@@ -6,7 +6,7 @@ const DetailProfile = () => {
   return (
     <>
       <div className="flex flex-wrap -mx-px md:-mx-3">
-        <div className=" p-0 md:px-3 md:w-8/12 pt-5 md:mx-auto mb-8">
+        <div className=" px-5 md:px-3 md:w-8/12 pt-2 md:pt-5 md:mx-auto mb-8">
           <div className="py-2 pb-5 border-b">
             <ReadMore>
               Present a modern, feminine, Highest restaurant in town with
@@ -27,7 +27,7 @@ const DetailProfile = () => {
               <div className="flex flex-col space-y-4">
                 <div className="flex inline-flex items-center justify-between border-b pb-3">
                   <div>
-                    <p className="text-blue-400 font-bold text-lg">
+                    <p className="text-blue-400 font-bold md:text-lg">
                       <a href="">https://www.eatmazra.com</a>
                     </p>
                   </div>
@@ -41,7 +41,7 @@ const DetailProfile = () => {
                 </div>
                 <div className="flex inline-flex items-center justify-between border-b pb-3">
                   <div>
-                    <p className="text-gray-500 font-bold text-lg">
+                    <p className="text-gray-500 font-bold md:text-lg">
                       (650) 491-6019
                     </p>
                   </div>
@@ -55,10 +55,10 @@ const DetailProfile = () => {
                 </div>
                 <div className="flex inline-flex items-center justify-between ">
                   <div>
-                    <p className="text-blue-400 font-bold text-lg">
+                    <p className="text-blue-400 font-bold md:text-lg">
                       <a href="">Get Directions</a>
                     </p>
-                    <p className="text-gray-500 font-bold text-md">
+                    <p className="text-gray-500 font-bold text-sm md:text-md">
                       504 San Bruno Ave W San Bruno, CA 94066
                     </p>
                   </div>
