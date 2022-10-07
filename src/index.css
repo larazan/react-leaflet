@@ -111,7 +111,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #33baf0;
   border-radius: 16px;
-  border: 4px solid #fff;
+  border: 2px solid #fff;
 }
 
 /* set button(top and bottom of the scrollbar) */
