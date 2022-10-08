@@ -24,6 +24,7 @@ import bbm from "../../assets/images/bbm.jpg";
 import twitter from "../../assets/images/twitter.svg";
 import facebook from "../../assets/images/facebook.svg";
 import Notification from "../Notification";
+import ContentSponsor from "../ContentSponsor";
 
 const getImage = (imgName) => {
   let imgNews = "";
@@ -242,7 +243,9 @@ const ContentNews = ({
           </div>
           
         </div>
-        <Notification type={'info'} title={'The website looks awesome'} msg={'Lorem ipsum dolor sit amet consectetur adipisicing elit?'} />
+        
+        <Notification type={'alert'} title={'The website looks awesome'} msg={'Lorem ipsum dolor sit amet consectetur adipisicing elit?'} />
+        <ContentSponsor />
         {news.map((article, idx) => (
           <Link
             key={article.id}

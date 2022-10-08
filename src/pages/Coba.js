@@ -3,6 +3,7 @@ import Avatar from "react-avatar";
 import axios from "axios";
 import { useLocation, Outlet, Link, NavLink } from "react-router-dom";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
+import ContentSelected from "../components/ContentSelected";
 
 const Coba = memo(() => {
   const [showDrop, setShowDrop] = useState(false);
@@ -43,7 +44,7 @@ const Coba = memo(() => {
     <>
       <main>
         <div className="md:flex md:flex-no-wrap">
-          <div className="flex flex-col translate-x-0 mt-0 md:mt-14 translate-x-0">
+          {/* <div className="flex flex-col translate-x-0 mt-0 md:mt-14 translate-x-0">
 
             <div className="relative w-full">
               <img
@@ -253,13 +254,13 @@ const Coba = memo(() => {
                 </ul>
 
                 <div className="hidden md:block">
-                  {/* <h1 className="font-semibold">Mr Travlerrr...</h1> */}
+                  <h1 className="font-semibold">Mr Travlerrr...</h1> 
                   <span>Travel, Nature and Music</span>
                   <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
 
                 <div className="md:hidden text-sm">
-                  {/* <h1 className="font-semibold">Mr Travlerrr...</h1> */}
+                   <h1 className="font-semibold">Mr Travlerrr...</h1> 
                   <span>Travel, Nature and Music</span>
                   <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
@@ -364,7 +365,10 @@ const Coba = memo(() => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
+        </div>
+        <div className="mt-20">
+          <ContentSelected />
         </div>
       </main>
     </>
