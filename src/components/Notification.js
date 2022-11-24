@@ -64,9 +64,9 @@ const Notification = ({ type, title, msg }) => {
     <>
       {showNotif ? (
         <div
-          className={`relative ${notifBg} rounded-lg border-gray-300 border p-3 m-1.5 shadow-lg`}
+          className={`relative2 ${notifBg} rounded-lg border-gray-300 border p-2 m-1.5 shadow-lg`}
         >
-          <div className="absolute top-2 right-2">
+          {/* <div className="absolute relative2 top-2 right-2">
             <button className={`${notifColor}`} onClick={closeNotif}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,16 +81,31 @@ const Notification = ({ type, title, msg }) => {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
           <div className="flex flex-row">
             <div className={`px-2 `}>
               {notifLogo(type)}
             </div>
 
-            <div className={`ml-2 mr-6 ${notifColor}`}>
+            <div className={`ml-2 mr-2 ${notifColor}`}>
               <span className="font-semibold">{title}</span>
               <span className={`block text-sm ${notifColor}`}>{msg}</span>
             </div>
+
+            <button className={`${notifColor} flex`} onClick={closeNotif}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       ) : null}

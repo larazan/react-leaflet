@@ -327,92 +327,186 @@ const ContentNews = ({
                         }  right-1 mt-24 md:mt-32 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
                       >
                         <div className="py-2">
-                          <ul className="flex-col font-sans items-center justify-center text-sm">
-                            <Link to="">
-                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                                <div className="flex items-center space-x-2">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={1}
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    />
-                                  </svg>
-                                  <span>Tidak tertarik dengan tweet ini</span>
-                                </div>
-                              </li>
-                            </Link>
-                            <Link to="">
-                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                                <div className="flex items-center space-x-2">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={1}
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                                    />
-                                  </svg>
-                                  <span>Laporkan tweet ini</span>
-                                </div>
-                              </li>
-                            </Link>
-                            <Link to="">
-                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                                <div className="flex items-center space-x-2">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={1}
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                    />
-                                  </svg>
-                                  <span>Tambahkan/hapus dari daftar</span>
-                                </div>
-                              </li>
-                            </Link>
-                            <Link to="">
-                              <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                                <div className="flex items-center space-x-2">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth={1}
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                    />
-                                  </svg>
-                                  <span>Source</span>
-                                </div>
-                              </li>
-                            </Link>
-                          </ul>
+                        <ul className="flex-col font-sans items-center justify-center text-sm">
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-mood-sad"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <line
+                                          x1="9"
+                                          y1="10"
+                                          x2="9.01"
+                                          y2="10"
+                                        ></line>
+                                        <line
+                                          x1="15"
+                                          y1="10"
+                                          x2="15.01"
+                                          y2="10"
+                                        ></line>
+                                        <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0"></path>
+                                      </svg>
+                                      <span>
+                                        Tidak tertarik dengan tweet ini
+                                      </span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-flag"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <line
+                                          x1="5"
+                                          y1="5"
+                                          x2="5"
+                                          y2="21"
+                                        ></line>
+                                        <line
+                                          x1="19"
+                                          y1="5"
+                                          x2="19"
+                                          y2="14"
+                                        ></line>
+                                        <path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0"></path>
+                                        <path d="M5 14a5 5 0 0 1 7 0a5 5 0 0 0 7 0"></path>
+                                      </svg>
+                                      <span>Laporkan tweet ini</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-bookmark"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                                      </svg>
+                                      <span>Markah tweet ini</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-file-plus"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                                        <line
+                                          x1="12"
+                                          y1="11"
+                                          x2="12"
+                                          y2="17"
+                                        ></line>
+                                        <line
+                                          x1="9"
+                                          y1="14"
+                                          x2="15"
+                                          y2="14"
+                                        ></line>
+                                      </svg>
+                                      <span>Tambahkan/hapus dari daftar</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-external-link"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+                                        <line
+                                          x1="10"
+                                          y1="14"
+                                          x2="20"
+                                          y2="4"
+                                        ></line>
+                                        <polyline points="15 4 20 4 20 9"></polyline>
+                                      </svg>
+                                      <span>Source</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                              </ul>
                         </div>
                       </div>
                     ) : null}

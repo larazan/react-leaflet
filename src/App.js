@@ -31,6 +31,7 @@ import Following from "./pages/Following";
 import SetupProfile from "./pages/SetupProfile";
 import Cluster from "./pages/Cluster";
 import Wide from "./pages/Wide";
+import Search from "./pages/Search";
 
 import Frontend from "./hoc/Frontend";
 import Backend from "./hoc/Backend";
@@ -45,6 +46,7 @@ function App() {
 
   useEffect(() => {
     const host = window.location.host;
+    const hr = window.location.href;
 
     const arr = host
         .split(".")
@@ -80,6 +82,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="maps" element={<Maps />} />
             <Route path="content" element={<Content />} />
+            <Route path="search" element={<Search />} />
             <Route path="login" element={<Login />} />
             <Route path="messages" element={<Message />} />
             <Route path="messages/:id" element={<MessageBox />} />

@@ -27,7 +27,7 @@ const openReplyHandler = () => {
                   alt=""
                 />
               </div>
-              <div className="flex-1 px-3 py-2 md:px-3 md:py-2 leading-relaxed">
+              <div className="flex-1 px-3 py-2 md:px-3 md:py-2 leading-tight md:leading-relaxed">
                 <div className="flex inline-flex items-center space-x-2">
                   <div>
                     <strong>Sarah</strong>{" "}
@@ -35,7 +35,7 @@ const openReplyHandler = () => {
                   <span className="text-xs text-gray-400">3:34 PM</span>
                 </div>
 
-                <p className="text-sm">
+                <p className="text-sm md:text-base">
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                   diam nonumy eirmod tempor invidunt ut labore et dolore magna
                   aliquyam erat, sed diam voluptua.

@@ -72,7 +72,7 @@ const Detail = () => {
 
   const commentHandler = (e) => {
     e.stopPropagation();
-    setKomen(8)
+    setKomen(8);
     // console.log('comment click');
     // console.log("comment");
   };
@@ -106,8 +106,8 @@ const Detail = () => {
   };
 
   const replaceWithBr = (title) => {
-    return title.replace(/\n/g, "<br />")
-  }
+    return title.replace(/\n/g, "<br />");
+  };
 
   const openDrop = (e) => {
     e.stopPropagation();
@@ -118,7 +118,7 @@ const Detail = () => {
   const handleClick = () => {
     setCurrentIndex(1);
     setClickedImg(omah1);
-    setShowModalGallery(true)
+    setShowModalGallery(true);
   };
 
   const handelRotationRight = () => {
@@ -158,7 +158,7 @@ const Detail = () => {
   return (
     <>
       <main>
-      <header className="flex md:hidden z-20 md:z-20 h-10 md:h-14 w-full  top-0 md:m-0 px-4 md:px-5 py-6 md:py-3  items-center justify-between bg-gray-100 border-b shadow">
+        <header className="flex md:hidden z-20 md:z-20 h-10 md:h-14 w-full  top-0 md:m-0 px-4 md:px-5 py-6 md:py-3  items-center justify-between bg-gray-100 border-b shadow">
           <div className="flex inline-flex w-full justify-center items_center space-x-3">
             <div className="flex w-1/4 w-full">
               <button className="p-1 rounded-full2 hover:bg-gray-300">
@@ -299,94 +299,188 @@ const Detail = () => {
                               showDrop === false ? "hidden" : ""
                             }  right-4 mt-24 absolute z-20 font-normal bg-white shadow-md rounded-sm overflow-hidden border`}
                           >
-                             <div className="py-2">
-                        <ul className="flex-col font-sans items-center justify-center text-sm">
-                          <Link to="">
-                            <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                              <div className="flex items-center space-x-2">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-6 w-6"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  strokeWidth={1}
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                  />
-                                </svg>
-                                <span>Tidak tertarik dengan tweet ini</span>
-                              </div>
-                            </li>
-                          </Link>
-                          <Link to="">
-                            <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                              <div className="flex items-center space-x-2">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-6 w-6"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  strokeWidth={1}
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                                  />
-                                </svg>
-                                <span>Laporkan tweet ini</span>
-                              </div>
-                            </li>
-                          </Link>
-                          <Link to="">
-                            <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                              <div className="flex items-center space-x-2">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-6 w-6"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  strokeWidth={1}
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                  />
-                                </svg>
-                                <span>Tambahkan/hapus dari daftar</span>
-                              </div>
-                            </li>
-                          </Link>
-                          <Link to="">
-                            <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
-                              <div className="flex items-center space-x-2">
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="h-6 w-6"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  strokeWidth={1}
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                  />
-                                </svg>
-                                <span>Source</span>
-                              </div>
-                            </li>
-                          </Link>
-                        </ul>
-                      </div>
+                            <div className="py-2">
+                              <ul className="flex-col font-sans items-center justify-center text-sm">
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-mood-sad"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <line
+                                          x1="9"
+                                          y1="10"
+                                          x2="9.01"
+                                          y2="10"
+                                        ></line>
+                                        <line
+                                          x1="15"
+                                          y1="10"
+                                          x2="15.01"
+                                          y2="10"
+                                        ></line>
+                                        <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0"></path>
+                                      </svg>
+                                      <span>
+                                        Tidak tertarik dengan tweet ini
+                                      </span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-flag"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <line
+                                          x1="5"
+                                          y1="5"
+                                          x2="5"
+                                          y2="21"
+                                        ></line>
+                                        <line
+                                          x1="19"
+                                          y1="5"
+                                          x2="19"
+                                          y2="14"
+                                        ></line>
+                                        <path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0"></path>
+                                        <path d="M5 14a5 5 0 0 1 7 0a5 5 0 0 0 7 0"></path>
+                                      </svg>
+                                      <span>Laporkan tweet ini</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-bookmark"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2"></path>
+                                      </svg>
+                                      <span>Markah tweet ini</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-file-plus"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                                        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                                        <line
+                                          x1="12"
+                                          y1="11"
+                                          x2="12"
+                                          y2="17"
+                                        ></line>
+                                        <line
+                                          x1="9"
+                                          y1="14"
+                                          x2="15"
+                                          y2="14"
+                                        ></line>
+                                      </svg>
+                                      <span>Tambahkan/hapus dari daftar</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                                <Link to="">
+                                  <li className="py-1 md:py-2 px-3 md:px-6 hover:bg-gray-200">
+                                    <div className="flex items-center space-x-2">
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-external-link"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="2"
+                                        stroke="currentColor"
+                                        fill="none"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      >
+                                        <path
+                                          stroke="none"
+                                          d="M0 0h24v24H0z"
+                                          fill="none"
+                                        ></path>
+                                        <path d="M11 7h-5a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-5"></path>
+                                        <line
+                                          x1="10"
+                                          y1="14"
+                                          x2="20"
+                                          y2="4"
+                                        ></line>
+                                        <polyline points="15 4 20 4 20 9"></polyline>
+                                      </svg>
+                                      <span>Source</span>
+                                    </div>
+                                  </li>
+                                </Link>
+                              </ul>
+                            </div>
                           </div>
                         )}
                       </div>
@@ -510,116 +604,116 @@ const Detail = () => {
                 </div>
 
                 <div className="flex justify-between w-full py-4 px-6 border-b">
-                <div
-                  className="flex w-1/3 cursor-pointer"
-                  onClick={commentHandler}
-                >
-                  <div className="flex inline-flex justify-center items-center space-x-1">
-                    <div className="h-5 w-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1}
-                          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                        />
-                      </svg>
-                    </div>
-                    <div className="text-xs font-semibold text-gray-600">
-                      {komen > 0 ? komen : 'Comment'}
-                    </div>
-                  </div>
-                </div>
-                {favorites.includes() ? (
                   <div
-                    onClick={() => addFav({})}
-                    data-event="fav"
-                    className="flex w-1/3 text-center justify-center cursor-pointer"
+                    className="flex w-1/3 cursor-pointer"
+                    onClick={commentHandler}
                   >
                     <div className="flex inline-flex justify-center items-center space-x-1">
-                      <div className="h-5 w-5 text-rose-500">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                      <div className="text-xs font-semibold text-gray-600">
-                        {suka}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div
-                    onClick={() => addFav({})}
-                    data-event="fav"
-                    className="flex w-1/3 text-center justify-center cursor-pointer"
-                  >
-                    <div className="flex inline-flex justify-center items-center space-x-1">
-                      <div className="h-5 w-5 ">
+                      <div className="h-5 w-5">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
-                          strokeWidth={1}
                         >
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            strokeWidth={1}
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                           />
                         </svg>
                       </div>
                       <div className="text-xs font-semibold text-gray-600">
-                        {suka}
+                        {komen > 0 ? komen : "Comment"}
                       </div>
                     </div>
                   </div>
-                )}
+                  {favorites.includes() ? (
+                    <div
+                      onClick={() => addFav({})}
+                      data-event="fav"
+                      className="flex w-1/3 text-center justify-center cursor-pointer"
+                    >
+                      <div className="flex inline-flex justify-center items-center space-x-1">
+                        <div className="h-5 w-5 text-rose-500">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <div className="text-xs font-semibold text-gray-600">
+                          {suka}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div
+                      onClick={() => addFav({})}
+                      data-event="fav"
+                      className="flex w-1/3 text-center justify-center cursor-pointer"
+                    >
+                      <div className="flex inline-flex justify-center items-center space-x-1">
+                        <div className="h-5 w-5 ">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={1}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            />
+                          </svg>
+                        </div>
+                        <div className="text-xs font-semibold text-gray-600">
+                          {suka}
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
-                <div
-                  href="#"
-                  onClick={shareHandler}
-                  // data-id={idx}
-                  data-event="share"
-                  className="w-1/3 text-right cursor-pointer"
-                >
-                  <div className="flex inline-flex justify-center items-center space-x-1">
-                    <div className="text-xs font-semibold text-gray-600">
-                      Share
-                    </div>
-                    <div className="h-5 w-5 rounded-full border">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1}
-                          d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-                        />
-                      </svg>
-                    </div>
-                    {/* {shareId === idx ? ( */}
+                  <div
+                    href="#"
+                    onClick={shareHandler}
+                    // data-id={idx}
+                    data-event="share"
+                    className="w-1/3 text-right cursor-pointer"
+                  >
+                    <div className="flex inline-flex justify-center items-center space-x-1">
+                      <div className="text-xs font-semibold text-gray-600">
+                        Share
+                      </div>
+                      <div className="h-5 w-5 rounded-full border">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1}
+                            d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                          />
+                        </svg>
+                      </div>
+                      {/* {shareId === idx ? ( */}
                       <div className="absolute flex z-[20] right-1 rounded-full border items-center justify-between shadow-md">
                         <a
                           data-id="22436481"
@@ -640,10 +734,10 @@ const Detail = () => {
                           </button>
                         </a>
                       </div>
-                    {/* ) : null} */}
+                      {/* ) : null} */}
+                    </div>
                   </div>
                 </div>
-              </div>
 
                 <div className="px-8 py-2">
                   <div className="py-3 text-bold text-md">Related Tags</div>
@@ -674,7 +768,7 @@ const Detail = () => {
           handelRotationRight={handelRotationRight}
           setClickedImg={setClickedImg}
           handelRotationLeft={handelRotationLeft}
-          showModalGallery={showModalGallery} 
+          showModalGallery={showModalGallery}
           closeModalGallery={setShowModalGallery}
         />
       )}

@@ -190,7 +190,7 @@ const Header = () => {
           </div> */}
           
         </div>
-        <div className="flex flex-row space-x-4">
+        <div className="flex flex-row space-x-3">
         <div className="flex">
             <button className="flex inline-flex items-center justify-center rounded border px-3 py-1.5 space-x-2 hover:bg-gray-100">
               <svg
@@ -210,9 +210,12 @@ const Header = () => {
               <span className="font-semibold">Posting</span>
             </button>
           </div>
-          <div className="flex">
+          <div className="flex space-x-1">
             <button className="flex inline-flex items-center justify-center rounded border px-6 py-1.5 space-x-2 bg-[#fe2c55] opacity-90 hover:opacity-100">
               <span className="font-semibold text-white">Masuk</span>
+            </button>
+            <button className="flex inline-flex items-center justify-center rounded border px-6 py-1.5 space-x-2 bg-[#30ffd0] opacity-90 hover:opacity-100">
+              <span className="font-semibold text-white2">Daftar</span>
             </button>
           </div>
           
