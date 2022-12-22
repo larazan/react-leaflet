@@ -32,6 +32,8 @@ import SetupProfile from "./pages/SetupProfile";
 import Cluster from "./pages/Cluster";
 import Wide from "./pages/Wide";
 import Search from "./pages/Search";
+import Kanban from "./pages/Kanban";
+import CalendarEvent from "./pages/CalendarEvent";
 
 import Frontend from "./hoc/Frontend";
 import Backend from "./hoc/Backend";
@@ -107,6 +109,8 @@ function App() {
           </Route>
           <Route path="/dashboard" element={<Backend />}>
             <Route index element={<Dashboard />} />
+            <Route path="kanban" element={<Kanban />} />
+            <Route path="calendar" element={<CalendarEvent />} />
           </Route>
         </Routes>
 
