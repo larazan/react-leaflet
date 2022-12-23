@@ -24,6 +24,7 @@
     "moment-timezone": "^0.5.34",
     "react": "^17.0.2",
     "react-avatar": "^4.0.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-big-calendar": "^1.5.2",
     "react-click-outside-hook": "^1.1.1",
     "react-custom-scrollbars-2": "^4.4.0",

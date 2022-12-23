@@ -5,6 +5,116 @@ import { useLocation, Outlet, Link, NavLink } from "react-router-dom";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
 import ContentSelected from "../components/ContentSelected";
 
+
+const createGuid = () => {
+  let d = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+  const reg = /[xy]/g
+  let r = (Math.random() * 16 | 0)
+  // let m = (r && 0x3 || 0x8)
+  // let n = m.toString(16)
+  // let v = c === 'x' ? r : (r && 0x3 || 0x8)
+  // const v = (c) => {
+  //   c === 'x' ? r : (r && 0x3 || 0x8)
+  // } 
+  // return d.replace(reg, 2)
+  // return r
+  // return m
+  // return n
+  let q = d.replace(reg, r)
+  return q
+}
+
+console.log(createGuid());
+
+const recipes = [
+  {
+    id: 716429,
+    title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
+    image: "<https://spoonacular.com/recipeImages/716429-312x231.jpg>",
+    dishTypes: ["lunch", "main course", "main dish", "dinner"],
+    recipe: {
+      // recipe data
+    },
+    tickets: [
+      {
+        title:
+          "Stop it, stop it. It's fine. I will 'destroy' you! I can explain. It's very valuable. ",
+        author: "Bender Bending Rodriguez",
+        created_at: "16 hours ago",
+        level: "Low Level",
+        comments_count: 12,
+      },
+      {
+        title:
+          "Hey, whatcha watching? Hey! I'm a porno-dealing monster, what do I care what you think? It must be wonderful.",
+        author: "Professor Farnsworth",
+        created_at: "16 hours ago",
+        level: "Medium Level",
+        comments_count: 0,
+      },
+      {
+        title:
+          "We don't have a brig. Meh. Calculon is gonna kill us and it's all everybody else's fault!",
+        author: "Philip J. Fry",
+        created_at: "16 hours ago",
+        level: "Medium Level",
+        comments_count: 12,
+      },
+      {
+        title:
+          "This opera's as lousy as it is brilliant! Your lyrics lack subtlety. You can't just have your characters announce how they feel.",
+        author: "Turanga Leela",
+        created_at: "16 hours ago",
+        level: "High Level",
+        comments_count: 1,
+      },
+    ],
+  },
+  {
+    id: 716429,
+    title: "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
+    image: "<https://spoonacular.com/recipeImages/716429-312x231.jpg>",
+    dishTypes: ["lunch", "main course", "main dish", "dinner"],
+    recipe: {
+      // recipe data
+    },
+    tickets: [
+      {
+        title:
+          "Stop it, stop it. It's fine. I will 'destroy' you! I can explain. It's very valuable. ",
+        author: "Bender Bending Rodriguez",
+        created_at: "16 hours ago",
+        level: "Low Level",
+        comments_count: 12,
+      },
+      {
+        title:
+          "Hey, whatcha watching? Hey! I'm a porno-dealing monster, what do I care what you think? It must be wonderful.",
+        author: "Professor Farnsworth",
+        created_at: "16 hours ago",
+        level: "Medium Level",
+        comments_count: 0,
+      },
+      {
+        title:
+          "We don't have a brig. Meh. Calculon is gonna kill us and it's all everybody else's fault!",
+        author: "Philip J. Fry",
+        created_at: "16 hours ago",
+        level: "Medium Level",
+        comments_count: 12,
+      },
+      {
+        title:
+          "This opera's as lousy as it is brilliant! Your lyrics lack subtlety. You can't just have your characters announce how they feel.",
+        author: "Turanga Leela",
+        created_at: "16 hours ago",
+        level: "High Level",
+        comments_count: 1,
+      },
+    ],
+  },
+];
+
 const Coba = memo(() => {
   const [showDrop, setShowDrop] = useState(false);
 
@@ -37,7 +147,7 @@ const Coba = memo(() => {
   };
 
   useEffect(() => {
-    getData();
+    // getData();
   }, []);
 
   return (
@@ -369,6 +479,31 @@ const Coba = memo(() => {
         </div>
         <div className="mt-20">
           <ContentSelected />
+        </div>
+
+        <div>
+          {recipes.map((recipe) => {
+            return (
+              <div key={recipe.id}>
+                <h1>{recipe.title}</h1>
+                <img src={recipe.image} alt="recipe image" />
+                <div>
+                  <ul>
+                {recipe.dishTypes.map((type, index) => {
+                  return <li key={index}>{type}</li>;
+                })}
+                </ul>
+                </div>
+                <div>
+                  <ul>
+                {recipe.tickets.map((ticket, id) => {
+                  return <li key={id}>{ticket.title}</li>;
+                })}
+                </ul>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </main>
     </>
